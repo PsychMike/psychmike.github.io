@@ -953,6 +953,7 @@ ul.social-list li a i {
 /* ===== Begin contact ===== */
 #contact-section {
 	position: relative;
+	max-height: 800px;
 }
 #contact-section h4 {
 	font-weight: 400;
