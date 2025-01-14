@@ -1,0 +1,292 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tiger K01</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="canonical" href="http://html5-templates.com/" />
+        <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="../style.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		<div class="wrapAll clearfix">
+			<div class="sidebar">
+				<div class="logo">
+					<a href="/"><img src='../img/logo.png' alt="logo"></a>
+				</div>
+				<div class="navigation">
+					<ul>
+						<li><a href="#">Main page</a></li>
+						<li><a href="#">Contents</a></li>
+						<li><a href="#">Featured content</a></li>
+					</ul>
+					<h3>Interaction</h3>
+					<ul>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Portal</a></li>
+					</ul>
+					<h3>Interaction</h3>
+					<ul>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Portal</a></li>
+					</ul>
+				</div>
+
+			
+			</div>
+			<div class="mainsection">
+				<div class="headerLinks">
+					<span class="user">Not logged in</span> <a href="#">Talk</a> <a href="#">Contributions</a> <a href="#">Create account</a> <a href="#">Log in</a>
+				</div>
+				<div class="tabs clearfix">
+					<div class="tabsLeft">
+						<ul>
+							<li><a href="#" class="active">Article</a></li>
+							<li><a href="#">Talk</a></li>						
+						</ul>
+					</div>
+					<div id="simpleSearch">
+						<input type="text" name="searchInput" id="searchInput" placeholder="Search Wikipedia" size="12" />
+						<div id="submitSearch"></div>
+					</div>
+					<div class="tabsRight">
+						<ul>
+							<li><a href="#" class="active">Read</a></li>
+							<li><a href="#">View source</a></li>						
+							<li><a href="#">View history</a></li>						
+						</ul>
+					</div>
+				
+				</div>
+				<div class="article">
+					<h1>Pre-processing TIGER K01 data</h1>
+					<p class="siteSub">From Wikipedia, the free encyclopedia</p>
+					<p class="roleNote">This article is about the writing implement. For other uses, see Pencil (disambiguation).</p>
+
+					<!-- <div class="articleRight">
+						<div class="articleRightInner">
+							<img src="../img/pencil.jpg" alt="pencil" />
+						</div>
+						This is a blue <a href="">pencil</a>
+					</div> -->
+                    <h2>Overview</h2>
+
+                    <p><strong>General subject folder structure:</strong> <code>~/project-tiffany/projects/TIGER-K01/raw/sub-XXX</code></p>
+                    
+                    <h3>‘Raw’ Subject Data Sub-Folders</h3>
+                    <ul>
+                        <li><strong>EJA_SVS_SLASER_0005:</strong> Contains DICOM files for a spectroscopy scan, possibly using the Siemens SVS/SLASER sequence.</li>
+                        <li><strong>EP2D_BOLD_1_6MM_ISO_P2_SMS5_HCP_PA_CMRR_0014:</strong> Contains DICOM files for a BOLD (blood oxygen level dependent) fMRI scan using the Siemens HCP (Human Connectome Project) sequence.</li>
+                        <li><strong>EP2D_BOLD_1_6MM_ISO_P2_SMS5_HCP_PA_CMRR_SBREF_0013:</strong> Contains DICOM files for a BOLD fMRI scan using the Siemens HCP sequence, for a single-shot gradient-echo echo-planar imaging (GE-EPI) acquisition.</li>
+                        <li><strong>EP2D_BOLD_1_6MM_ISO_P2_SMS5_HCP_PA_CMRR_SBREF_0015:</strong> Contains DICOM files for a BOLD fMRI scan using the Siemens HCP sequence, for a single-shot GE-EPI acquisition, for the reference scan.</li>
+                        <li><strong>LOCALIZER_0007:</strong> Contains DICOM files for a localizer scan, which is typically a low-resolution image used for positioning subsequent scans.</li>
+                        <li><strong>SPINECHOFIELDMAP_AP_CMRR_0010:</strong> Contains DICOM files for a field map scan in the anterior-posterior (AP) direction, possibly for use in distortion correction of subsequent scans.</li>
+                        <li><strong>SPINECHOFIELDMAP_AP_CMRR_SBREF_0009:</strong> Contains DICOM files for a field map reference scan in the anterior-posterior (AP) direction.</li>
+                        <li><strong>SPINECHOFIELDMAP_PA_CMRR_0012:</strong> Contains DICOM files for a field map scan in the posterior-anterior (PA) direction, possibly for use in distortion correction of subsequent scans.</li>
+                        <li><strong>SPINECHOFIELDMAP_PA_CMRR_SBREF_0011:</strong> Contains DICOM files for a field map reference scan in the posterior-anterior (PA) direction.</li>
+                        <li><strong>SUB_S4-S3_1_0102:</strong> Contains DICOM files for a T1-weighted anatomical scan.</li>
+                        <li><strong>SVS_SLASER_DKD_RACC_WS_64AV_0006:</strong> Contains DICOM files for a spectroscopy scan, possibly using the Siemens SVS/SLASER sequence.</li>
+                        <li><strong>T1_MP2RAGE_SAG_P3_1MM_INV2_0003:</strong> Contains DICOM files for a T1-weighted anatomical scan, possibly using the Siemens MP2RAGE sequence.</li>
+                        <li><strong>_MPR_RANGE[1]__0101:</strong> Contains DICOM files for an anatomical scan in the axial plane, possibly using the Siemens MPRAGE sequence.</li>
+                        <li><strong>_MPR_RANGE__0100:</strong> Contains DICOM files for an anatomical scan in the axial plane, possibly using the Siemens MPRAGE sequence.</li>
+                    </ul>
+                    
+                    <br>
+                    <div class="contentsPanel">
+						<div class="contentsHeader">Contents</div>
+						<ul>
+							<li>
+								<span>1</span><a href="#">Overview</a>
+								<!-- <ul>
+									<li><span>1.2</span><a href="contents/spt.html">SPT</a> </li>
+							</ul> -->
+							</li>
+                            <li><span>2</span><a href="#convert-dicoms">Batch DICOM to NIFTI Conversion</a> </li>
+							<!-- <li><span>3</span><a href="#">Manufacture</a></li>
+							<li><span>4</span><a href="#">Grading and classification</a></li> -->
+						</ul>
+					</div>
+
+                    <h2 id="convert-dicoms">Batch DICOM to NIFTI Conversion</h2>
+<p>Navigate to the directory:</p>
+<pre><code>cd ~/project-tiffany/projects/TIGER_K01/</code></pre>
+<p>Then, run the following command:</p>
+<pre><code>python batch_dcm2niix.py</code></pre>
+<p>That’s it!</p>
+
+<h3>Python Script: <code>batch_dcm2niix.py</code></h3>
+<pre><code>
+import os
+import subprocess
+
+# Set the root directory for the study
+root_dir = os.getcwd()
+
+# Find all subject directories in the raw data folder
+subj_dirs = [d for d in os.listdir(os.path.join(root_dir, 'raw')) if d.startswith('sub-')]
+
+# Loop through each subject directory
+for subj_dir in subj_dirs:
+    subj_id = subj_dir.split('-')[1]
+    print(f"Processing subject {subj_id}...")
+    
+    func_input_dir = os.path.join(root_dir, 'raw', subj_dir)
+    func_output_dir = os.path.join(root_dir, 'bids', subj_dir, 'func')
+
+    func_dirs = [d for d in os.listdir(func_input_dir) if 'EP2D_BOLD' in d and not d.endswith('SBREF')]
+    if len(func_dirs) == 0:
+        print(f"No functional image directory found for subject {subj_id}!")
+        continue
+    func_dir = os.path.join(func_input_dir, func_dirs[0])
+    print(f"Functional image directory found: {func_dir}")
+
+    struct_input_dir = os.path.join(func_input_dir, [d for d in os.listdir(func_input_dir) if 'SUB' in d][0])
+    struct_output_dir = os.path.join(root_dir, 'bids', subj_dir, 'anat')
+
+    cmd = f"dcm2niix -b y -ba y -z y -o {func_output_dir} -f sub-{subj_id}_task-rest_bold {func_dir}"
+    subprocess.call(cmd, shell=True)
+
+    if not os.path.exists(struct_input_dir):
+        print(f"No structural image directory found for subject {subj_id}!")
+        continue
+    struct_output_file = f"sub-{subj_id}_T1w"
+    if not os.path.exists(struct_output_dir):
+        os.makedirs(struct_output_dir)
+    cmd = f"dcm2niix -b y -ba y -z y -o {struct_output_dir} -f {struct_output_file} {struct_input_dir}"
+    subprocess.call(cmd, shell=True)
+    print(f"Data conversion complete for subject {subj_id}!")
+</code></pre>
+
+<h3>Automating Script Execution with Crontab</h3>
+<p>Crontab allows the time-scheduled execution of scripts and commands. The following crontab entry runs the batch conversion daily at 4 AM PST:</p>
+<pre><code>0 4 * * * cd ~/project-tiffany/projects/TIGER_K01 && python batch_dcm2niix.py >> batch_dcm2niix.log 2>&1</code></pre>
+
+<h3>Processing Structural Data: <code>process_struct.sh</code></h3>
+<pre><code>
+#!/bin/bash
+
+root_dir="/u/project/tiffany/psychmik/projects/TIGER_K01/raw"
+folders=("TIGER-T1" "TIGER-T2" "TIGER-T3")
+
+process_data() {
+    input_path="$1"
+    output_path="$2"
+    echo "Processing ${input_path}..."
+
+    mkdir -p "${output_path}"
+
+    bet "${input_path}" "${output_path}/DTI_2mm_b2000_60dir_raw_bet.nii.gz"
+    N4BiasFieldCorrection -i "${input_path}" -o "${output_path}/DTI_2mm_b2000_60dir_raw_n4.nii.gz"
+    fast -t 1 -n 3 -g -o "${output_path}/segmentation" "${output_path}/DTI_2mm_b2000_60dir_raw_n4.nii.gz"
+    fslmaths "${output_path}/segmentation_seg_0.nii.gz" -bin "${output_path}/binary_mask.nii.gz"
+    echo "Finished processing ${input_path}."
+}
+
+for folder in "${folders[@]}"; do
+    folder_path="${root_dir}/${folder}"
+    subject_dirs=$(find "${folder_path}" -mindepth 1 -maxdepth 1 -type d)
+
+    for subject_dir in $subject_dirs; do
+        subject_name=$(basename "${subject_dir}")
+        input_file=$(find "${subject_dir}" -name "DTI*.nii.gz" -type f)
+        output_path="${folder_path}/processed/${subject_name}"
+
+        if [ ! -f "${output_path}/binary_mask.nii.gz" ]; then
+            if [ -f "${input_file}" ]; then
+                process_data "${input_file}" "${output_path}"
+            else
+                echo "Skipping ${subject_name} because the input file does not exist."
+            fi
+        else
+            echo "Skipping ${subject_name} because the output already exists."
+        fi
+    done
+done
+</code></pre>
+
+<h3>Processing Functional Data: <code>process_func.sh</code></h3>
+<pre><code>
+#!/bin/bash
+
+root_dir="/u/project/tiffany/psychmik/projects/TIGER_K01/raw"
+folders=("TIGER-T1" "TIGER-T2" "TIGER-T3")
+smoothing_kernel="5"
+lowpass_cutoff="0.08"
+highpass_cutoff="0.01"
+
+process_func_data() {
+    input_path="$1"
+    output_path="$2"
+    echo "Processing ${input_path}..."
+
+    mkdir -p "${output_path}"
+    mcflirt -in "${input_path}" -out "${output_path}/func_data_mcf.nii.gz"
+    slicetimer -i "${output_path}/func_data_mcf.nii.gz" -o "${output_path}/func_data_stc.nii.gz" -r TR
+    fslmaths "${output_path}/func_data_stc.nii.gz" -s "${smoothing_kernel}" "${output_path}/func_data_smooth.nii.gz"
+    fslmaths "${output_path}/func_data_smooth.nii.gz" -bptf "${highpass_cutoff}" "${lowpass_cutoff}" "${output_path}/func_data_filtered.nii.gz"
+    echo "Finished processing ${input_path}."
+}
+
+for folder in "${folders[@]}"; do
+    folder_path="${root_dir}/${folder}"
+    subject_dirs=$(find "${folder_path}" -mindepth 1 -maxdepth 1 -type d)
+
+    for subject_dir in $subject_dirs; do
+        subject_name=$(basename "${subject_dir}")
+        input_file=$(find "${subject_dir}" -name "func*.nii.gz" -type f)
+        output_path="${folder_path}/processed_func/${subject_name}"
+
+        if [ ! -f "${output_path}/func_data_filtered.nii.gz" ]; then
+            process_func_data "${input_file}" "${output_path}"
+        else
+            echo "Skipping ${subject_name} because the output already exists."
+        fi
+    done
+done
+</code></pre>
+
+
+					<div class="lavenderBox">
+						<div class="header">Panel title</div>
+						<div class="subtitle linklist"><a href="#">Lorem</a> <a href="#">Ipsum</a> <a href="#">Dolorestitas</a> </div>
+						<div class="linklist">
+							<a href="#">Percipit </a> <a href="#">Mnesarchum </a> <a href="#">Molestie </a> <a href="#">Phaedrum </a> <a href="#">Luptatum constituam </a> <a href="#">Habeo adipisci </a> <a href="#">Inani zril  </a> <a href="#">Forensibus sea </a> <a href="#">Habeo adipisci </a> <a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Has et partem </a><a href="#">Percipit </a> <a href="#">Mnesarchum </a> <a href="#">Molestie </a> <a href="#">Phaedrum </a> <a href="#">Luptatum constituam </a> <a href="#">Habeo adipisci </a> <a href="#">Inani zril  </a> <a href="#">Vel nisl albucius </a> <a href="#">Habeo adipisci </a> <a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Percipit maiestatis </a> <a href="#">Regione suscipit </a> <a href="#">Percipit maiestatis </a>
+						</div>
+						
+						<div class="subtitle">Subtitle</div>
+					</div>
+					
+					<div class="categories">
+						<a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Has et partem </a>
+					</div>
+					
+				</div>
+				<div class="pagefooter">
+					This page was last edited on 29.07.2017 | Template by <a href="http://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a> <!-- Please leave this link unchanged -->
+					<div class="footerlinks">
+						<a href="#">Privacy policy</a> <a href="#">About</a> <a href="#">Terms and conditions</a> <a href="#">Cookie statement</a> <a href="#">Developers</a>
+					</div>
+				</div>
+			
+			
+			</div>		
+		</div>
+		
+		
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="script.js"></script>
+
+
+    </body>
+</html>

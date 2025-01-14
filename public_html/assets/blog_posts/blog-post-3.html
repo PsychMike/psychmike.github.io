@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Update the description to fit your new post -->
+  <meta
+    name="description"
+    content="Learn how to quickly build responsive and modern websites using Bootstrap’s comprehensive set of tools, components, and utilities."
+  />
+  <meta name="author" content="Michael Hess" />
+  <!-- Update the title to match the new topic -->
+  <title>Getting Started with Bootstrap - Blog Post</title>
+
+  <!-- Stylesheet Links -->
+  <link rel="stylesheet" href="../vendors/bootstrap/bootstrap.bundle.css" />
+  <link
+    rel="stylesheet"
+    href="../vendors/themify-icons/css/themify-icons.css"
+  />
+  <link rel="stylesheet" href="../css/steller.css" />
+</head>
+<body>
+  <!-- Navigation Bar (Dynamically Loaded if Using Includes) -->
+  <!-- 
+    If you’re using a header partial, ensure you have a <div id="header-placeholder"></div>
+    and the fetch code at the bottom. Otherwise, paste your nav here directly.
+  -->
+
+      <!-- Navigation Bar -->
+      <div id="header-placeholder"></div>
+
+  <!-- Blog Header -->
+  <header
+  class="section blog-header"
+  style="background: url('../imgs/bootstrap_dev.jpg') no-repeat center center / cover; position: relative;"
+>
+  <!-- Overlay -->
+  <div style="
+      background-color: rgba(0, 0, 0, 0.5);  /* 50% black overlay */
+      position: absolute;
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+    "
+  ></div>
+
+  <div class="container text-center text-light" style="position: relative; z-index: 1;">
+    <h1 class="title">Getting Started with Bootstrap</h1>
+    <p class="subtitle">
+      Your gateway to building sleek, responsive websites with minimal effort
+    </p>
+  </div>
+</header>
+
+
+  <!-- Blog Content -->
+  <section class="section blog-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <p>
+            If you’ve ever struggled to build websites that look good on every
+            device, Bootstrap might just be the solution you’ve been looking
+            for. As one of the most popular front-end frameworks, Bootstrap
+            streamlines layout, styling, and components so you can focus on
+            creating content rather than reinventing the wheel. In this guide,
+            you’ll learn the basics of setting up Bootstrap and using its core
+            features.
+          </p>
+
+          <h2>What Is Bootstrap?</h2>
+          <p>
+            Bootstrap is a free and open-source toolset that includes
+            pre-designed HTML, CSS, and JavaScript components. These range from
+            layout utilities (like a powerful grid system) to interactive
+            plugins (such as carousels and modals). Originally developed by
+            Twitter, Bootstrap has become the go-to framework for many
+            developers seeking rapid prototyping and consistent design.
+          </p>
+
+          <h3>Why Use Bootstrap?</h3>
+          <ul>
+            <li>
+              <strong>Mobile-First Approach:</strong> Bootstrap ensures your
+              website adapts gracefully to various screen sizes, from
+              smartphones to desktops.
+            </li>
+            <li>
+              <strong>Customization:</strong> With Sass variables and a
+              well-structured codebase, you can easily tailor Bootstrap to match
+              your brand identity.
+            </li>
+            <li>
+              <strong>Reusable Components:</strong> Common interface elements
+              such as navbars, cards, and alerts come ready to use.
+            </li>
+            <li>
+              <strong>Active Community:</strong> A large community offers
+              extensive documentation, tutorials, and third-party components,
+              making it easier to troubleshoot and learn.
+            </li>
+          </ul>
+
+          <h3>Getting Started</h3>
+          <p>
+            There are two popular ways to include Bootstrap in your project:
+            downloading the files or using a Content Delivery Network (CDN).
+          </p>
+          <ol>
+            <li>
+              <strong>Use the CDN:</strong> Simply copy and paste the links to
+              Bootstrap’s CSS and JS from the
+              <a
+                href="https://getbootstrap.com/docs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >official documentation</a
+              >.
+            </li>
+            <li>
+              <strong>Download Bootstrap:</strong> If you prefer local files and
+              want to customize them (using Sass, for example), head to the
+              Bootstrap GitHub repository or
+              <a
+                href="https://getbootstrap.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >official website</a
+              >.
+            </li>
+          </ol>
+
+          <h3>Core Concepts</h3>
+          <p>
+            Once you’ve integrated Bootstrap into your project, you’ll have
+            access to a suite of classes and components:
+          </p>
+          <ul>
+            <li>
+              <strong>Grid System:</strong> Bootstrap’s 12-column grid lets you
+              create responsive layouts with classes like
+              <code>.col-md-6</code> or <code>.row</code>. The grid automatically
+              adjusts column widths at various breakpoints (<code>xs</code>,
+              <code>sm</code>, <code>md</code>, <code>lg</code>, and
+              <code>xl</code>).
+            </li>
+            <li>
+              <strong>Components:</strong> Easily add navbars, cards, alerts,
+              modals, and more. For instance, a simple alert can be created with
+              a <code>&lt;div class="alert alert-warning"&gt;</code> element.
+            </li>
+            <li>
+              <strong>Utility Classes:</strong> Spacing, colors, text alignment,
+              and more can be tweaked using single-purpose classes like
+              <code>.my-3</code> or <code>.text-center</code>. This approach
+              promotes quick, consistent styling.
+            </li>
+          </ul>
+
+          <h3>Best Practices</h3>
+          <p>
+            While Bootstrap offers a wide array of features, keep the following
+            tips in mind:
+          </p>
+          <ol>
+            <li>
+              <strong>Customize Strategically:</strong> Use the Sass variables
+              to override default colors and fonts, ensuring a unique brand
+              identity.
+            </li>
+            <li>
+              <strong>Don’t Overload on Classes:</strong> Combining too many
+              utility classes can lead to bloated HTML. Balance them with custom
+              CSS when needed.
+            </li>
+            <li>
+              <strong>Check Browser Support:</strong> Bootstrap v5 dropped
+              support for older browsers like Internet Explorer. Always confirm
+              your target audience’s browser usage.
+            </li>
+            <li>
+              <strong>Keep Performance in Mind:</strong> Although Bootstrap is
+              optimized, loading multiple plugins or large images can still slow
+              down your site. Use only what you need.
+            </li>
+          </ol>
+
+          <h3>Conclusion</h3>
+          <p>
+            Whether you’re a seasoned developer looking for a faster workflow or
+            a beginner making your first website, Bootstrap’s rich set of tools
+            can give you a head start. By taking advantage of its responsive
+            grid, versatile components, and robust documentation, you’ll be able
+            to craft professional, modern websites in no time.
+          </p>
+          <p>
+            Ready to level up your web development projects? 
+            <a
+              href="https://www.upwork.com/freelancers/~01325ed6fe68935e31"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact Me
+            </a>
+            and let’s collaborate on bringing your ideas to life with Bootstrap.
+          </p>
+
+          <!-- Social Share -->
+          <div class="social-share mt-4">
+            <a
+              class="social-item"
+              href="https://twitter.com/intent/tweet?text=Check+out+this+post+on+getting+started+with+Bootstrap!&url=https://yourwebsite.com/blog-post-3"
+              target="_blank"
+            >
+              <i class="ti-twitter"></i> Share on Twitter
+            </a>
+            <a
+              class="social-item"
+              href="https://www.linkedin.com/sharing/share-offsite/?url=https://yourwebsite.com/blog-post-3"
+              target="_blank"
+            >
+              <i class="ti-linkedin"></i> Share on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder (If Using Client-Side Includes) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="../vendors/jquery/jquery-3.4.1.js"></script>
+  <script src="../vendors/bootstrap/bootstrap.bundle.js"></script>
+  <!-- JavaScript to fetch header.html & footer.html -->
+  <script>
+    // Load header - adjust path if needed
+    fetch('../../header-blog.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error fetching header:', error));
+
+    // Load footer - adjust path if needed
+    fetch('../../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+        // Insert year after footer is injected
+        document.getElementById('year').textContent = new Date().getFullYear();
+      })
+      .catch(error => console.error('Error fetching footer:', error));
+  </script>
+</body>
+</html>

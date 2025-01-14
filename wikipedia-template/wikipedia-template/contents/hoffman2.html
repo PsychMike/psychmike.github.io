@@ -1,0 +1,545 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hoffman2 Cluster Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="http://html5-templates.com/" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="../style.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="wrapAll clearfix">
+        <div class="sidebar">
+            <div class="logo">
+                <a href="/"><img src='../img/logo.png' alt="logo"></a>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Main page</a></li>
+                    <li><a href="#">Contents</a></li>
+                    <li><a href="#">Featured content</a></li>
+                </ul>
+                <h3>Interaction</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portal</a></li>
+                </ul>
+                <h3>Interaction</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portal</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="mainsection">
+            <div class="headerLinks">
+                <span class="user">Not logged in</span> <a href="#">Talk</a> <a href="#">Contributions</a> <a
+                    href="#">Create account</a> <a href="#">Log in</a>
+            </div>
+            <div class="tabs clearfix">
+                <div class="tabsLeft">
+                    <ul>
+                        <li><a href="#" class="active">Article</a></li>
+                        <li><a href="#">Talk</a></li>
+                    </ul>
+                </div>
+                <div id="simpleSearch">
+                    <input type="text" name="searchInput" id="searchInput" placeholder="Search Wikipedia" size="12" />
+                    <div id="submitSearch"></div>
+                </div>
+                <div class="tabsRight">
+                    <ul>
+                        <li><a href="#" class="active">Read</a></li>
+                        <li><a href="#">View source</a></li>
+                        <li><a href="#">View history</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="article">
+                <h1 id="introduction">Hoffman2 Cluster Guide</h1>
+                <p class="siteSub">From Wikipedia, the free encyclopedia</p>
+                <p class="roleNote">This article is about the writing implement. For other uses, see Pencil
+                    (disambiguation).</p>
+
+                <div class="articleRight">
+                    <div class="articleRightInner">
+                        <img src="../img/hoffman2.jpg" alt="pencil" />
+                    </div>
+                    Hoffman2 servers
+                    <!-- <a href="">pencil</a> -->
+                </div>
+                <p>The <strong>Hoffman2 Cluster</strong> is a high-performance computing (HPC) resource provided by the
+                    Institute for Digital Research and Education (IDRE) at the University of California, Los Angeles
+                    (UCLA). It is named after Edward T. Hoffman, a former UCLA professor and pioneer in the field of
+                    high-performance computing.</p>
+                <p>The Hoffman2 Cluster provides a shared computing environment for researchers and students across
+                    multiple departments and disciplines at UCLA, as well as for external collaborators. It is designed
+                    to enable computationally intensive research projects that require large amounts of processing power
+                    and storage capacity, as well as specialized software and tools.</p>
+                <p>The cluster is composed of thousands of interconnected computing nodes, with a variety of hardware
+                    configurations and capabilities. It uses a job scheduling system called SLURM (Simple Linux Utility
+                    for Resource Management) to manage and allocate computing resources to users. The cluster also
+                    offers multiple storage options, including home directories, project directories, and scratch space,
+                    to help users organize and store their data.</p>
+                <p>The Hoffman2 Cluster is an essential resource for many research projects at UCLA, particularly in
+                    fields such as bioinformatics, genomics, computational chemistry, and physics. It has been used in a
+                    wide range of research applications, including molecular modeling, data analysis, machine learning,
+                    and simulation studies.</p>
+                <p>To use the Hoffman2 Cluster, users need to obtain an account through the IDRE website and have some
+                    basic knowledge of Linux, command-line interface, and job scheduling. The cluster provides multiple
+                    ways to connect and use the resources, including SSH, NoMachine, X2Go, and Jupyter Notebook/Lab.</p>
+                <p>Overall, the Hoffman2 Cluster is a valuable resource that enables researchers and students to perform
+                    complex computations and data analysis, and to accelerate their research projects. The cluster is
+                    continuously evolving, with new hardware and software upgrades, as well as training and support
+                    programs, to better serve the needs of the UCLA research community.</p>
+                <div class="contentsPanel">
+                    <div class="contentsHeader">Contents</div>
+                    <ul>
+                        <li>
+                            <span>1</span><a href="#introduction">Introduction</a>
+                            <!-- <ul>
+									<li><span>1.1</span><a href="contents/hoffman2.html">Hoffman2 Cluster</a> </li>
+									<li><span>1.2</span><a href="#">Discovery of graphite deposit</a> </li>
+									<li><span>1.3</span><a href="#">Wood holders added </a></li>
+									<li><span>1.4</span><a href="#">The pencil in America </a></li>
+									<li><span>1.5</span><a href="#">Eraser attached </a></li>							
+									<li><span>1.6</span><a href="#">Marking material </a></li>							
+									<li><span>1.7</span><a href="#">Pencil extenders </a></li>							
+								</ul> -->
+                        </li>
+                        <li><span>2</span><a href="#user-account">Obtaining a User Account</a></li>
+                        <li><span>3</span><a href="#connect-cluster">Connecting to the Cluster</a></li>
+                        <ul>
+                            <li><span>3.1</span><a href="#nomachine">NoMachine</a></li>
+                            <li><span>3.2</span><a href="#x2go">X2Go</a></li>
+                            <li><span>3.3</span><a href="#jupyter">Jupyter Lab/Notebook</a></li>
+                        </ul>
+                        <li><span>4</span><a href="#submitting-jobs">Submitting Jobs</a></li>
+                        <li><span>5</span><a href="#data">Transferring and Managing Data</a></li>
+                        <ul>
+                            <li><span>5.1</span><a href="#transfer">Transferring</a></li>
+                            <li><span>5.2</span><a href="#manage">Managing</a></li>
+                        </ul>
+                        <li><span>6</span><a href="manage-env">Managing the Environment</a><li>
+                            <ul>
+                                <li><span>6.1</span><a href="#load-mods">Loading Modules</a></li>
+                                <li><span>6.2</span><a href="#unload-mods">Unloading Modules</a></li>
+                                <li><span>6.3</span><a href="#manage-env-sub">Managing Your Environment</a></li>
+                                <li><span>6.4</span><a href="#change-mods">Changing Default Modules</a></li>
+                                <li><span>6.4</span><a href="#remove-mods">Removing Custom Modules</a></li>
+</ul>
+                                    <li><span>7</span><a href="monitor-cluster">Monitoring the Cluster Status</a></li>
+                                    <ul>
+                                        <li><span>7.1</span><a href="#check-status">Checking the Status of Nodes</a></li>
+                                        <li><span>7.2</span><a href="#view-job-info">Viewing Job Information</a></li>
+                                        <li><span>7.3</span><a href="#monitor-resources">Monitoring Resource Usage</a></li>
+                                        <li><span>7.4</span><a href="#view-logs">Viewing System Logs</a></li>
+                                    </ul>
+                                    <li><span>8</span><a href="#troubleshooting">Troubleshooting</a></li>
+                                    <ul>
+                                        <li><span>8.1</span><a href="#check-docs">Check the Documentation</a></li>
+                                        <li><span>8.2</span><a href="#contact-support">Contact the Cluster Support Team</a></li>
+                                        <li><span>8.3</span><a href="#check-logs">Check System Logs</a></li>
+                                        <li><span>8.4</span><a href="#check-job-status">Check Job Status</a></li>
+                                        <li><span>8.5</span><a href="#check-storage-space">Check Storage Space</a></li>
+                                        <li><span>8.6</span><a href="#check-network-connection">Check Network Connection</a></li>
+                                        <li><span>8.7</span><a href="#check-firewall-settings">Check Firewall Settings</a></li>
+                                    </ul>
+                                    </div>
+                <h2 id="user-account">Obtaining a User Account</h2>
+                <h3>How to obtain a user account on the Hoffman2 Cluster</h3>
+                <p>First, visit the IDRE website <a href="https://www.idre.ucla.edu/hoffman2/access"
+                        target="_blank">here</a> to request a user account. On the website, click on the "Request a
+                    Hoffman2 account" button to begin.</p>
+                <p>You will be directed to a form that asks for your personal information, including your full name,
+                    email address, department or affiliation, and a brief description of your research project or
+                    purpose for using the cluster.</p>
+                <p>Fill out the form and submit it. Your request will be reviewed by the IDRE support team, who will
+                    verify your eligibility and confirm your account.</p>
+                <p>Once your account has been approved, you will receive an email with your username and initial
+                    password. You will also receive instructions on how to access the cluster and connect to the
+                    resources.</p>
+                <p>When you first log in, you will be prompted to change your password. You should choose a strong and
+                    secure password that you can remember.</p>
+                <p>Before you start using the cluster, it's recommended that you read the documentation and training
+                    materials provided on the IDRE website. This will help you get familiar with the cluster's
+                    architecture, software, and tools, and avoid common mistakes or issues.</p>
+                <p>It's also recommended that you attend a training session or workshop on the Hoffman2 Cluster, which
+                    are regularly offered by the IDRE support team. These sessions cover topics such as basic Linux
+                    commands, job submission, file transfer, and data management, and provide hands-on experience on the
+                    cluster.</p>
+                <p>If you encounter any problems or issues while using the cluster, you can consult the IDRE website for
+                    troubleshooting tips and contact the support team for assistance. The support team is available to
+                    help you with any questions or concerns you may have, and can provide guidance on how to optimize
+                    your workflow and performance on the cluster.</p>
+
+                <h2 id="connect-cluster">Connecting to the Cluster</h2>
+                <h3>First Steps</h3>
+                <!-- <p>To connect to the Hoffman2 Cluster, users need to have an account with access to the cluster. This
+                    section provides guidance on how to connect to the cluster using the Secure Shell (SSH) protocol. It
+                    explains that users can use a terminal or command prompt on their local machine to connect to the
+                    cluster by typing in the command:</p>
+                    <pre><code>ssh username@hoffman2.idre.ucla.edu</code></pre> and entering their password
+                    when prompted. The section also notes that it is recommended to use the SLURM workload manager to
+                    submit and manage jobs on the cluster.</p>
+                <p>Here's how to connect to the Hoffman2 Cluster:</p> -->
+                <p>First, you will need to have an account with access to the cluster. If you do not have an account,
+                    you will need to request access from the appropriate parties.</p>
+                <p>Once you have an account, you can connect to the cluster using a Secure Shell (SSH) client. On
+                    Windows, you can use a program like PuTTY, and on Mac or Linux, you can use the built-in terminal.
+                </p>
+                <p>To connect, open your SSH client and enter the following command:</p>
+                <p>To connect, open your SSH client and enter the following command:</p>
+                <pre><code>ssh username@hoffman2.idre.ucla.edu</code></pre>
+                <p>Replace "username" with your actual username for the cluster. You will then be prompted for your
+                    password. Enter your password and press enter.</p>
+                <p>If you are connecting for the first time, you may be prompted to accept the cluster's SSH key. Type
+                    "yes" and press enter.</p>
+                <p>Once you are successfully logged in, you will be on the login node of the cluster and ready to submit
+                    jobs or run commands.</p>
+                <p>It's important to note that on the Hoffman2 Cluster, it is recommended to use the SLURM workload
+                    manager to submit and manage your jobs. To submit a job, you will create a script file containing
+                    the commands you want to run, along with options for the SLURM scheduler, such as requested
+                    resources and estimated runtime. Then you can submit the script using the <code>sbatch</code>
+                    command.</p>
+                <p>If you encounter any issues while connecting to the cluster or submitting jobs, please consult the
+                    official documentation of the Hoffman2 Cluster or contact the cluster administrator for more
+                    information and support.</p>
+
+                <h3 id="nomachine">NoMachine</h3>
+                <p>First, you will need to download the NoMachine client from the official website: <a
+                        href="https://www.nomachine.com/download"
+                        target="_blank">https://www.nomachine.com/download</a>.</p>
+                <p>Install the NoMachine client on your local machine by following the prompts in the installation
+                    wizard.</p>
+                <p>Once the installation is complete, launch the NoMachine client.</p>
+                <p>Click on the "New" button to create a new connection.</p>
+                <p>In the "Host" field, enter <code>hoffman2.idre.ucla.edu</code> and in the "Port" field enter
+                    <code>22</code>.</p>
+                <p>In the "User" field, enter your Hoffman2 username.</p>
+                <p>In the "Session" field, select <code>X11</code> as the connection type.</p>
+                <p>Click the "Advanced" button to open the advanced settings.</p>
+                <p>In the "Session" tab, make sure the "Desktop" is set to <code>GNOME</code>.</p>
+                <p>In the "Security" tab, select the "Use SSH" option.</p>
+                <p>Click the "OK" button to save the advanced settings.</p>
+                <p>Click the "Connect" button to initiate the connection.</p>
+                <p>A window will appear prompting you to enter your password. Enter your Hoffman2 password and click
+                    "OK" to log in.</p>
+                <p>Once logged in, you will be presented with the NoMachine remote desktop interface. From here, you can
+                    launch terminal
+                    sessions, transfer files, and run graphical applications as if you were physically logged in to the
+                    Hoffman2
+                    Cluster.</p>
+                <p>It's important to note that you will need to have an active user account on the Hoffman2 Cluster and
+                    a working
+                    internet connection to use the NoMachine client. You may also need to configure your firewall
+                    settings to allow the
+                    NoMachine client to connect to the Hoffman2 Cluster.</p>
+                <p>If you encounter any issues while connecting, you can refer to the official website link provided for
+                    more
+                    information and troubleshooting steps, or contact the cluster administrator for support.</p>
+                <h3 id="x2go">X2Go</h3>
+                <p>First, you will need to download the X2Go client from the official website: <a
+                        href="https://wiki.x2go.org/doku.php/download:start"
+                        target="_blank">https://wiki.x2go.org/doku.php/download:start</a>.</p>
+                <p>Install the X2Go client on your local machine by following the prompts in the installation wizard.
+                </p>
+                <p>Once the installation is complete, launch the X2Go client.</p>
+                <p>Click on the "New Session" button to create a new connection.</p>
+                <p>In the "Session name" field, enter a name for the connection (e.g., "Hoffman2").</p>
+                <p>In the "Host" field, enter <code>hoffman2.idre.ucla.edu</code>.</p>
+                <p>In the "Login" field, enter your Hoffman2 username.</p>
+                <p>In the "Session Type" field, select <code>XFCE</code> or <code>GNOME</code>.</p>
+                <p>In the "Connection" tab, make sure the "SSH" option is selected.</p>
+                <p>Click the "OK" button to save the connection settings.</p>
+                <p>Click the "Session" button to initiate the connection.</p>
+                <p>A window will appear prompting you to enter your password. Enter your Hoffman2 password and click
+                    "OK" to log in.</p>
+                <p>Once logged in, you will be presented with the X2Go remote desktop interface. From here, you can
+                    launch terminal
+                    sessions, transfer files, and run graphical applications as if you were physically logged in to the
+                    Hoffman2
+                    Cluster.</p>
+                <p>It's important to note that you will need to have an active user account on the Hoffman2 Cluster and
+                    a working
+                    internet connection to use the X2Go client. You may also need to configure your firewall settings to
+                    allow the X2Go
+                    client to connect to the Hoffman2 Cluster.</p>
+                <p>If you encounter any issues while connecting, you can refer to the official website link provided for
+                    more
+                    information and troubleshooting steps, or contact the cluster administrator for support.</p>
+
+                <h3 id="jupyter">Jupyter Lab/Notebook</h3>
+                <p>Open a terminal window on your local machine and use the <code>ssh</code> command to connect to the
+                    Hoffman2 Cluster using the following command:</p>
+                <pre><code>ssh username@hoffman2.idre.ucla.edu</code></pre>
+                <p>Replace <code>username</code> with your actual username for the cluster.</p>
+                <p>Once connected to the Hoffman2 Cluster, load the Anaconda module by running the following command:
+                </p>
+                <pre><code>module load anaconda</code></pre>
+                <p>Create a virtual environment for Jupyter by running the following command:</p>
+                <pre><code>conda create -n myenv python=3.8</code></pre>
+                <p>Activate the virtual environment by running the following command:</p>
+                <pre><code>conda activate myenv</code></pre>
+                <p>Install Jupyter by running the following command:</p>
+                <pre><code>conda install -c conda-forge jupyter</code></pre>
+                <p>Once Jupyter is installed, you can start a Jupyter Notebook session by running the following command:
+                </p>
+                <pre><code>jupyter notebook --no-browser --port=8888</code></pre>
+                <p>Jupyter Notebook will start and display a URL in the terminal window, which you will need to copy and
+                    paste into a web browser on your local machine.</p>
+                <p>You will be prompted to enter a token to authenticate. You can find the token in the terminal window,
+                    which will look something like this:</p>
+                <!-- <pre><code>http://localhost:8888/?token=abcd1234efgh5678ijkl</code></pre> -->
+                <img src="../img/jupyter_running.png">
+                <p>Copy the URL, paste it into a web browser on your local machine, and replace <code>localhost</code>
+                    with <code>hoffman2.idre.ucla.edu</code>.</p>
+                <p>You will be prompted to enter the token. Copy the token from the terminal window and paste it into
+                    the appropriate field on the login page.</p>
+                <p>Once you are authenticated, you will be presented with the Jupyter Notebook interface and can start
+                    working on your projects.</p>
+                <p>It's important to note that you will need to have an active user account on the Hoffman2 Cluster and
+                    a working internet connection to use Jupyter Notebook. You may also need to configure your firewall
+                    settings to allow Jupyter Notebook to connect to the Hoffman2 Cluster.</p>
+                <p>If you encounter any issues while connecting, you can refer to the official website link provided for
+                    more information and troubleshooting steps, or contact the cluster administrator for support.</p>
+
+                <h2 id="submitting-jobs">Submitting Jobs</h2>
+                <p><strong>Create a job script:</strong> Before you can submit a job, you need to create a job script
+                    that contains the commands you want to run on the cluster. The script should also include
+                    instructions for the SLURM scheduler, such as the resources needed for the job (e.g., number of CPU
+                    cores, memory, time limit, etc.) and the output and error files. You can use a text editor like
+                    <code>nano</code> or <code>vi</code> to create the script file, and save it with a <code>.sh</code>
+                    extension.</p>
+                <p>Here's an example of a job script for a simple bash command that prints "Hello, world!" to a file:
+                </p>
+                <pre><code>#!/bin/bash
+#SBATCH --partition=general
+#SBATCH --job-name=hello
+#SBATCH --output=hello.out
+#SBATCH --error=hello.err
+#SBATCH --ntasks=1
+
+echo "Hello, world!" > hello.txt
+</code></pre>
+                <p>This script requests to run on the general partition of the cluster, sets the job name to "hello,"
+                    and specifies the output and error files. The script then runs the <code>echo</code> command to
+                    print the message to a file named <code>hello.txt</code>.</p>
+                <p><strong>Load the required modules:</strong> Before you can run the job script, you may need to load
+                    any required software modules using the <code>module load</code> command. You can check the
+                    available modules on the cluster using the <code>module avail</code> command, and load the required
+                    modules by specifying the module name, version, and any dependencies.</p>
+                <p>For example, if you need to use the Python 3.7 module, you can load it with the following command:
+                </p>
+                <pre><code>module load python/3.7</code></pre>
+                <p><strong>Submit the job:</strong> Once you have created the job script and loaded any required
+                    modules, you can submit the job to the SLURM scheduler using the <code>sbatch</code> command. The
+                    <code>sbatch</code> command takes the name of the job script as an argument, and returns a job ID
+                    number that you can use to monitor the job status.</p>
+                <p>For example, to submit the "hello" job script, you can use the following command:</p>
+                <pre><code>sbatch hello.sh</code></pre>
+                <p><strong>Check the job status:</strong> You can check the status of your job using the
+                    <code>squeue</code> command, which displays a list of all running and pending jobs on the cluster.
+                    You can use the <code>-u</code> option to filter the list by user, and the <code>-j</code> option to
+                    display the details of a specific job ID.</p>
+                <p>For example, to check the status of the "hello" job, you can use the following command:</p>
+                <pre><code>squeue -j JOB_ID</code></pre>
+                <p><strong>Retrieve the output:</strong> Once the job has finished, you can retrieve the output files
+                    from the cluster using the File Transfer Protocol (FTP) or the Secure File Transfer Protocol (SFTP).
+                    You can use a client such as FileZilla to transfer files, or use command line tools such as
+                    <code>scp</code>, <code>rsync</code>, and <code>sftp</code>.</p>
+                <p>For example, to retrieve the output file <code>hello.txt</code> from the cluster to your local
+                    machine, you can use the following command:</p>
+                <pre><code>scp username@hoffman2.idre.ucla.edu:/path/to/hello.txt /local/destination/path</code></pre>
+
+                <h2 id="data">Transferring and Managing Data</h2>
+                <!-- <p>This section provides guidance on how to transfer and manage data on the Hoffman2 Cluster. It explains that users can transfer data to and from the cluster using the File Transfer Protocol (FTP) or the Secure File Transfer Protocol (SFTP). The section also provides information on the different storage options available on the cluster, such as the home, project, and scratch directories, and explains how to manage data in these directories.</p> -->
+
+<!-- <p><strong>Here's a guide on transferring and managing data on the Hoffman2 Cluster:</strong></p> -->
+
+<h3 id="transfer">Transferring Data</h3>
+<p>You can transfer data to and from the Hoffman2 Cluster using the File Transfer Protocol (FTP) or the Secure File Transfer Protocol (SFTP). You can use a client such as FileZilla to transfer files, or use command-line tools such as <code>scp</code>, <code>rsync</code>, and <code>sftp</code>.</p>
+<p>Here's how you can transfer files using the <code>scp</code> command:</p>
+<pre><code>scp /local/path/to/file username@hoffman2.idre.ucla.edu:/remote/path/to/destination</code></pre>
+<p>This command transfers the file from your local machine to the Hoffman2 Cluster. You can also transfer files from the cluster to your local machine by switching the local and remote paths.</p>
+<h3 id="manage">Managing Data</h3>
+<p>It's essential to keep your data organized and backed up on the Hoffman2 Cluster. The cluster provides different storage options such as home, project, and scratch:</p>
+<ul>
+    <li><strong>Home directory:</strong> The home directory is a personal directory that is backed up regularly. It has a limited amount of storage, and you should avoid storing large files or data sets in this directory.</li>
+    <li><strong>Project directory:</strong> The project directory is intended for collaborative research projects and has more storage than the home directory. It is backed up once a day, and the files are accessible to all members of the project.</li>
+    <li><strong>Scratch directory:</strong> The scratch directory is not backed up and is intended for temporary storage and storing large data sets. You can use this directory to store intermediate results and data files that you no longer need.</li>
+</ul>
+<p>You can check your disk usage and quota using the <code>quota</code> command. You can also list the contents of a directory using the <code>ls</code> command, and create new directories using the <code>mkdir</code> command.</p>
+<p>For example, to create a new directory called "mydata" in your home directory, you can use the following command:</p>
+<pre><code>mkdir ~/mydata</code></pre>
+<p>You can also move files and directories using the <code>mv</code> command, copy files and directories using the <code>cp</code> command, and delete files and directories using the <code>rm</code> command.</p>
+<p>For example, to move a file called <code>data.txt</code> from your home directory to the project directory, you can use the following command:</p>
+<pre><code>mv ~/data.txt /path/to/project/directory/</code></pre>
+<p>Overall, transferring and managing data on the Hoffman2 Cluster requires using tools like <code>scp</code>, <code>rsync</code>, and <code>sftp</code> to transfer files, and using commands like <code>quota</code>, <code>ls</code>, <code>mkdir</code>, <code>mv</code>, <code>cp</code>, and <code>rm</code> to manage your data files and directories. By following these steps, you can keep your data organized, secure, and accessible, and ensure that your research projects are successful.</p>
+
+<h2 id="manage-env">Managing the Environment</h2>
+<p>This section provides guidance on how to manage the software environment on the Hoffman2 Cluster. It explains that the cluster uses the Environment Modules package to manage the software environment and allows users to easily switch between different versions of software packages and libraries. The section provides an example of how to load modules using the <code>module load</code> command and notes that users can use the <code>module list</code> command to see a list of currently loaded modules.</p>
+<!-- <p><strong>Here's how to set up and manage the environment on the Hoffman2 Cluster:</strong></p> -->
+
+<h3 id="load-modules">Loading Modules</h3><p>The cluster uses the Environment Modules package to manage the software environment. The Environment Modules package allows you to easily switch between different versions of software packages and libraries.</p>
+<p>Once you are logged in to the Hoffman2 Cluster, you will need to load the modules that you need to access the software and tools on the cluster. You can do this by typing the command <code>module load package_name</code> and replacing <code>package_name</code> with the name of the package you want to load.</p>
+<p>For example, to load the GCC compiler, you can use the following command:</p>
+<pre><code>module load gcc</code></pre>
+<p>You can use the <code>module avail</code> command to see a list of available modules on the cluster, and the <code>module list</code> command to see the modules that are currently loaded.</p>
+
+<h3 id="unload-modules">Unloading Modules</h3>
+<p>You can also unload a module using the <code>module unload package_name</code> command. This command removes the module from your environment.</p>
+
+<h3 id="manage-env-sub">Managing Your Environment</h3>
+<p>You can create and manage your own environment on the Hoffman2 Cluster using the <code>module spider</code> command. This command allows you to search for modules, see module dependencies, and view available versions of a module.</p>
+<p>For example, to search for a module, you can use the following command:</p>
+<pre><code>module spider package_name</code></pre>
+<p>To view the dependencies of a module, you can use the following command:</p>
+<pre><code>module spider package_name --deps</code></pre>
+<p>You can also use the <code>module save</code> command to create a module file that loads a specific set of modules. This can be useful if you frequently use the same modules for your work.</p>
+
+<h3 id="change-mods">Changing Default Modules</h3>
+<p>You can change the default modules that are loaded when you log in to the Hoffman2 Cluster by creating a module file in your home directory. This module file is called <code>~/.modules</code>, and it specifies the modules that should be loaded when you log in.</p>
+<p>For example, to set the default module to load the GCC compiler, you can create a <code>.modules</code> file in your home directory with the following line:</p>
+<pre><code>module load gcc</code></pre>
+
+<h3 id="remove-mods">Removing Custom Modules</h3>
+<p>You can remove custom modules that you have created using the <code>module purge</code> command. This command removes all loaded modules from your environment, including custom modules that you have created.</p>
+<p>By following these steps, you can set up and manage your environment on the Hoffman2 Cluster, allowing you to easily switch between different software packages and libraries and customize your environment to meet your specific needs.</p>
+
+<h2 id="monitor-cluster">Monitoring the Cluster Status</h2>
+<p>This section provides guidance on how to monitor the status of the Hoffman2 Cluster. It explains that users can use the <code>sinfo</code> command to check the status of the cluster, including the number of jobs running, the number of nodes available, and the amount of memory and CPU time used by jobs.</p>
+<!-- <p><strong>Here's how to monitor the status of the Hoffman2 Cluster:</strong></p> -->
+
+<h3 id="check-status">Checking the Status of Nodes</h3>
+<p>The <code>sinfo</code> command displays a summary of the status of nodes on the cluster. By default, it shows the status of all nodes in the cluster. The output includes the state of each node, such as "idle," "alloc," or "drain," as well as the number of CPUs, memory, and other resources available on each node.</p>
+<p>To run the <code>sinfo</code> command, simply type the following command in your terminal:</p>
+<pre><code>sinfo</code></pre>
+
+<h3 id="view-job-info">Viewing Job Information</h3>
+<p>You can also use the <code>squeue</code> command to view information about jobs that are currently running or pending on the cluster. This command displays information such as the job ID, user, partition, and job status, as well as the resources being used by the job, such as memory and CPU time.</p>
+<p>To view information about all jobs on the cluster, you can run the following command:</p>
+<pre><code>squeue</code></pre>
+<p>You can also use the <code>-u</code> option to view information about your own jobs:</p>
+<pre><code>squeue -u username</code></pre>
+
+<h3 id="monitor-resources">Monitoring Resource Usage</h3>
+<p>The <code>sacct</code> command allows you to monitor resource usage for jobs that have completed. This command displays detailed information about the resources used by each job, including CPU time, memory usage, and I/O operations.</p>
+<p>To view resource usage for all completed jobs, you can run the following command:</p>
+<pre><code>sacct</code></pre>
+<p>You can also use the <code>-u</code> option to view information about your own jobs:</p>
+<pre><code>sacct -u username</code></pre>
+
+<h3 id="view-logs">Viewing System Logs</h3>
+<p>Finally, you can view system logs to monitor the performance of the cluster and diagnose any issues. The system logs are stored in the <code>/var/log</code> directory on the cluster.</p>
+<p>To view the system logs, you can use the <code>tail</code> command. For example, to view the last 100 lines of the messages log, you can run the following command:</p>
+<pre><code>tail -n 100 /var/log/messages</code></pre>
+<p>By using these commands, you can monitor the status of the Hoffman2 Cluster and track resource usage to ensure that your jobs are running smoothly and efficiently.</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>This section provides guidance on how to troubleshoot issues on the Hoffman2 Cluster. It explains that users can check the IDRE website for troubleshooting tips and contact the IDRE support team for assistance.</p>
+
+<!-- <p><strong>Here's an extensive guide on troubleshooting common issues on the Hoffman2 Cluster:</strong></p> -->
+
+<!-- <h3 id="troubleshooting">Troubleshooting Steps</h3> -->
+
+<h3 id="check-docs">Check the Documentation</h3>
+<p>The first step to troubleshooting issues on the Hoffman2 Cluster is to consult the official documentation. The documentation includes detailed information about how to use the cluster, including instructions on how to submit jobs, transfer data, and monitor system performance.</p>
+
+<h3 id="contact-support">Contact the Cluster Support Team</h3>
+<p>If you are unable to resolve your issue using the documentation, you can contact the Cluster Support Team for assistance. The support team is available to answer questions and provide guidance on how to use the cluster effectively.</p>
+<p>You can contact the Cluster Support Team by sending an email to <a href="mailto:hpc@idre.ucla.edu">hpc@idre.ucla.edu</a> or by submitting a support request through the IDRE website.</p>
+
+<h3 id="check-logs">Check System Logs</h3>
+<p>If you are experiencing issues with a specific job or task, you can check the system logs to diagnose the issue. The system logs are stored in the <code>/var/log</code> directory on the cluster.</p>
+<p>You can use the <code>tail</code> command to view the last few lines of a log file. For example, to view the last 100 lines of the messages log, you can run the following command:</p>
+
+<pre><code>tail -n 100 /var/log/messages</code></pre>
+
+<h3 id="check-job-status">Check Job Status</h3>
+<p>If you are experiencing issues with a job that you have submitted, you can check the status of the job using the <code>squeue</code> command. This command displays information about jobs that are currently running or pending on the cluster, including the job ID, user, partition, and job status.</p>
+<p>If your job is not running, you can try resubmitting it or adjusting the job parameters to use fewer resources.</p>
+
+<h3 id="check-storage-space">Check Storage Space</h3>
+<p>If you are experiencing issues with transferring or managing data on the cluster, you may be running out of storage space. You can check your available storage space using the <code>df</code> command.</p>
+<p>For example, to view the available space on your home directory, you can run the following command:</p>
+
+<pre><code>df -h ~</code></pre>
+
+<h3 id="check-network-connection">Check Network Connection</h3>
+<p>If you are unable to connect to the cluster, you may be experiencing network connectivity issues. You can check your network connection using the <code>ping</code> command.</p>
+<p>For example, to test connectivity to the cluster, you can run the following command:</p>
+
+<pre><code>ping hoffman2.idre.ucla.edu</code></pre>
+
+<h3 id="check-firewall-settings">Check Firewall Settings</h3>
+<p>If you are unable to connect to the cluster, you may need to adjust your firewall settings to allow access to the cluster. You can check your firewall settings using the <code>iptables</code> command.</p>
+<p>For example, to view your current firewall rules, you can run the following command:</p>
+
+<pre><code>iptables -L</code></pre>
+
+<p>By using these troubleshooting steps, you can diagnose and resolve common issues on the Hoffman2 Cluster and ensure that your work proceeds smoothly and efficiently.</p>
+
+
+                <div class="lavenderBox">
+                    <div class="header">Panel title</div>
+                    <div class="subtitle linklist"><a href="#">Lorem</a> <a href="#">Ipsum</a> <a
+                            href="#">Dolorestitas</a> </div>
+                    <div class="linklist">
+                        <a href="#">Percipit </a> <a href="#">Mnesarchum </a> <a href="#">Molestie </a> <a
+                            href="#">Phaedrum </a> <a href="#">Luptatum constituam </a> <a href="#">Habeo adipisci </a>
+                        <a href="#">Inani zril </a> <a href="#">Forensibus sea </a> <a href="#">Habeo adipisci </a> <a
+                            href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Has et partem
+                        </a><a href="#">Percipit </a> <a href="#">Mnesarchum </a> <a href="#">Molestie </a> <a
+                            href="#">Phaedrum </a> <a href="#">Luptatum constituam </a> <a href="#">Habeo adipisci </a>
+                        <a href="#">Inani zril </a> <a href="#">Vel nisl albucius </a> <a href="#">Habeo adipisci </a>
+                        <a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Percipit
+                            maiestatis </a> <a href="#">Regione suscipit </a> <a href="#">Percipit maiestatis </a>
+                    </div>
+
+                    <div class="subtitle">Subtitle</div>
+                </div>
+
+                <div class="categories">
+                    <a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Has et partem </a>
+                </div>
+
+            </div>
+            <div class="pagefooter">
+                This page was last edited on 29.07.2017 | Template by <a href="http://html5-templates.com/"
+                    target="_blank" rel="nofollow">HTML5 Templates</a> <!-- Please leave this link unchanged -->
+                <div class="footerlinks">
+                    <a href="#">Privacy policy</a> <a href="#">About</a> <a href="#">Terms and conditions</a> <a
+                        href="#">Cookie statement</a> <a href="#">Developers</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="../script.js"></script>
+
+
+</body>
+
+</html>

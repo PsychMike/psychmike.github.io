@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SPT</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="http://html5-templates.com/" />
+        <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+        <link rel="stylesheet" href="../style.css">
+        <style>
+            .slider {
+                position: relative;
+                max-width: 80%;
+                margin: auto;
+                overflow: hidden;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                transform: translateX(0%);
+            }
+
+            .slide {
+                min-width: 100%;
+                box-sizing: border-box;
+                display: none;
+            }
+
+            .slide.active {
+                display: block;
+            }
+
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 20px;
+                z-index: 10;
+            }
+
+            .arrow.left {
+                left: 10px;
+            }
+
+            .arrow.right {
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapAll clearfix">
+            <div class="mainsection">
+                <div class="article">
+                    <h1>Slides Viewer</h1>
+                    <p class="siteSub">From Wikipedia, the free encyclopedia</p>
+                    <p class="roleNote">This section contains images for Slides 1 to 61.</p>
+                    
+                    <div class="slider">
+                        <div class="slides">
+                            <!-- Dynamically load slides -->
+                            <script>
+                                for (let i = 1; i <= 61; i++) {
+                                    document.write(`<img src="../spt_slides/Slide${i}.png" alt="Slide ${i}" class="slide" />`);
+                                }
+                            </script>
+                        </div>
+                        <button class="arrow left" onclick="prevSlide()">&#8249;</button>
+                        <button class="arrow right" onclick="nextSlide()">&#8250;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            // Initialize the first slide
+            showSlide(currentSlide);
+        </script>
+    </body>
+</html>
