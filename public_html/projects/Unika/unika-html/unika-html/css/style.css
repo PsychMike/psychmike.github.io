@@ -330,9 +330,11 @@ section {
 
 #text-carousel-intro-section {
 	height: 100%;
+	max-height: 800px;
 }
 #text-carousel-intro-section .container {
 	height: 100%;
+	/* padding-bottom: 400px; */
 }
 #text-carousel-intro-section .caption {
 	position: relative;
@@ -349,6 +351,7 @@ section {
 #text-carousel-intro-section .caption p {
 	letter-spacing: 2px;
 	font-size: 16px;
+	padding-bottom:
 }
 /* End text carousel intro */
 /* ===== End intro ===== */
