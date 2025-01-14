@@ -10,6 +10,7 @@ Master Stylesheet
 
 ---------------------------------------------------------------------------------*/
 
+
 html {
 	height: 100% !important;
 }
@@ -546,34 +547,87 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 
 /* ===== Begin testimonial ===== */
 .testimonial {
-	position: relative;
-	overflow: hidden;
-	padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    max-height: 400px; /* Fixed height */
+    padding: 0; /* Remove unnecessary padding */
+    background-size: cover; /* Ensure the image fits proportionally */
+    background-position: center center; /* Center the image */
+    display: flex; /* Align content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
 }
 
 .testimonial .cover {
-	background-color: rgba(0, 7, 11, 0.87);
+    background-color: rgba(0, 7, 11, 0.7); /* Dark overlay */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
+
+/* Center the quotes container */
 .testimonial-inner {
-	position: relative;
-	max-width: 800px;
-	z-index: 9;
+    max-width: 800px; /* Restrict the width of the content */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Align text within the container */
 }
-.testimonial-inner .heading {
-	margin-bottom: 20px;
-}
+
+/* Adjust blockquote styles for better appearance */
 .testimonial-inner blockquote {
-	border: none;
+    text-align: center; /* Center-align the blockquote content */
+    margin: 0 auto 20px; /* Center and add spacing */
+    padding: 10px 20px; /* Add padding for better readability */
 }
+
 .testimonial-inner blockquote p {
-	letter-spacing: 2px;
-	padding-bottom: 20px;
+    font-size: 1.2rem; /* Adjust font size for better visibility */
+    line-height: 1.5; /* Improve line spacing */
+    color: #fff; /* Ensure text color contrasts well with background */
 }
+
+.testimonial-inner blockquote footer {
+    margin-top: 10px; /* Add spacing between text and footer */
+    font-style: italic; /* Add a distinctive style for attribution */
+    color: #ccc; /* Lighten footer color for subtle appearance */
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        height: auto; /* Allow auto height on smaller screens */
+        padding: 20px 0;
+    }
+
+    .testimonial-inner blockquote p {
+        font-size: 0.9rem; /* Smaller font for smaller screens */
+        line-height: 1.3;
+    }
+}
+
 .testimonial-inner blockquote cite {
 	font-style: normal;
 	color: #fff;
 	font-size: 1.5em;
 }
+
+
+/* Center items in the testimonial row */
+#testimonial-section .row.d-flex {
+	min-height: 400px; /* or whatever height you prefer */
+	padding: 40px 0;   /* space above/below */
+  }
+  
+  /* Make sure the headings in the left column have some spacing */
+  #testimonial-section .col-md-4.text-center h2 {
+	margin-bottom: 10px;
+  }
+  #testimonial-section .col-md-4.text-center p.subtitle {
+	margin-bottom: 0;  /* or adjust as needed */
+  }
+  
+  
+
 /* ===== End testimonial ===== */
 
 
@@ -1202,6 +1256,131 @@ p.subtitle {
 }
 
 
+/* CTA Section */
+#cta-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 60px 20px;
+}
+
+.cta-logo {
+    max-height: 200px;
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    text-align: left;
+}
+
+.cta-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d4574b;
+    border-color: #d4574b;
+    text-decoration: none;
+}
+
+
+/* Service Buttons */
+.service-button {
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.service-button .button-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.service-button h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.service-button p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* General Spacing */
+.service-buttons-wrapper {
+    margin-bottom: 50px; /* Space below services section */
+	padding-top: 80px; /* Increased space above services section */
+}
+
+.reviews-section {
+    margin-top: 50px; /* Space above reviews section */
+}
+
+/* Spacing Around Calendar Button */
+.service-buttons-wrapper .btn-primary {
+    margin-top: 40px; /* Space between services and calendar button */
+    margin-bottom: 60px; /* Space between calendar button and reviews */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-buttons-wrapper {
+        margin-bottom: 40px; /* Adjust space for smaller screens */
+    }
+
+    .reviews-section {
+        margin-top: 40px; /* Adjust space above reviews section */
+    }
+
+    .btn-primary {
+        padding: 10px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .service-button {
+        height: 200px; /* Reduce button height for smaller screens */
+    }
+}
 
 
 

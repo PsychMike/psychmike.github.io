@@ -104,10 +104,13 @@ $("#owl-partners").owlCarousel({
 
 // Testimonials carousel
 $("#owl-testimonial").owlCarousel({
-    singleItem : true,
-    pagination : true,
-    autoHeight : true
-})
+    singleItem: true,
+    pagination: true,
+    autoHeight: true,
+    autoPlay: 6000, // e.g. 6 seconds
+    stopOnHover: true // optionally pause on hover
+  });
+  
 
 
 ////////////////////////////////////////////////////////////////////
