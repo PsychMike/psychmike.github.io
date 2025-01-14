@@ -337,22 +337,20 @@ section {
 	/* padding-bottom: 400px; */
 }
 #text-carousel-intro-section .caption {
-	position: relative;
-	top: 50%;
-	margin-top: -70px;
-}
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
 #text-carousel-intro-section .caption h1 {
-	margin-top: 0;
-	margin-bottom: 5px;
-	font-size: 60px;
-	text-transform: uppercase;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-}
-#text-carousel-intro-section .caption p {
-	letter-spacing: 2px;
-	font-size: 16px;
-	padding-bottom:
-}
+    font-size: 60px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  }
+  #text-carousel-intro-section .caption p {
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
 /* End text carousel intro */
 /* ===== End intro ===== */
 
@@ -778,75 +776,136 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 
 /* ===== Begin team ===== */
 .team-item {
-	height: 120px;
-}	
-.team-item .team-triangle {
+	/* Remove fixed height to allow content to expand naturally */
+	height: auto;
+  }
+  
+  /* The triangle container for the image/hover effect */
+  .team-item .team-triangle {
 	width: 120px;
 	height: 120px;
-	/* background: transparent; */
 	background-color: hsl(239, 78%, 48%);
-	-ms-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 	margin: 0 auto;
 	position: relative;
 	top: 25px;
 	box-shadow: 0 0 0 6px #FFFFFF, 0 0 0 7px #dadbdb;
 	overflow: hidden;
-}
-.team-item img {
-    max-width: 100%;
-}
-.team-items {
-	margin-bottom: 50px;
-	padding-top: 10px;
+  }
+  
+  .team-item img {
+	max-width: 100%;
+  }
+  
+  .team-items {
+	margin-bottom: 60px;
+	/* padding-top: 10px; */
 	margin-top: 0;
-}
-.team-triangle .content {
-	-ms-transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
+  }
+  
+  
+  /* 
+	 On mobile screens (under 768px):
+	 1) Hide all items after the 3rd.
+	 2) Make each item 100% wide (stacked vertically).
+	 3) Offset each of the first three items slightly left or right.
+  */
+  @media (max-width: 767px) {
+	.team-items .col-md-2 {
+	  width: 100% !important; /* Stacked full width */
+	  float: none !important; /* No float, so they stack vertically */
+	  margin-bottom: 30px;    /* Spacing between items */
+	  margin-left: auto;      /* Center them by default */
+	  margin-right: auto;     /* Center them by default */
+	}
+  
+	/* Hide any items after the 3rd on mobile */
+	.team-items .col-md-2:nth-child(n+4) {
+	  display: none;
+	}
+  
+	/* First item slightly "right of center" */
+	.team-items .col-md-2:nth-child(1) {
+	  margin-left:- 10%; /* Adjust as desired, e.g. 15% offset from left */
+	}
+  
+	/* Second item slightly "left of center" */
+	.team-items .col-md-2:nth-child(2) {
+	  margin-left: -10%;  /* or even negative margin if you want it more left */
+	}
+  
+	/* Third item again "right of center" */
+	.team-items .col-md-2:nth-child(3) {
+	  margin-left: 10%;
+	}
+  }
+  
+  /* The inner content container inside the triangle */
+  .team-triangle .content {
 	transform: rotate(-45deg);
 	top: -27px;
 	position: absolute;
 	left: -19px;
 	width: 190px;
 	height: 190px;
-}
-.team-hover {
+  }
+  
+  /* Hover overlay */
+  .team-hover {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba( 103, 109, 117, 0.9);
+	background: rgba(103, 109, 117, 0.9);
 	opacity: 0;
-	-webkit-transition: opacity 0.4s ease-in; /* For Safari 3.1 to 6.0 */
-    transition: opacity 0.4s ease-in;
-}
-.team-item .team-triangle:hover .team-hover {
+	transition: opacity 0.4s ease-in;
+  }
+  
+  .team-item .team-triangle:hover .team-hover {
 	opacity: 1;
-}
-.team-hover i {
-    color: rgba(255, 255, 255,.75);
-    font-size: 28px;
-    margin-top: 57px;
-    position: relative;
-}
-.team-hover p {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 0;
-}
-.team-items .col-md-2:nth-child(7n+5) {
+  }
+  
+  .team-hover i {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 28px;
+	margin-top: 57px;
+	position: relative;
+  }
+  
+  .team-hover p {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: 0;
+  }
+  
+  /* 
+	 Original nth-child rules for large screens (optional).
+	 You can keep or remove these if needed for your larger grid logic.
+  */
+  .team-items .col-md-2:nth-child(7n+5) {
 	clear: left;
 	margin-left: 24.9999999%;
-}
-.team-items .col-md-2:nth-child(7n+1) {
+  }
+  .team-items .col-md-2:nth-child(7n+1) {
 	clear: left;
 	margin-left: 16.6666666%;
-}
-/* ===== End team ===== */
+  }
+
+  @media (max-width: 768){
+
+	.team-items .col-md-2:nth-child(7n+5) {
+		clear: left;
+		margin-left: 24.9999999%;
+	  }
+	  .team-items .col-md-2:nth-child(7n+1) {
+		clear: none;
+		margin-left: 0;
+	  }
+  }
+  /* ===== End team ===== */
+  
 
 
 /* ===== Begin partners ===== */
@@ -1367,6 +1426,10 @@ p.subtitle {
     margin-bottom: 60px; /* Space between calendar button and reviews */
 }
 
+#AZBD_video{
+	max-height: 200px;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .service-buttons-wrapper {
@@ -1384,6 +1447,11 @@ p.subtitle {
     .service-button {
         height: 200px; /* Reduce button height for smaller screens */
     }
+
+	#text-carousel-intro-section {
+		/* height: 100%; */
+		max-height: 300px;
+	}
 }
 
 
