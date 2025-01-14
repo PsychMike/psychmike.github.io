@@ -553,9 +553,9 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
     padding: 0; /* Remove unnecessary padding */
     background-size: cover; /* Ensure the image fits proportionally */
     background-position: center center; /* Center the image */
-    display: flex; /* Align content */
     align-items: center; /* Vertically center content */
     justify-content: center; /* Horizontally center content */
+	padding-top: 20px;
 }
 
 .testimonial .cover {
