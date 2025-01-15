@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Responsive Navbar</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- jQuery (required for script below) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="theme.js"></script>
+</head>
+<body>
+
+<header id="header" class="header-main">
+  <!-- Begin Navbar -->
+  <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- LOGO / BRAND -->
+        <a class="navbar-brand" href="index.html">
+          <!-- Make sure the logo path is correct; alt text improved -->
+          <img src="img/AZBD_logo.png" alt="AZBD Logo" />
+        </a>
+        
+        <!-- MOBILE MENU TRIGGER -->
+        <!-- Added role="button" and aria-label for accessibility -->
+        <button type="button" class="menu-trigger" aria-label="Toggle navigation">
+            <span>Menu</span>
+          </button>
+          
+      </div>
+
+      <!-- Navbar menu -->
+      <div class="nav" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Updated “Home” link to use an anchor ID instead of 'body' -->
+          <li><a class="page-scroll" href="#top">Home</a></li>
+          <li><a class="page-scroll" href="#about-section">About</a></li>
+          <li><a class="page-scroll" href="#services-section">Services</a></li>
+          <li><a class="page-scroll" href="#portfolio-section">Reels</a></li>
+          <li><a class="page-scroll" href="#counter-section">Team</a></li>
+          <li>
+            <a class="page-scroll" href="https://bootsanddukesdance.square.site/s/shop" target="_blank"
+              >Prices</a
+            >
+          </li>
+          <li><a class="page-scroll" href="#contact-section">Contact</a></li>
+
+          <!-- Submenu (Dropdown) -->
+          <!-- Added aria-haspopup & aria-expanded for accessibility; renamed link text -->
+          <!-- <li class="submenu">
+            <a href="javascript:;" aria-haspopup="true" aria-expanded="false">More</a>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="single-product.html">Single Product</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </li> -->
+
+        </ul>
+      </div>
+    </div><!-- /.container -->
+  </nav>
+  <!-- End Navbar -->
+</header>
+
+<!-- JavaScript for toggling the menu on mobile and handling submenus -->
+<script>
+  (function ($) {
+    "use strict";
+
+    $(document).ready(function () {
+      // Toggle navbar menu on mobile
+      $(".menu-trigger").on("click", function () {
+        $(this).toggleClass("active");
+        $("#navbar-menu").slideToggle(200);
+      });
+
+      // Dropdown submenu toggle for mobile
+      $(".submenu > a").on("click", function (e) {
+        e.preventDefault();
+        $(this).next("ul").slideToggle(200);
+        // Toggle aria-expanded for accessibility
+        const expanded = $(this).attr("aria-expanded") === "true";
+        $(this).attr("aria-expanded", !expanded);
+      });
+    });
+  })(jQuery);
+</script>
+
+</body>
+</html>

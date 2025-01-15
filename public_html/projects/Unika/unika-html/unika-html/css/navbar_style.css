@@ -1,0 +1,650 @@
+/********************************** 
+ * NAVIGATION & SUBMENU STYLES 
+ **********************************/
+
+/* Submenu parent */
+.nav li.submenu {
+    position: relative;
+    padding-right: 30px;
+  }
+  
+  /* FontAwesome downward arrow for submenu parent */
+  .nav li.submenu:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    font-size: 12px;
+    color: #2a2a2a;
+    position: absolute;
+    right: 18px;
+    top: 12px;
+  }
+  
+  .background-header .main-nav .nav li.submenu:after {
+    color: #2a2a2a;
+  }
+  
+  /* Submenu UL - hidden by default */
+  .nav li.submenu ul {
+    position: absolute; 
+    display: block; 
+    flex-direction: column; 
+    width: 200px; 
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    top: 50px;
+    opacity: 0;
+    transform: translateY(+2em);
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s,
+                visibility 0s linear 0.3s,
+                z-index 0s linear 0.01s;
+  }
+  
+  .nav li.submenu ul li {
+    display: block;
+    width: 100%;
+  }
+  
+  .nav li.submenu ul li a {
+    display: block;
+    background: #f7f7f7;
+    color: #2a2a2a !important;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s, color 0.3s, padding-left 0.3s;
+  }
+  
+  .nav li.submenu ul li a:hover {
+    background: #fff;
+    color: #aaa !important;
+    padding-left: 25px;
+  }
+  
+  /* Hover triggers the submenu to show */
+  .nav li.submenu:hover ul {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+  }
+  
+  /********************************** 
+   * MENU TRIGGER (HAMBURGER) STYLES
+   **********************************/
+  
+  .menu-trigger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 33px;
+    width: 32px;
+    height: 40px;
+    text-indent: -9999em;
+    z-index: 99;
+    right: 40px;
+    color: #333;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    background-color: transparent; /* Default background */
+  }
+  
+  .background-header .main-nav .menu-trigger {
+    top: 23px;
+  }
+  
+  /* The three lines of the hamburger icon */
+  .menu-trigger span,
+  .menu-trigger span:before,
+  .menu-trigger span:after {
+    transition: all 0.4s;
+    background-color: #1e1e1e;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 0;
+    content: "";
+  }
+  
+  .menu-trigger span {
+    top: 16px;
+  }
+  
+  .menu-trigger span:before {
+    transform-origin: 33% 100%;
+    top: -10px;
+    z-index: 10;
+  }
+  
+  .menu-trigger span:after {
+    transform-origin: 33% 0;
+    top: 10px;
+  }
+  
+  /* Active state of hamburger icon (turns into an X) */
+
+  .menu-trigger.active {
+    background-color: blue; /* Debug color */
+  }
+
+  .menu-trigger.active span,
+  .menu-trigger.active span:before,
+  .menu-trigger.active span:after {
+    background-color: transparent;
+    width: 100%;
+  }
+  
+  .menu-trigger.active span:before {
+    transform: translateY(6px) translateX(1px) rotate(45deg);
+    background-color: #1e1e1e;
+  }
+  
+  .background-header .main-nav .menu-trigger.active span:before {
+    background-color: #1e1e1e;
+  }
+  
+  .menu-trigger.active span:after {
+    transform: translateY(-6px) translateX(1px) rotate(-45deg);
+    background-color: #1e1e1e;
+  }
+  
+  .background-header .main-nav .menu-trigger.active span:after {
+    background-color: #1e1e1e;
+  }
+  
+  /********************************** 
+   * HEADER-AREA & STICKY HEADER
+   **********************************/
+  
+  .header-area.header-sticky {
+    min-height: 80px;
+  }
+  
+  .header-area .nav {
+    margin-top: 30px;
+  }
+  
+  .header-area.header-sticky .nav li a.active {
+    color: #aaa;
+  }
+  
+  /********************************** 
+   * MEDIA QUERY (MAX-WIDTH: 1200px)
+   **********************************/
+  
+  @media (max-width: 1200px) {
+    .nav li {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .header-area .main-nav:before {
+      display: none;
+    }
+  }
+  
+  /********************************** 
+   * MOBILE STYLES (MAX-WIDTH: 767px)
+   **********************************/
+  
+  @media (max-width: 767px) {
+  
+    /* Logo adjustments */
+    .logo {
+      color: #1e1e1e;
+    }
+  
+    .header-area.header-sticky .nav li a:hover,
+    .header-area.header-sticky .nav li a.active {
+      color: #aaa!important;
+      opacity: 1;
+    }
+  
+    .header-area.header-sticky .nav li.search-icon a {
+      width: 100%;
+    }
+  
+    /* Header area layout on mobile */
+    .header-area {
+      background-color: #f7f7f7;
+      padding: 0px 15px;
+      height: 100px;
+      box-shadow: none;
+      text-align: center;
+    }
+  
+    .header-area .container {
+      padding: 0px;
+    }
+  
+    .header-area .logo {
+      margin-left: 30px;
+    }
+  
+    /* Show the menu trigger on mobile */
+    .header-area .menu-trigger {
+      display: block !important;
+    }
+  
+    /* Hide overflow for small screens */
+    {
+      overflow: hidden;
+    }
+  
+    /* Collapse the nav into a hidden panel */
+    .nav {
+      float: none;
+      width: 100%;
+      display: none;
+      transition: all 0s ease 0s;
+      margin-left: 0px;
+    }
+  
+    .nav li:first-child {
+      border-top: 1px solid #eee;
+    }
+  
+    /* Push the dropdown down when sticky */
+    .header-area.header-sticky .nav {
+      margin-top: 100px !important;
+    }
+  
+    .nav li {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  
+    .nav li a {
+      height: 50px !important;
+      line-height: 50px !important;
+      padding: 0px !important;
+      border: none !important;
+      background: #f7f7f7 !important;
+      color: #191a20 !important;
+    }
+  
+    .nav li a:hover {
+      background: #eee !important;
+      color: #aaa!important;
+    }
+  
+    /* Re-override for submenus on mobile */
+    .nav li.submenu ul {
+      position: absolute;
+      display: block;
+      flex-direction: column;
+      width: 200px;
+      box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      top: 50px;
+      opacity: 0;
+      transform: translateY(+2em);
+      visibility: hidden;
+      z-index: -1;
+      transition: all 0.3s ease-in-out 0s,
+                  visibility 0s linear 0.3s,
+                  z-index 0s linear 0.01s;
+    }
+  
+    .nav li.submenu ul li {
+      display: block;
+      width: 100%;
+    }
+  
+    .nav li.submenu ul li a {
+      display: block;
+      background: #f7f7f7;
+      color: #2a2a2a !important;
+      padding: 10px 20px;
+      text-align: left;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .nav li.submenu ul li a:hover {
+      background: #fff;
+      color: #aaa !important;
+      padding-left: 25px;
+    }
+  
+    .nav li.submenu:hover ul {
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transform: translateY(0%);
+      transition-delay: 0s, 0s, 0.3s;
+    }
+  }
+  
+  /********************************** 
+   * ADDITIONAL MENU-TRIGGER (TEXT-BASED) 
+   * FOR A DIFFERENT LAYOUT (OPTIONAL)
+   **********************************/
+  
+  .menu-trigger span {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /********************************** 
+   * GENERAL .NAV STYLES
+   **********************************/
+  
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav ul li {
+    margin: 0 10px;
+  }
+  
+  .nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+  
+  .nav ul li a:hover {
+    color: #007BFF;
+  }
+  
+  /********************************** 
+   * RESPONSIVE NAVBAR MENU (MAX-WIDTH: 768px)
+   **********************************/
+  
+  @media screen and (max-width: 768px) {
+    .menu-trigger {
+      display: inline-block; /* Show text-based trigger */
+    }
+  
+    #navbar-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 60px; /* Adjust based on header height */
+      right: 0;
+      width: 100%;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  
+    #navbar-menu.active {
+      display: flex;
+    }
+  
+    .nav ul li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .nav ul li a {
+      padding: 10px;
+    }
+  }
+  
+  /********************************** 
+   * NAVBAR CORE STYLES
+   **********************************/
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; 
+    background-color: #fff !important;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  
+  /* Set navbar text color to black */
+  .navbar-nav > li > a {
+    color: #000000 !important; 
+    font-weight: 600; 
+    text-transform: none; 
+    font-size: 13px;
+  }
+  
+  /* On hover, change the text color */
+  .navbar-nav > li > a:hover {
+    color: #3a3939 !important; 
+  }
+  
+  /* Style the brand (logo text or image) */
+  .navbar-brand {
+    color: #000000 !important;
+    font-weight: bold; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100%; 
+    padding: 0; 
+    margin: 0 auto; 
+  }
+  
+  .navbar-brand img {
+    max-height: 60px; 
+    height: auto; 
+    width: auto; 
+    display: block; 
+    margin: 0 auto; 
+    padding-top: 5px;
+  }
+  
+  /* Navbar shrink (scroll) */
+  .navbar-shrink {
+    z-index: 9999;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+  
+  .navbar-shrink .navbar-brand {
+    color: #001f3f !important; /* Dark blue color for brand text on shrink */
+  }
+  
+  /********************************** 
+   * COLLAPSE & TOGGLE (FOR MOBILE)
+   **********************************/
+  
+  .navbar-toggle {
+    border-color: #000000; 
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #000000; 
+  }
+  
+  /* For when the navbar is collapsed */
+  @media screen and (max-width: 768px) {
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #fff;
+      width: 100%;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  
+    .navbar-collapse ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .navbar-collapse ul li a {
+      width: 100%;
+      padding: 10px 20px;
+      text-align: left;
+    }
+  
+    .navbar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .navbar-toggle {
+      margin-right: 10px;
+    }
+  }
+  
+  /********************************** 
+   * BRAND LOGO BACKGROUND VERSIONS (OPTIONAL)
+   **********************************/
+  
+  .navbar-default .navbar-brand,
+  .navbar-shrink .navbar-brand,
+  .navbar-transparent .navbar-brand,
+  .navbar-inverse .navbar-brand {
+    background-image: url(../img/AZBD_logo.png);
+  }
+  
+  /********************************** 
+   * DROPDOWN MENUS
+   **********************************/
+  
+  .dropdown-left {
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  .dropdown-right {
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+    background-color: transparent;
+  }
+  
+  .navbar-default .dropdown-menu,
+  .navbar-inverse .dropdown-menu {
+    padding: 10px 0;
+  }
+  
+  .dropdown-menu > li > a {
+    padding: 4px 20px;
+    text-transform: uppercase;
+  }
+  
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus,
+  .dropdown-menu > li > a.active,
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
+  /********************************** 
+   * FIXED NAVBAR & SHRINK SETTINGS
+   **********************************/
+  
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navbar-default.navbar-fixed-top.navbar-shrink .container {
+    /* Additional tweaks if needed */
+  }
+  
+  .navbar-fixed-top.navbar-shrink .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  .navbar-default.navbar-fixed-top.navbar-shrink .navbar-nav > li > a {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  
+  /********************************** 
+   * TRANSPARENT NAVBAR (OPTIONAL)
+   **********************************/
+  
+  .navbar-transparent {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .navbar-fixed-top.navbar-transparent .container {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+  
+  .navbar-fixed-bottom.navbar-transparent .container {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  
+  .navbar-transparent .navbar-nav > li > a {
+    color: #FFF;
+  }
+  
+  .navbar-transparent .navbar-brand,
+  .navbar-transparent .navbar-brand:focus {
+    color: #FFF;
+  }
+  
+  /********************************** 
+   * EXTRA REFINEMENTS
+   **********************************/
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-nav > li {
+    margin: 0 10px;
+  }
+  
+  .navbar-nav > li > a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  
+  .navbar-nav > li > a:hover {
+    color: #007BFF;
+  }
+  
