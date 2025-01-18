@@ -1172,6 +1172,10 @@ p.subtitle {
 }
 
 
+#AZBD-top-logo{
+	margin-top: 20px;
+}
+
 /* CTA Section */
 #cta-section {
     background-color: #f8f9fa; /* Light background for contrast */
@@ -1285,6 +1289,11 @@ p.subtitle {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+
+	#AZBD-top-logo{
+		margin-top: 0px;
+	}
+
     .service-buttons-wrapper {
         margin-bottom: 40px; /* Adjust space for smaller screens */
     }
