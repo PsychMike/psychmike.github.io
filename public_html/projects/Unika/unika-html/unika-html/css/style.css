@@ -624,8 +624,8 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 	height: auto;
   }
   
-  /* The triangle container for the image/hover effect */
-  .team-item .team-triangle {
+  /* The diamond container for the image/hover effect */
+  .team-item .team-diamond {
 	width: 120px;
 	height: 120px;
 	background-color: hsl(239, 78%, 48%);
@@ -684,15 +684,29 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 	}
   }
   
-  /* The inner content container inside the triangle */
-  .team-triangle .content {
-	transform: rotate(-45deg);
-	top: -27px;
-	position: absolute;
-	left: -19px;
-	width: 190px;
-	height: 190px;
-  }
+  /* The inner content container inside the diamond */
+  .team-diamond .content {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 150%; /* Match the diamond's dimensions */
+    height: 150%; /* Match the diamond's dimensions */
+    transform: rotate(-45deg); /* Align with the diamond's orientation */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    overflow: hidden; /* Ensure no overflow occurs */
+}
+
+
+  .team-diamond .content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center center; /* Centers the image within the container */
+    /* transform: rotate(-45deg); Keeps the image upright within the diamond */
+}
+
   
   /* Hover overlay */
   .team-hover {
@@ -706,7 +720,7 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 	transition: opacity 0.4s ease-in;
   }
   
-  .team-item .team-triangle:hover .team-hover {
+  .team-item .team-diamond:hover .team-hover {
 	opacity: 1;
   }
   
