@@ -25,7 +25,7 @@
   
   /* Submenu UL - hidden by default */
   .nav li.submenu ul {
-    position: absolute; 
+    position: absolute;
     display: block; 
     flex-direction: column; 
     width: 200px; 
@@ -130,11 +130,6 @@
   }
   
   /* Active state of hamburger icon (turns into an X) */
-
-  .menu-trigger.active {
-    background-color: blue; /* Debug color */
-  }
-
   .menu-trigger.active span,
   .menu-trigger.active span:before,
   .menu-trigger.active span:after {
@@ -431,6 +426,7 @@
     font-weight: 600; 
     text-transform: none; 
     font-size: 13px;
+    line-height: 70px; /* vertically center text for single-line links */
   }
   
   /* On hover, change the text color */
@@ -440,23 +436,28 @@
   
   /* Style the brand (logo text or image) */
   .navbar-brand {
-    color: #000000 !important;
-    font-weight: bold; 
     display: flex;
-    align-items: center;
-    justify-content: center; 
-    height: 100%; 
-    padding: 0; 
-    margin: 0 auto; 
+    align-items: center;  /* centers the logo vertically */
+    height: 70px;         /* match the navbar height */
+    margin: 0 !important; /* override any default margin */
+    padding: 0 !important;/* override any default padding */
+    /* line-height: 70px;  <-- removed to avoid conflicts with flex centering */
+  }
+  
+  /* Force the container & navbar-header to remove extra padding or margin */
+  .navbar .container,
+  .navbar-header {
+    padding: 0 !important;
+    margin: 0 !important;
   }
   
   .navbar-brand img {
-    max-height: 60px; 
-    height: auto; 
-    width: auto; 
+    max-height: 60px;
+    height: auto;
+    width: auto;
     display: block; 
-    margin: 0 auto; 
-    padding-top: 5px;
+    margin: 0 auto; /* optional horizontal centering */
+    /* vertical-align: middle; <-- removed, not needed with flexbox parent */
   }
   
   /* Navbar shrink (scroll) */
