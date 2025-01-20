@@ -6820,6 +6820,11 @@ a.close.disabled {
   color: #495057;
 }
 
+#carouselExampleIndicators:hover {
+  animation-play-state: paused;
+}
+
+
 .carousel {
   position: relative;
 }
