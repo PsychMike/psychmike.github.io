@@ -23,16 +23,25 @@
 
   <!-- Your Custom CSS -->
   <link rel="stylesheet" href="./css/solution.css" />
+
+  <style>
+    @media (max-width: 768px) {
+        .back-to-portfolio {
+            display: none;
+        }
+    }    
+  </style>
+
 </head>
 
 <body>
-            <!-- Top-left button for portfolio -->
-            <div style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
-                <a href="../../index.html" 
-                   style="background-color: #000; color: #fff; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-                    Back to Portfolio
-                </a>
-            </div>
+<!-- Top-left button for portfolio -->
+<div class="back-to-portfolio" style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
+  <a href="../../index.html" 
+     style="background-color: #000; color: #fff; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+      Back to Portfolio
+  </a>
+</div>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
