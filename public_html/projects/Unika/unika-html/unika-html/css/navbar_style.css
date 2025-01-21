@@ -23,56 +23,41 @@
     color: #2a2a2a;
   }
   
-  /* Submenu UL - hidden by default */
-  .nav li.submenu ul {
-    position: absolute;
-    display: block; 
-    flex-direction: column; 
-    width: 200px; 
-    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-    top: 50px;
-    opacity: 0;
-    transform: translateY(+2em);
-    visibility: hidden;
-    z-index: -1;
-    transition: all 0.3s ease-in-out 0s,
-                visibility 0s linear 0.3s,
-                z-index 0s linear 0.01s;
-  }
+/* Hide dropdown by default */
+.nav li.submenu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f7f7f7;
+  width: 200px;
+  box-shadow: 0 2px 28px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+}
   
-  .nav li.submenu ul li {
-    display: block;
-    width: 100%;
-  }
+/* Styling for submenu items */
+.nav li.submenu ul li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav li.submenu ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
   
-  .nav li.submenu ul li a {
-    display: block;
-    background: #f7f7f7;
-    color: #2a2a2a !important;
-    padding: 10px 20px;
-    text-align: left;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 400;
-    border-bottom: 1px solid #eee;
-    transition: background 0.3s, color 0.3s, padding-left 0.3s;
-  }
+.nav li.submenu ul li a:hover {
+  background-color: #eee;
+  padding-left: 25px;
+}
   
-  .nav li.submenu ul li a:hover {
-    background: #fff;
-    color: #aaa !important;
-    padding-left: 25px;
-  }
-  
-  /* Hover triggers the submenu to show */
-  .nav li.submenu:hover ul {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
-    transform: translateY(0%);
-    transition-delay: 0s, 0s, 0.3s;
-  }
+/* Show dropdown on hover */
+.nav li.submenu:hover ul,
+.nav li.submenu.active ul {
+  display: block;
+}
   
   /********************************** 
    * MENU TRIGGER (HAMBURGER) STYLES
