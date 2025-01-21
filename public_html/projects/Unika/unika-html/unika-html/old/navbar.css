@@ -89,6 +89,8 @@
 	background-color: transparent;
 } */
 .navbar-default .dropdown-menu {
+    background-color: #ffffff !important; /* Change to white */
+    color: #000000 !important; /* Ensure text is black */
 	padding: 10px 0;
 }
 .dropdown-menu > li > a {

@@ -11536,19 +11536,70 @@ pre {
 }
 
 @media (max-width: 991.98px) {
+  .header {
+    padding-top: 0px; /* Adjust this value if necessary */
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
   .header .container {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Ensure text alignment is centered */
+    margin-top: 0px;
+    margin-bottom: 0;
   }
-  .header .container .infos {
-    margin-top: 0;
-  }
+
+  /* .header .container .infos {
+    margin-top: 40px;
+  } */
+
   .header .container .img-holder {
-    display: none;
+    display: flex; /* Ensure it stays visible */
+    justify-content: center; /* Center the image */
+    align-items: center;
+    width: 100%; /* Take full width */
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  #about {
+    margin-top: -40px; /* Pull resume text up */
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .section {
+    padding-top: 0;
+  }
+  /* .header .container .infos,
+.header .container .img-holder {
+  padding-bottom: 20px; /* Add uniform spacing */
+} */
+
+
+  .header .container .img-holder img {
+    max-width: 70%; /* Resize the image to fit better */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Reset position */
+    margin: 0 auto; /* Center within parent */
+    /* margin-top: 20px; Increase spacing from the text */
   }
 }
+@media (max-width: 768px) {
+  .header .container .img-holder img {
+    max-width: 80%; /* Slightly larger on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header .container .img-holder img {
+    max-width: 90%; /* Make it larger for very small screens */
+  }
+}
+
+
+
 
 .header .widget {
   position: relative;

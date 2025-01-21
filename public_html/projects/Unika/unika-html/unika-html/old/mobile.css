@@ -183,7 +183,7 @@
 	}
 	.navbar-nav > li > a {
 		padding: 10px 0 !important;
-		color: #030202;
+		color: #FFF;
 	}
 	.navbar-nav .open .dropdown-menu > li > a {
 		padding: 10px 10px 10px 45px !important;
@@ -192,7 +192,7 @@
 		color: #222;
 	}
 	.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-		color: #0f0d0d;
+		color: #CCC;
 	}
 	.navbar-default.navbar-shrink .navbar-nav > li.active > a {
 		-webkit-box-shadow: none !important;
