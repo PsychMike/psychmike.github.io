@@ -824,14 +824,17 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const stars = document.querySelectorAll('.product-star i');
+    const starButtons = document.querySelectorAll('.product-star');
 
-    stars.forEach(star => {
-        star.addEventListener('click', function(event) {
+    starButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
             event.preventDefault();
+
+            const starIcon = this.querySelector('i');
+
             // Toggle active state and color
-            this.classList.toggle('active');
-            this.style.color = this.classList.contains('active') ? 'gold' : 'gray';
+            starIcon.classList.toggle('active');
+            starIcon.style.color = starIcon.classList.contains('active') ? 'gold' : 'gray';
         });
     });
 
@@ -860,8 +863,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-
     </script>
     
     
