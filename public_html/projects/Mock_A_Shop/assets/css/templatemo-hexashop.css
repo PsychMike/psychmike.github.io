@@ -2570,3 +2570,68 @@ responsive
   line-height: 1.8;
   margin: 0;
 }
+
+/* Tracking Section */
+.tracking-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.tracking-form {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-form h4 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#tracking-id {
+  width: 70%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+  outline: none;
+}
+
+.main-dark-button {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.main-dark-button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.progress {
+  height: 25px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 1s ease-in-out;
+  border-radius: 20px;
+}
