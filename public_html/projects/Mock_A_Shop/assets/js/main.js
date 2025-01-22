@@ -67,46 +67,35 @@ cartButtons.forEach(button => {
     button.addEventListener('click', function (event) {
         event.preventDefault();  // Prevent default action
 
-        // Find the product image within the clicked item's container
-        const productImage = button.closest('.thumb').querySelector('img');
-        if (!productImage) return; // Exit if image not found
+        // Find the closest .item parent which wraps all content
+        const product = button.closest('.item');
 
-        // Clone the product image to animate it to the cart
-        let flyingImage = productImage.cloneNode(true);
-        flyingImage.classList.add('flying-image');  // Add class for styling animation
-        document.body.appendChild(flyingImage);  // Append cloned image to the body
+        if (!product) {
+            console.error("Error: '.item' container not found for clicked button.");
+            return;
+        }
 
-        // Get the current position of the product image
-        let rect = productImage.getBoundingClientRect();
-        flyingImage.style.left = `${rect.left}px`;
-        flyingImage.style.top = `${rect.top}px`;
+        // Find product details inside .down-content within the .item container
+        const itemNameElement = product.querySelector('.down-content h4');
+        const itemPriceElement = product.querySelector('.down-content span');
 
-        // Animate the cloned image to the cart icon
-        let cartRect = cartIcon.getBoundingClientRect();
-        setTimeout(() => {
-            flyingImage.style.left = `${cartRect.left + window.scrollX}px`;
-            flyingImage.style.top = `${cartRect.top + window.scrollY}px`;
-            flyingImage.style.width = '50px';
-            flyingImage.style.opacity = '0.3';
-        }, 100);
+        if (!itemNameElement || !itemPriceElement) {
+            console.error("Error: Product details not found.");
+            return;
+        }
 
-        // Disable the button temporarily to prevent spam clicking
-        button.disabled = true;
-        setTimeout(() => { button.disabled = false; }, 100);
+        const itemName = itemNameElement.textContent;
+        const itemPrice = itemPriceElement.textContent.replace('$', '');
 
-        // Remove the flying image after animation completes
-        setTimeout(() => {
-            flyingImage.remove();
-            updateCartCount();  // Update the cart counter
-        }, 1000);
-
-        // Get product details (name & price) and add to the cart
-        const product = button.closest('.down-content');
-        const itemName = product.querySelector('h4').textContent;
-        const itemPrice = product.querySelector('span').textContent.replace('$', '');
+        // Add the product to cart only once
         addToCart(itemName, itemPrice);
+
+        // Trigger animation to cart
+        animateToCart(button);
     });
 });
+
+
 
 // Function to update cart count indicator
 function updateCartCount() {
@@ -125,35 +114,37 @@ function updateCartCount() {
     setTimeout(() => cartIcon.classList.remove('bounce'), 500);
 }
 
-// Function to add items to cart array and update display
 function addToCart(itemName, itemPrice) {
-    cart.push({ name: itemName, price: parseFloat(itemPrice) });  // Add new item to cart
-    updateCartDisplay();  // Refresh cart UI
+    console.log("Adding item to cart:", itemName, itemPrice);
+    cart.push({ name: itemName, price: parseFloat(itemPrice) });
+
+    updateCartDisplay();
+    updateCartCount();
 }
 
-// Function to update cart dropdown UI
 function updateCartDisplay() {
-    cartItemsList.innerHTML = '';  // Clear existing cart items
+    console.log("Cart items:", cart);
+    cartItemsList.innerHTML = '';
     let total = 0;
 
-    // Loop through cart array and add each item to the dropdown
     cart.forEach(item => {
         let li = document.createElement('li');
-        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;  // Format price to 2 decimal places
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
         cartItemsList.appendChild(li);
         total += item.price;
     });
 
-    cartTotalPrice.textContent = `$${total.toFixed(2)}`;  // Update the total price
+    cartTotalPrice.textContent = `$${total.toFixed(2)}`;
 }
 
-// Toggle cart dropdown visibility on cart icon click
+
+// Toggle cart dropdown visibility when clicking on the cart icon
 cartIcon.addEventListener('click', function (event) {
     event.stopPropagation();  // Prevent click from bubbling to document
     cartDropdown.classList.toggle('visible');  // Show/hide the dropdown
 });
 
-// Close cart dropdown when clicking outside
+// Close the dropdown when clicking outside
 document.addEventListener('click', function (event) {
     if (!cartIcon.contains(event.target) && !cartDropdown.contains(event.target)) {
         cartDropdown.classList.remove('visible');  // Hide dropdown
