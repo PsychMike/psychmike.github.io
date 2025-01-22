@@ -2530,4 +2530,43 @@ responsive
   animation: bounce 0.5s;
 }
 
+/* FAQ Section */
 
+
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.faq-content {
+  border-top: 2px solid #333;
+  padding-top: 20px;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-left: 4px solid #333;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+  border-left: 4px solid #ff6600;
+  transform: translateX(10px);
+}
+
+.faq-item h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
