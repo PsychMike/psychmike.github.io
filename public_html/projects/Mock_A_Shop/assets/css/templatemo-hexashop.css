@@ -2424,6 +2424,7 @@ responsive
 
 
 /* Shopping Cart Animation */
+
 #cart-icon {
   position: fixed;
   top: 20px;
@@ -2431,7 +2432,8 @@ responsive
   font-size: 24px;
   color: #333;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 2000;
+  background-color: white;
 }
 
 #cart-icon #cart-dropdown {
@@ -2445,6 +2447,10 @@ responsive
   padding: 15px;
   display: none;
   z-index: 1000;
+}
+
+#cart-dropdown.visible {
+  display: block;
 }
 
 #cart-icon #cart-dropdown ul {
@@ -2466,35 +2472,44 @@ responsive
   font-weight: bold;
 }
 
-#cart-icon #cart-dropdown .hidden {
-  display: none;
-}
-
-#cart-icon #cart-dropdown .visible {
-  display: block;
-}
-
-
 #cart-icon span#cart-count {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#cart-count {
   position: absolute;
-  top: -5px;  /* Position slightly higher */
-  left: -18px; /* Move further left */
+  top: -5px;  
+  left: -10px;
   background-color: red;
   color: white;
   border-radius: 50%;
-  padding: 1px 4px; /* Further reduce padding */
-  font-size: 9px;  /* Smaller text size */
+  padding: 2px 6px;
+  font-size: 12px;
   font-weight: bold;
-  min-width: 14px;  /* Smaller for a better fit */
-  height: 14px;  /* Adjust height for balance */
+  min-width: 18px;
+  height: 18px;
   text-align: center;
-  line-height: 14px;  /* Align number vertically */
+  line-height: 18px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart-items li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.cart-total {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Hover effect for cart items */
+#cart-items li:hover {
+  background-color: #f5f5f5;
 }
 
 .flying-image {
