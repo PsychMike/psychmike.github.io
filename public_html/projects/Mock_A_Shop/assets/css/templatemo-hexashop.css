@@ -2431,7 +2431,49 @@ responsive
   font-size: 24px;
   color: #333;
   cursor: pointer;
+  z-index: 1000;
 }
+
+#cart-icon #cart-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 250px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: none;
+  z-index: 1000;
+}
+
+#cart-icon #cart-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart-icon #cart-dropdown ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+#cart-icon #cart-dropdown .cart-total {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#cart-icon #cart-dropdown .hidden {
+  display: none;
+}
+
+#cart-icon #cart-dropdown .visible {
+  display: block;
+}
+
 
 #cart-icon span#cart-count {
   font-size: 14px;
