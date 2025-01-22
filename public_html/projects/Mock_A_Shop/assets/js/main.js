@@ -156,14 +156,12 @@ function updateCartDisplay() {
 // Toggle cart dropdown visibility when clicking on the cart icon
 cartIcon.addEventListener('click', function (event) {
     event.stopPropagation();  // Prevent click from bubbling to document
-    cartDropdown.classList.toggle('visible');  // Show/hide the dropdown
+    cartDropdown.classList.toggle('visible');  // Toggle visibility
 });
 
-// Close the dropdown when clicking outside
-document.addEventListener('click', function (event) {
-    if (!cartIcon.contains(event.target) && !cartDropdown.contains(event.target)) {
-        cartDropdown.classList.remove('visible');  // Hide dropdown
-    }
+// Prevent clicks inside the dropdown from closing it
+cartDropdown.addEventListener('click', function (event) {
+    event.stopPropagation();  // Stop the event from propagating further
 });
 
 // Prevent clicks inside the dropdown from closing it
