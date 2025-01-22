@@ -116,7 +116,21 @@ function updateCartCount() {
 
 function addToCart(itemName, itemPrice) {
     console.log("Adding item to cart:", itemName, itemPrice);
-    cart.push({ name: itemName, price: parseFloat(itemPrice) });
+
+    // Check if the item already exists in the cart
+    let existingItem = cart.find(item => item.name === itemName);
+
+    if (existingItem) {
+        existingItem.quantity += 1;  // Increment quantity if item exists
+        existingItem.totalPrice = existingItem.quantity * itemPrice;  // Update total price
+    } else {
+        cart.push({
+            name: itemName,
+            price: parseFloat(itemPrice),
+            quantity: 1,
+            totalPrice: parseFloat(itemPrice)
+        });
+    }
 
     updateCartDisplay();
     updateCartCount();
@@ -124,18 +138,19 @@ function addToCart(itemName, itemPrice) {
 
 function updateCartDisplay() {
     console.log("Cart items:", cart);
-    cartItemsList.innerHTML = '';
+    cartItemsList.innerHTML = '';  // Clear existing cart items
     let total = 0;
 
     cart.forEach(item => {
         let li = document.createElement('li');
-        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        li.textContent = `${item.quantity}x ${item.name} - $${item.totalPrice.toFixed(2)}`;
         cartItemsList.appendChild(li);
-        total += item.price;
+        total += item.totalPrice;
     });
 
-    cartTotalPrice.textContent = `$${total.toFixed(2)}`;
+    cartTotalPrice.textContent = `$${total.toFixed(2)}`;  // Update total price
 }
+
 
 
 // Toggle cart dropdown visibility when clicking on the cart icon
