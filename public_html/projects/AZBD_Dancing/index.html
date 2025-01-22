@@ -77,6 +77,16 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="theme.js"></script>
+
+  <!-- <style>
+    @media (max-width: 768px) {
+        .back-to-portfolio {
+            display: none;
+        }
+    }    
+</style> -->
 
 </head>
 
@@ -103,8 +113,24 @@
 
                   <div class="container">
 
+                    <div class="back-to-portfolio" style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
+                        <a href="../../index.html" 
+                           style="background-color: #000; color: #fff; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                            Back to Portfolio
+                        </a>
+                    </div>
+                        <style>
+                        @media (max-width: 768px) {
+                            .back-to-portfolio {
+                                display: none;
+                            }
+                        }    
+                    </style>
+
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
+
+
                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -122,7 +148,7 @@
                             <li><a class="page-scroll" href="#services-section">Services</a></li>
                             <li><a class="page-scroll" href="#portfolio-section">Reels</a></li>
                             <li><a class="page-scroll" href="#counter-section">Team</a></li>
-                            <li><a class="page-scroll" href="https://bootsanddukesdance.square.site/s/shop" target="_blank">Prices</a></li>
+                            <!-- <li><a class="page-scroll" href="https://bootsanddukesdance.square.site/s/shop" target="_blank">Prices</a></li> -->
                             <li><a class="page-scroll" href="#contact-section">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
