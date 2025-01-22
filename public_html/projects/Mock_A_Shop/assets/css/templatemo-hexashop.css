@@ -2425,6 +2425,9 @@ responsive
 
 /* Shopping Cart Animation */
 
+
+
+/* Shopping cart icon styling */
 #cart-icon {
   position: fixed;
   top: 20px;
@@ -2432,8 +2435,34 @@ responsive
   font-size: 24px;
   color: #333;
   cursor: pointer;
-  z-index: 2000;
-  background-color: white;
+  z-index: 1000;
+  background: white; /* White background */
+  padding: 15px;
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the cart count bubble */
+#cart-count {
+  position: absolute;
+  top: -5px;  /* Position slightly higher */
+  left: -10px; /* Adjust position */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  background: white; /* Add white background */
+  border: 2px solid red; /* Add border to make it pop */
 }
 
 #cart-icon #cart-dropdown {
