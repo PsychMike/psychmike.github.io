@@ -103,6 +103,10 @@
                                 </li>
                                 
                                 <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                                    <!-- Shopping cart icon in header or footer -->
+<div id="cart-icon">
+    <i class="fa fa-shopping-cart"></i>
+</div>
                             </ul>        
                             <a class='menu-trigger'>
                                 <span>Menu</span>
@@ -866,6 +870,79 @@ document.addEventListener("DOMContentLoaded", function() {
 });
     </script>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const cartButtons = document.querySelectorAll('.add-to-cart');
+    const cartIcon = document.getElementById('cart-icon');
+
+    cartButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            // Find the closest product image to the clicked cart button
+            const productImage = button.closest('.thumb').querySelector('img');
+            if (!productImage) return;
+
+            // Clone the product image and position it at the button location
+            let flyingImage = productImage.cloneNode(true);
+            flyingImage.classList.add('flying-image');
+            document.body.appendChild(flyingImage);
+
+            let rect = productImage.getBoundingClientRect();
+            flyingImage.style.left = `${rect.left}px`;
+            flyingImage.style.top = `${rect.top}px`;
+
+            // Animate the cloned image to the cart icon
+            let cartRect = cartIcon.getBoundingClientRect();
+            setTimeout(() => {
+    flyingImage.style.left = `${cartRect.left + window.scrollX}px`;
+    flyingImage.style.top = `${cartRect.top + window.scrollY}px`;
+    flyingImage.style.width = '50px';
+    flyingImage.style.opacity = '0.3';
+}, 100)
+button.disabled = true;
+setTimeout(() => { button.disabled = false; }, 100);
+;
+
+
+            // Remove the flying image after animation completes
+            setTimeout(() => {
+                flyingImage.remove();
+                // Optionally: Update cart count
+                updateCartCount();
+            }, 1000);
+        });
+    });
+
+    function updateCartCount() {
+    let cartCount = document.getElementById('cart-count');
+    if (!cartCount) {
+        cartCount = document.createElement('span');
+        cartCount.id = 'cart-count';
+        // cartCount.style.position = 'absolute';
+        // cartCount.style.top = '-5px';
+        // cartCount.style.right = '-5px';
+        // cartCount.style.backgroundColor = 'red';
+        // cartCount.style.color = 'white';
+        // cartCount.style.borderRadius = '50%';
+        // cartCount.style.padding = '5px 8px';
+        // cartCount.style.fontSize = '14px';
+        cartCount.textContent = '1';
+        cartIcon.appendChild(cartCount);
+    } else {
+        cartCount.textContent = parseInt(cartCount.textContent) + 1;
+    }
+
+    function notifyCartUpdate() {
+    cartIcon.classList.add('bounce');
+    setTimeout(() => cartIcon.classList.remove('bounce'), 500);
+}
+
+}
+
+});
+
+    </script>
     
 
   </body>

@@ -2423,3 +2423,54 @@ responsive
 }
 
 
+/* Shopping Cart Animation */
+#cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+#cart-icon span#cart-count {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#cart-count {
+  position: absolute;
+  top: -5px;  /* Position slightly higher */
+  left: -18px; /* Move further left */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 1px 4px; /* Further reduce padding */
+  font-size: 9px;  /* Smaller text size */
+  font-weight: bold;
+  min-width: 14px;  /* Smaller for a better fit */
+  height: 14px;  /* Adjust height for balance */
+  text-align: center;
+  line-height: 14px;  /* Align number vertically */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.flying-image {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  transition: all 1s ease-in-out;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.bounce {
+  animation: bounce 0.5s;
+}
+
+
