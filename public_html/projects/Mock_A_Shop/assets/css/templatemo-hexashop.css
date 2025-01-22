@@ -2428,96 +2428,63 @@ responsive
 
 
 /* Shopping cart icon styling */
+/* Shopping cart container styling */
 #cart-icon {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  color: #333;
-  cursor: pointer;
-  z-index: 1000;
-  background: white; /* White background */
-  padding: 15px;
-  border-radius: 50%; /* Circular shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  position: relative;
+  background: white;
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
-/* Style the cart count bubble */
+/* Shopping cart icon styling */
+#cart-icon i {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Shopping cart notification bubble */
 #cart-count {
   position: absolute;
-  top: -5px;  /* Position slightly higher */
-  left: -10px; /* Adjust position */
-  background-color: red;
+  top: -5px;
+  right: -5px;
+  background: red;
   color: white;
   border-radius: 50%;
-  padding: 5px 8px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  min-width: 18px;
-  height: 18px;
+  min-width: 20px;
+  height: 20px;
   text-align: center;
-  line-height: 18px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  background: white; /* Add white background */
-  border: 2px solid red; /* Add border to make it pop */
+  line-height: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-#cart-icon #cart-dropdown {
+/* Cart dropdown styling */
+#cart-dropdown {
   position: absolute;
-  top: 40px;
+  top: 60px;  /* Space below the icon */
   right: 0;
-  width: 250px;
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 15px;
-  display: none;
-  z-index: 1000;
+  width: 280px;
+  display: none;  /* Initially hidden */
+  border-radius: 5px;
 }
 
+/* Cart dropdown visible class */
 #cart-dropdown.visible {
   display: block;
 }
 
-#cart-icon #cart-dropdown ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#cart-icon #cart-dropdown ul li {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-  font-size: 14px;
-  color: #333;
-}
-
-#cart-icon #cart-dropdown .cart-total {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-#cart-icon span#cart-count {
-  position: absolute;
-  top: -5px;  
-  left: -10px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-  font-weight: bold;
-  min-width: 18px;
-  height: 18px;
-  text-align: center;
-  line-height: 18px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-}
-
+/* Cart items list */
 #cart-items {
   list-style: none;
   padding: 0;
@@ -2525,16 +2492,20 @@ responsive
 }
 
 #cart-items li {
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ddd;
   font-size: 14px;
+  color: #333;
 }
 
+/* Cart total price styling */
 .cart-total {
   margin-top: 10px;
+  font-size: 16px;
   font-weight: bold;
   text-align: right;
 }
+
 
 /* Hover effect for cart items */
 #cart-items li:hover {
