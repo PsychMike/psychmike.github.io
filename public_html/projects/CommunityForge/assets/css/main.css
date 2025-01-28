@@ -244,7 +244,33 @@
     object-fit: contain;
     object-position: center !important; /* Ensures the image is centered */
   }
-  
+
+  /* Remove extra space before this section */
+  .how-can-help-text {
+    font-size: 20px !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .work-request--information label {
+    font-size: 12px !important; /* Adjust size as needed */
+  }
+
+  .work-request--information input {
+    font-size: 14px !important; /* Adjust input text size */
+  }
+
+  .send-request-text{
+    font-size: 12px !important;
+  }
+  .work-request--options{
+    font-size: 2px !important;
+  }
+  .work-request--options label {
+    font-size: 12px !important; /* Decrease font size */
+    padding: 5px !important; /* Adjust padding to fit smaller text */
+  }
 }
 
   
