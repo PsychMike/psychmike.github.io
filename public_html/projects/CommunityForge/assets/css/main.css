@@ -187,4 +187,64 @@
     bottom: 0;
   }
   
+  .why-choose-title {
+    font-size: 24px; /* Adjust as needed */
+    text-align: center;
+    line-height: 1.5; /* Improve spacing */
+  }
+  
+  .why-choose-title .why-choose-logo {
+    max-width: 50px;
+    vertical-align: middle; /* Align the logo with the text */
+    margin-left: 10px; /* Add some space between the text and logo */
+  }
+  
+  
+@media screen and (max-width: 1024px) {
+  .why-choose-text, .copyright-text {
+    display: none !important;
+  }
+
+  .why-choose-title {
+    text-align: left !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .work--lockup {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .work {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+.slider{
+    margin-top: 0;
+}
+
+  .slider--item {
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    flex-direction: column;
+    height: 100%; /* Ensure full height */
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+
+  .slider--item-image {
+    max-width: 100%; /* Adjusts based on screen size */
+    height: auto; /* Maintains aspect ratio */
+    min-height: 150px;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: center !important; /* Ensures the image is centered */
+  }
+  
+}
+
   
