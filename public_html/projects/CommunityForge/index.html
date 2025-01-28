@@ -15,7 +15,7 @@
 
 <!-- notification for small viewports and landscape oriented smartphones -->
 <div class="device-notification">
-  <a class="device-notification--logo" href="#0">
+  <a class="device-notification--logo" href="https://discord.gg/7UHWwjyKzz">
     <img src="assets/img/CF Logo-Icon-01.png" alt="Community Forge">
     <p>Community Forge</p>
   </a>
@@ -29,7 +29,7 @@
     <div id="viewport" class="l-viewport">
       <div class="l-wrapper">
         <header class="header">
-          <a class="header--logo" href="#0">
+          <a class="header--logo" href="https://discord.gg/7UHWwjyKzz">
             <img src="assets/img/CF Logo-Icon-01.png" style="max-width: 50px;" alt="Community Forge">
             <p>Community Forge</p>
           </a>
@@ -290,15 +290,22 @@
 <!-- Include Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-<!-- Social Media Links -->
-<div class="social-links">
-  <a href="https://x.com/your-account" target="_blank" aria-label="Twitter">
-    <i><img src="assets/img/twitter-logo.png"></i>
-  </a>
-  <a href="https://discord.gg/your-server" target="_blank" aria-label="Discord">
-    <i><img src="assets/img/discord-logo.png"></i>
-  </a>
-</div>
+<!-- Footer -->
+<footer>
+  <div class="social-links">
+    <a href="https://x.com/your-account" target="_blank" aria-label="Twitter">
+      <i><img src="assets/img/twitter-logo.png"></i>
+    </a>
+    <a href="https://discord.gg/your-server" target="_blank" aria-label="Discord">
+      <i><img src="assets/img/discord-logo.png"></i>
+    </a>
+  </div>
+  <p>&copy; <span id="year"></span> Community Forge. All rights reserved.</p>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</footer>
 
 
 
@@ -377,6 +384,59 @@
       }
     });
   });
+
+  $(document).ready(function () {
+  const $sections = $('.l-section'); // All sections
+  let currentIndex = 0; // Keep track of the active section
+  const totalSections = $sections.length; // Total number of sections
+  let isAnimating = false; // Prevent overlapping animations
+
+  // Scroll to a specific section
+  function scrollToSection(index) {
+    if (isAnimating || index < 0 || index >= totalSections) return;
+    isAnimating = true;
+
+    $('html, body').animate(
+      { scrollTop: $sections.eq(index).offset().top },
+      800,
+      function () {
+        currentIndex = index;
+        isAnimating = false;
+      }
+    );
+  }
+
+  // Handle scroll events (mousewheel or touch)
+  $(window).on('wheel', function (e) {
+    if (isAnimating) return;
+
+    if (e.originalEvent.deltaY > 0) {
+      // Scroll down
+      scrollToSection(currentIndex + 1);
+    } else if (e.originalEvent.deltaY < 0) {
+      // Scroll up
+      scrollToSection(currentIndex - 1);
+    }
+  });
+
+  // Handle keyboard navigation
+  $(document).on('keydown', function (e) {
+    if (isAnimating) return;
+
+    if (e.key === 'ArrowDown') {
+      scrollToSection(currentIndex + 1); // Down key
+    } else if (e.key === 'ArrowUp') {
+      scrollToSection(currentIndex - 1); // Up key
+    }
+  });
+
+  // Resize handling to ensure proper section positioning
+  $(window).on('resize', function () {
+    scrollToSection(currentIndex); // Re-align to the current section
+  });
+});
+
+
 </script>
 
 
