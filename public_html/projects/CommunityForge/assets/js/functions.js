@@ -192,7 +192,7 @@ $( document ).ready(function() {
           $right = $('.slider--item-right'),
           $item = $('.slider--item');
 
-      $('.slider').animate({ opacity : 0 }, 400);
+      // $('.slider').animate({ opacity : 1 }, 400);
 
       setTimeout(function(){
 
@@ -247,7 +247,7 @@ $( document ).ready(function() {
 
     }, 400);
 
-    $('.slider').animate({ opacity : 1 }, 400);
+    // $('.slider').animate({ opacity : 1 }, 400);
 
     });
 
