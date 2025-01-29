@@ -200,11 +200,9 @@
   }
   
   
-@media screen and (max-width: 1024px) {
-  .why-choose-text, .copyright-text {
-    display: none !important;
-  }
 
+/* Tablets and Larger Mobiles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
   .why-choose-title {
     text-align: left !important;
     margin-bottom: 0 !important;
@@ -245,31 +243,147 @@
     object-position: center !important; /* Ensures the image is centered */
   }
 
-  /* Remove extra space before this section */
   .how-can-help-text {
-    font-size: 20px !important;
+    font-size: 38px !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
-    margin-bottom: 0 !important;
   }
 
   .work-request--information label {
-    font-size: 12px !important; /* Adjust size as needed */
+    font-size: 12px !important;
   }
 
   .work-request--information input {
-    font-size: 14px !important; /* Adjust input text size */
+    font-size: 14px !important;
   }
 
-  .send-request-text{
+  .send-request-text {
+    font-size: 14px !important;
+  }
+
+  .work-request--options label {
+    font-size: 16px !important;
+    padding: 6px !important;
+  }
+
+  .page-title {
+    font-size: 50px !important;
+  }
+
+
+}
+
+/* Smaller Mobiles (480px - 767px) */
+@media screen and (max-width: 767px) {
+  .why-choose-title {
+    font-size: 18px !important;
+  }
+
+  .slider--item-image {
+    min-height: 120px;
+    max-height: 180px;
+  }
+
+  .how-can-help-text {
+    font-size: 26px !important;
+  }
+
+  .work-request--information label {
+    font-size: 20px !important;
+  }
+
+  .work-request--information input {
     font-size: 12px !important;
   }
-  .work-request--options{
-    font-size: 2px !important;
+
+  .send-request-text {
+    font-size: 12px !important;
   }
+
   .work-request--options label {
-    font-size: 9px !important; /* Decrease font size */
-    padding: 5px !important; /* Adjust padding to fit smaller text */
+    font-size: 20px !important;
+    padding: 5px !important;
+  }
+
+  .page-title {
+    font-size: 50px !important;
+  }
+}
+
+/* Extra Small Mobiles (Below 480px) */
+@media screen and (max-width: 480px) {
+  .why-choose-title {
+    font-size: 16px !important;
+  }
+
+  .slider--item-image {
+    min-height: 100px;
+    max-height: 160px;
+  }
+
+  .how-can-help-text {
+    font-size: 18px !important;
+  }
+
+  .work-request--information label {
+    font-size: 10px !important;
+  }
+
+  .work-request--information input {
+    font-size: 11px !important;
+  }
+
+  .send-request-text {
+    font-size: 10px !important;
+  }
+
+  .work-request--options label {
+    font-size: 10px !important;
+    padding: 4px !important;
+  }
+
+  .page-title {
+    font-size: 50px !important;
+  }
+}
+
+.header--cta {
+  position: fixed;
+  top: 10px; /* Keep some spacing from the top */
+  right: 10px; /* Ensure it's always aligned to the right */
+  padding: 10px 15px; /* Adjust padding for better fit */
+  font-size: 16px;
+  z-index: 999; /* Ensure it stays on top */
+  max-width: 150px; /* Prevent it from getting too large */
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+}
+
+/* Tablets and smaller screens (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .header--cta {
+      font-size: 14px; /* Reduce font size */
+      padding: 8px 12px; /* Adjust padding */
+      max-width: 120px;
+  }
+}
+
+/* Small mobile screens (480px - 767px) */
+@media screen and (max-width: 767px) {
+  .header--cta {
+      font-size: 12px;
+      padding: 6px 10px;
+      max-width: 100px;
+      right: 5px; /* Ensure it doesn't get pushed out */
+  }
+}
+
+/* Extra small mobile screens (Below 480px) */
+@media screen and (max-width: 480px) {
+  .header--cta {
+      font-size: 10px;
+      padding: 5px 8px;
+      max-width: 90px;
+      right: 3px; /* Ensure it stays within the screen */
   }
 }
 
