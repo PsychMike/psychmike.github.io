@@ -314,7 +314,21 @@
 @media screen and (max-width: 480px) {
   .why-choose-title {
     font-size: 16px !important;
+
   }
+
+.why-choose-text{
+  display: none !important;
+}
+
+  /* .why-choose-logo, .why-choose-title, .why-choose-text, .slider{
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    justify-self: top !important;
+    align-items: top !important;
+  } */
+
 
   /* .slider--item-image {
     min-height: 100px;
