@@ -316,10 +316,10 @@
     font-size: 16px !important;
   }
 
-  .slider--item-image {
+  /* .slider--item-image {
     min-height: 100px;
     max-height: 160px;
-  }
+  } */
 
   .how-can-help-text {
     font-size: 18px !important;
@@ -348,43 +348,43 @@
 }
 
 .header--cta {
-  position: fixed;
-  top: 10px; /* Keep some spacing from the top */
-  right: 10px; /* Ensure it's always aligned to the right */
-  padding: 10px 15px; /* Adjust padding for better fit */
-  font-size: 16px;
-  z-index: 999; /* Ensure it stays on top */
-  max-width: 150px; /* Prevent it from getting too large */
-  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    position: fixed;
+    top: 10px; /* Keep some spacing from the top */
+    right: 10px; /* Ensure it's always aligned to the right */
+    padding: 10px 15px; /* Adjust padding for better fit */
+    font-size: 16px;
+    z-index: 999; /* Ensure it stays on top */
+    max-width: 150px; /* Prevent it from getting too large */
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
 }
 
 /* Tablets and smaller screens (768px - 1024px) */
 @media screen and (max-width: 1024px) {
-  .header--cta {
-      font-size: 14px; /* Reduce font size */
-      padding: 8px 12px; /* Adjust padding */
-      max-width: 120px;
-  }
+    .header--cta {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 12px; /* Adjust padding */
+        max-width: 120px;
+    }
 }
 
 /* Small mobile screens (480px - 767px) */
 @media screen and (max-width: 767px) {
-  .header--cta {
-      font-size: 12px;
-      padding: 6px 10px;
-      max-width: 100px;
-      right: 5px; /* Ensure it doesn't get pushed out */
-  }
+    .header--cta {
+        font-size: 12px;
+        padding: 6px 10px;
+        max-width: 100px;
+        right: 5px; /* Ensure it doesn't get pushed out */
+    }
 }
 
 /* Extra small mobile screens (Below 480px) */
 @media screen and (max-width: 480px) {
-  .header--cta {
-      font-size: 10px;
-      padding: 5px 8px;
-      max-width: 90px;
-      right: 3px; /* Ensure it stays within the screen */
-  }
+    .header--cta {
+        font-size: 10px;
+        padding: 5px 8px;
+        max-width: 90px;
+        right: 3px; /* Ensure it stays within the screen */
+    }
 }
 
   
