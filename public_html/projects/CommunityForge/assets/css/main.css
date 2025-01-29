@@ -93,10 +93,24 @@
     justify-content: center;
     text-align: center; */
     color: white;
-    background: linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.6)), url("../img/community1.png");
+    /* background: linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.6)), url("../img/community1.png"); */
     background-size: cover;
     background-position: center;
 }
+
+.l-viewport {
+  background: linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.95)), 
+              url("../img/community1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw; /* Ensure it covers the full viewport width */
+  height: 100vh; /* Ensure it covers the full viewport height */
+  position: absolute; /* Keeps it behind other content */
+  top: 0;
+  left: 0;
+}
+
 
 .cta {
     position:relative;
