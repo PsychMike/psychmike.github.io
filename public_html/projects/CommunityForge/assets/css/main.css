@@ -415,4 +415,6 @@
     }
 }
 
-  
+.hidden {
+  display: none;
+}

@@ -154,6 +154,7 @@ $( document ).ready(function() {
   function outerNav() {
 
     $('.header--nav-toggle').click(function(){
+      $('footer').toggleClass('hidden'); // Add or remove the class
 
       $('.perspective').addClass('perspective--modalview');
       setTimeout(function(){
@@ -164,6 +165,7 @@ $( document ).ready(function() {
     });
 
     $('.outer-nav--return, .outer-nav li').click(function(){
+      $('footer').toggleClass('hidden'); // Toggle it back
 
       $('.perspective').removeClass('effect-rotate-left--animate');
       setTimeout(function(){
