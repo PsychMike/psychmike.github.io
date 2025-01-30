@@ -11731,3 +11731,17 @@ header.section.blog-header p.subtitle {
   margin-top: 0;
 }
 
+#portfolio img {
+  border: 3px solid #333; /* Adjust thickness and color as needed */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+#portfolio{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#testimonial{
+  margin-top: 0;
+  padding-top: 0;
+}
