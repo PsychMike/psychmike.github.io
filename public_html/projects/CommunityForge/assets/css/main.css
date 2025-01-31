@@ -415,6 +415,12 @@
     }
 }
 
+@media (min-width: 1100px) {
+  footer {
+      display: none !important;
+  }
+}
+
 .hidden {
   display: none;
 }
