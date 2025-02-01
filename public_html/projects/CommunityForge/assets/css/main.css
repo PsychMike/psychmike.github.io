@@ -424,3 +424,42 @@
 .hidden {
   display: none;
 }
+
+.gradient-text, .slider--item-title, .work-request--options {
+  background: linear-gradient(90deg, rgb(186, 4, 128), rgb(5,166,244)); /* Adjust colors as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* display: inline-block; */
+}
+
+.slider--item-price {
+  /* font-size: 1.5rem; */
+  font-weight: bold;
+  color: #c23bb6; /* Gradient color */
+  text-align: center;
+}
+
+.slider--item-description {
+  font-size: 1rem;
+  color: #ddd;
+  text-align: center;
+}
+
+.price {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6a11cb;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slider--item-image img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.slider--item:hover .slider--item-image img {
+  transform: scale(1.05);
+}
