@@ -99,8 +99,8 @@
 }
 
 .l-viewport {
-  background: linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.95)), 
-              url("../img/community1.png");
+  background: linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.8)), 
+              url("../img/cf-bg1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -425,12 +425,29 @@
   display: none;
 }
 
-.gradient-text, .slider--item-title, .work-request--options {
+.gradient-text{
   background: linear-gradient(90deg, rgb(186, 4, 128), rgb(5,166,244)); /* Adjust colors as needed */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+
+.work-request--options label {
+  background: linear-gradient(90deg, rgb(186, 4, 128), rgb(5,166,244));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  border: 2px solid; /* Makes the border gradient */
+  border-image: linear-gradient(90deg, rgb(186, 4, 128), rgb(5,166,244)) 1;
+}
+
+
+.slider--item-title{
+  color:  rgb(105,166,244);
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .slider--item-price {
