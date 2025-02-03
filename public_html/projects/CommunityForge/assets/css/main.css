@@ -407,6 +407,14 @@
   background-color: #003fc4; /* Darker shade for hover */
 }
 
+.slider--item-center {
+  height: 350px; /* Adjust based on your design */
+  min-height: 350px; /* Prevents shrinking */
+  display: flex;
+  align-items: center; /* Centers content */
+  justify-content: center; /* Ensures it doesn't push elements up */
+}
+
 
 /* Tablets and smaller screens (768px - 1024px) */
 @media screen and (max-width: 1024px) {
