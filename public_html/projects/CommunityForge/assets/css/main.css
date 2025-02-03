@@ -434,14 +434,17 @@
 }
 
 .work-request--options label {
-  background: linear-gradient(90deg, rgb(186, 4, 128), rgb(5,166,244));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  border: 2px solid; /* Makes the border gradient */
+  color: white; /* Keeps text white */
+  font-weight: bold; /* Optional: Make it stand out */
+  border: 2px solid transparent; /* Ensures a border exists */
   border-image: linear-gradient(90deg, rgb(186, 4, 128), rgb(5,166,244)) 1;
+  padding: 10px 15px; /* Adjusts spacing */
+  display: inline-block; /* Ensures proper button size */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
 
 
 .slider--item-title{
