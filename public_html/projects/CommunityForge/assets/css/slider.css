@@ -602,9 +602,8 @@ padding-top: 0px !important;
 
 }
 
-/* @media(min-width: 901){ */
+@media(min-width: 901){
 .options-a label{
     margin: 15px !important;
+}   
 }
-    
-/* } */
