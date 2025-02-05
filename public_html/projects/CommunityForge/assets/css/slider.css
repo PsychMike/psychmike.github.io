@@ -572,6 +572,11 @@ padding-top: 0px !important;
     .slider--next {
         right: -45px; /* Shift right for better positioning */
     }
+
+    .cta{
+        margin-top: 50px !important;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (min-height: 768px) and (max-height: 768px) {
@@ -592,5 +597,7 @@ padding-top: 0px !important;
 .why-choose-text{
     font-size: 15px !important;
 }
+
+
 
 }
