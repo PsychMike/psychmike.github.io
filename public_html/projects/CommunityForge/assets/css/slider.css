@@ -653,14 +653,20 @@ padding-top: 0px !important;
   }
 }
 
-@media (max-height: 900px) and (min-width: 900px) {
+/* @media (max-height: 900px) and (min-width: 1200px) { */
   .why-choose-title{
     margin-top: 100px !important;
   }
-}
+/* } */
 
-@media (min-height: 1000px) and (max-width: 800px){
+/* @media (min-height: 1200px) and (max-width: 800px){
   .why-choose-title{
     margin-top: 200px !important;
+  }
+} */
+
+@media (max-width: 768px) and (max-aspect-ratio: 20/9) {
+  .why-choose-title{
+  margin-top: 200px !important;
   }
 }
