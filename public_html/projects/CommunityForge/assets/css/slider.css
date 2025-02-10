@@ -653,11 +653,11 @@ padding-top: 0px !important;
   }
 }
 
-/* @media (max-height: 900px) and (min-width: 1200px) { */
+@media (max-height: 900px) and (min-width: 1200px) {
   .why-choose-title{
-    margin-top: 100px !important;
+    margin-top: 90px !important;
   }
-/* } */
+}
 
 /* @media (min-height: 1200px) and (max-width: 800px){
   .why-choose-title{
