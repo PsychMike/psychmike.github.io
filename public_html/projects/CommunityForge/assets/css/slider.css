@@ -605,3 +605,9 @@ padding-top: 0px !important;
 .options-a label{
     margin: 5px 5px !important;
 }   
+
+@media (max-height:800px) {
+  .why-choose-text{
+    display: none !important;
+  }
+}
