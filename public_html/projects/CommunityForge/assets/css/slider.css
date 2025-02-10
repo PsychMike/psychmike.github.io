@@ -618,14 +618,16 @@ padding-top: 0px !important;
   }
 
 
-  @media(max-width: 900px) {
-    .slider {
-      position: absolute;
-      top: 50%; /* Adjust for this screen range */
-  }
-  .cta{
-    margin-top: 0px !important;
-}
-  }
 
+
+}
+
+@media(max-width: 900px) {
+  .slider {
+    position: absolute;
+    top: 50%; /* Adjust for this screen range */
+}
+.cta{
+  margin-top: 0px !important;
+}
 }
