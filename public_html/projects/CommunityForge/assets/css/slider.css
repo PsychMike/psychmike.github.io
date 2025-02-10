@@ -659,7 +659,7 @@ padding-top: 0px !important;
   }
 }
 
-@media (min-height: 1200px) and (max-width: 800px){
+@media (min-height: 1000px) and (max-width: 800px){
   .why-choose-title{
     margin-top: 200px !important;
   }
