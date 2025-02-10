@@ -646,3 +646,9 @@ padding-top: 0px !important;
   margin-top: 5px !important;
   margin-bottom: 0 !important;
 }
+
+@media(max-height:900px){
+  .company-name{
+    display: none !important;
+  }
+}
