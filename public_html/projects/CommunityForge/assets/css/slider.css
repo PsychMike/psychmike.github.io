@@ -616,4 +616,12 @@ padding-top: 0px !important;
   .why-choose-logo{
     display: none !important;
   }
+
+  @media(max-width: 600px) {
+    .slider {
+      position: absolute;
+      top: 40%; /* Adjust for this screen range */
+  }
+  }
+
 }
