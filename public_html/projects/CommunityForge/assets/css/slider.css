@@ -607,7 +607,10 @@ padding-top: 0px !important;
 }   
 
 @media (max-height:900px) {
-  .why-choose-text{
+  .company-name{
     display: none !important;
+  }
+  .why-choose-title{
+    padding-top: 45px !important;
   }
 }
