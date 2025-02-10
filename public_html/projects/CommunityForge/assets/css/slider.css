@@ -647,7 +647,7 @@ padding-top: 0px !important;
   margin-bottom: 0 !important;
 }
 
-@media(max-height:900px){
+@media(max-height:900px) and (min-aspect-ratio: 16/9) {
   .company-name{
     display: none !important;
   }
@@ -667,6 +667,6 @@ padding-top: 0px !important;
 
 @media (max-width: 768px) and (max-aspect-ratio: 20/9) {
   .why-choose-title{
-  margin-top: 200px !important;
+  margin-top: 120px !important;
   }
 }
