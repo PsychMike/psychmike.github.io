@@ -613,4 +613,7 @@ padding-top: 0px !important;
   .why-choose-title{
     padding-top: 45px !important;
   }
+  .why-choose-logo{
+    display: none !important;
+  }
 }
