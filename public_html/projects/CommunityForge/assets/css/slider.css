@@ -657,6 +657,9 @@ padding-top: 0px !important;
   .why-choose-title{
     margin-top: 90px !important;
   }
+  .slider--item-description{
+    font-size: 0.8rem !important;
+  }
 }
 
 /* @media (min-height: 1200px) and (max-width: 800px){
