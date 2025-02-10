@@ -631,7 +631,15 @@ padding-top: 0px !important;
   margin-top: 0px !important;
 }
 .slider--next, .slider--prev{
-  width: 20px; /* Adjusted for better mobile usability */
-  height: 20px;
+  width: 15px !important; /* Adjusted for better mobile usability */
+  height: 15px !important;
+  
+}
+.slider--prev {
+  left: -10px !important; /* Shift left for better positioning */
+}
+
+.slider--next {
+  right: -10px !important; /* Shift right for better positioning */
 }
 }
