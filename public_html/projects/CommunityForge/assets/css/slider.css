@@ -561,16 +561,6 @@ padding-top: 0px !important;
         position: absolute;
         top: 60% !important; /* Center the arrows dynamically relative to the slider */
         transform: translateY(-50%);
-        width: 40px; /* Adjusted for better mobile usability */
-        height: 40px;
-    }
-
-    .slider--prev {
-        left: -45px; /* Shift left for better positioning */
-    }
-
-    .slider--next {
-        right: -45px; /* Shift right for better positioning */
     }
 
     .cta{
