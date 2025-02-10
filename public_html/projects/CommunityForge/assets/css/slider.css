@@ -630,4 +630,8 @@ padding-top: 0px !important;
 .cta, .why-choose-container *{
   margin-top: 0px !important;
 }
+.slider--next, .slider--prev{
+  width: 20px; /* Adjusted for better mobile usability */
+  height: 20px;
+}
 }
