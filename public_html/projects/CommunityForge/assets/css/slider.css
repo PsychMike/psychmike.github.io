@@ -623,7 +623,7 @@ padding-top: 0px !important;
 .slider--next, .slider--prev{
   width: 15px !important; /* Adjusted for better mobile usability */
   height: 15px !important;
-  top: 20% !important;
+  top: 40% !important;
   
 }
 .slider--prev {
