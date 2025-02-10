@@ -627,7 +627,7 @@ padding-top: 0px !important;
     position: absolute;
     top: 50%; /* Adjust for this screen range */
 }
-.cta{
+.cta, .why-choose-container *{
   margin-top: 0px !important;
 }
 }
