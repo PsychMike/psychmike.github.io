@@ -641,7 +641,6 @@ padding-top: 0px !important;
 .why-choose-title{
   padding: 0 !important;
   margin-bottom: 0 !important;
-  margin-top: 100px !important;
 }
 .cta{
   margin-top: 5px !important;
@@ -651,5 +650,11 @@ padding-top: 0px !important;
 @media(max-height:900px){
   .company-name{
     display: none !important;
+  }
+}
+
+@media (min-height: 900px) and (min-width: 900px) {
+  .why-choose-title{
+    margin-top: 100px !important;
   }
 }
