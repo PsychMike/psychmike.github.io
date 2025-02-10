@@ -617,7 +617,7 @@ padding-top: 0px !important;
     display: none !important;
   }
 
-  @media(max-width: 600px) {
+  @media(max-width: 900px) {
     .slider {
       position: absolute;
       top: 40%; /* Adjust for this screen range */
