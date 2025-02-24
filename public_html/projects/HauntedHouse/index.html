@@ -15,21 +15,29 @@
     <svg class="map-lines" xmlns="http://www.w3.org/2000/svg">
         <line id="line1" class="dashed-line" />
         <line id="line2" class="dashed-line" />
-      </svg>
+        <line id="line3" class="dashed-line" />  <!-- Added this -->
+    </svg>
+    
       
     <!-- Map icons with text underneath -->
     <a href="gallery.html" class="map-icon" id="gallery">
       <img src="assets/gallery.png" alt="Gallery Icon" />
       <span>Gallery</span>
     </a>
+
     <a href="projects.html" class="map-icon" id="projects">
       <img src="assets/projects.webp" alt="Projects Icon" />
       <span>Projects</span>
     </a>
+
     <a href="contact.html" class="map-icon" id="contact">
-      <img src="assets/contact-us.webp" alt="Contact Icon" />
-      <span>Contact Us</span>
-    </a>
+        <img src="assets/contact-us.webp" alt="Contact Icon" />
+        <span>Contact Us</span>
+
+      </a>    <a href="donate.html" class="map-icon" id="donate">
+        <img src="assets/donate.webp" alt="donate Icon" />
+        <span>Donate</span>
+      </a>
 
   </div>
   <script>
@@ -37,6 +45,8 @@
         const gallery = document.getElementById("gallery").getBoundingClientRect();
         const projects = document.getElementById("projects").getBoundingClientRect();
         const contact = document.getElementById("contact").getBoundingClientRect();
+        const donate = document.getElementById("donate").getBoundingClientRect();
+
   
         const svg = document.querySelector(".map-lines");
         const line1 = document.getElementById("line1");
@@ -60,10 +70,12 @@
         const centerGallery = getCenter(gallery);
         const centerProjects = getCenter(projects);
         const centerContact = getCenter(contact);
+        const centerDonate = getCenter(donate);
   
         // Set the lines to connect the icons dynamically
         setLine(line1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
         setLine(line2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
+        setLine(line3, centerContact.x, centerContact.y, centerDonate.x, centerDonate.y);
     }
   
     window.addEventListener("load", updateLines);
