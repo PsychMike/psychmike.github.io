@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Haunted House</title>
+</head>
+<body>
+    <div class="map-container">
+        <img src="assets/teasuremap_lowres.png" alt="Haunted Treasure Map" class="map">
+        <div class="overlay"></div>
+
+        <a href="gallery.html" class="map-link" id="gallery">Gallery</a>
+        <a href="projects.html" class="map-link" id="projects">Projects</a>
+        <a href="contact.html" class="map-link" id="contact">Contact Us</a>
+    </div>
+
+    <svg class="map-lines" xmlns="http://www.w3.org/2000/svg">
+        <path id="path1" class="dashed-line" fill="none"/>
+        <path id="path2" class="dashed-line" fill="none"/>
+        <path id="path3" class="dashed-line" fill="none"/>
+    </svg>
+    
+    
+
+    <script>
+        function updateLines() {
+            const gallery = document.getElementById("gallery").getBoundingClientRect();
+            const projects = document.getElementById("projects").getBoundingClientRect();
+            const contact = document.getElementById("contact").getBoundingClientRect();
+    
+            const svg = document.querySelector(".map-lines");
+            const path1 = document.getElementById("path1");
+            const path2 = document.getElementById("path2");
+            const path3 = document.getElementById("path3");
+    
+            function setCurvedPath(path, startX, startY, endX, endY) {
+                const midX = (startX + endX) / 2; 
+                const midY = (startY + endY) / 2 - 40; // Raise the middle for a curve
+    
+                const d = `M ${startX} ${startY} Q ${midX} ${midY}, ${endX} ${endY}`;
+                path.setAttribute("d", d);
+            }
+    
+            // Draw curved paths
+            setCurvedPath(path1, window.innerWidth / 2, 200, gallery.left + gallery.width / 2, gallery.top + gallery.height / 2);
+            setCurvedPath(path2, gallery.left + gallery.width / 2, gallery.top + gallery.height / 2, projects.left + projects.width / 2, projects.top + projects.height / 2);
+            setCurvedPath(path3, projects.left + projects.width / 2, projects.top + projects.height / 2, contact.left + contact.width / 2, contact.top + contact.height / 2);
+        }
+    
+        window.addEventListener("load", updateLines);
+        window.addEventListener("resize", updateLines);
+    </script>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../assets/treasuremap2.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* SVG overlay for the dashed red lines */
+.map-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Dashed red lines */
+.dashed-line {
+    stroke: red;
+    stroke-width: 5px; /* Increase thickness */
+    stroke-dasharray: 20 15; /* Increase dash and gap size */
+    animation: dash 8s linear infinite; /* Slow down animation */
+}
+
+/* Animation to make the dashes look like they're moving */
+@keyframes dash {
+    to { stroke-dashoffset: 200; } /* Decrease the number to make it move slower */
+}
+
+/* Style for the map icons */
+.map-icon {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Creepster', cursive; /* Horror-themed font */
+}
+
+/* Import horror font */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Hover effect to enlarge icons */
+.map-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Position each icon where you need it */
+#gallery   { top: 30%; left: 35%; }
+#projects  { top: 50%; left: 65%; }
+#contact   { top: 70%; left: 50%; }
+
+.map-icon img {
+    width: 100px; /* Adjust as necessary */
+    height: auto;
+}
+
+.map-icon span {
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3px 6px;
+    border-radius: 70px;
+    font-family: 'Another Danger Slanted', sans-serif; /* Use the downloaded font */
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: color 2s ease-in-out;
+}
+
+.map-icon:hover span {
+    color: white; /* Ensure contrast remains readable */
+}
+
+.map-icon:hover span::before {
+    height: 100%;
+}
+
+
+/* Blood-like effect on text */
+.map-icon span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: red;
+    bottom: 0;
+    left: 0;
+    z-index: 0; /* Ensure it covers text instead of being behind it */
+    transition: height 2s ease-in-out;
+    filter: blur(2px); /* Gives a smoother spread */
+}
+
+
+@font-face {
+    font-family: 'Another Danger';
+    src: url('another_danger/Another\ Danger\ -\ Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Another Danger Slanted';
+    src: url('another_danger/Another\ Danger\ Slanted\ -\ Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

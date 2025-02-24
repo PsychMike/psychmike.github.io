@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haunted Map</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="map-container">
+    
+    <!-- SVG overlay for dashed connecting lines -->
+    <svg class="map-lines" xmlns="http://www.w3.org/2000/svg">
+        <line id="line1" class="dashed-line" />
+        <line id="line2" class="dashed-line" />
+      </svg>
+      
+    <!-- Map icons with text underneath -->
+    <a href="gallery.html" class="map-icon" id="gallery">
+      <img src="assets/gallery.png" alt="Gallery Icon" />
+      <span>Gallery</span>
+    </a>
+    <a href="projects.html" class="map-icon" id="projects">
+      <img src="assets/projects-icon.png" alt="Projects Icon" />
+      <span>Projects</span>
+    </a>
+    <a href="contact.html" class="map-icon" id="contact">
+      <img src="assets/contact-icon.png" alt="Contact Icon" />
+      <span>Contact Us</span>
+    </a>
+
+  </div>
+  <script>
+    function updateLines() {
+        const gallery = document.getElementById("gallery").getBoundingClientRect();
+        const projects = document.getElementById("projects").getBoundingClientRect();
+        const contact = document.getElementById("contact").getBoundingClientRect();
+  
+        const svg = document.querySelector(".map-lines");
+        const line1 = document.getElementById("line1");
+        const line2 = document.getElementById("line2");
+  
+        function setLine(line, startX, startY, endX, endY) {
+            line.setAttribute("x1", startX);
+            line.setAttribute("y1", startY);
+            line.setAttribute("x2", endX);
+            line.setAttribute("y2", endY);
+        }
+  
+        // Get center points of each icon
+        function getCenter(element) {
+            return {
+                x: element.left + element.width / 2,
+                y: element.top + element.height / 2
+            };
+        }
+  
+        const centerGallery = getCenter(gallery);
+        const centerProjects = getCenter(projects);
+        const centerContact = getCenter(contact);
+  
+        // Set the lines to connect the icons dynamically
+        setLine(line1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
+        setLine(line2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
+    }
+  
+    window.addEventListener("load", updateLines);
+    window.addEventListener("resize", updateLines);
+  </script>
+  
+</body>
+</html>
