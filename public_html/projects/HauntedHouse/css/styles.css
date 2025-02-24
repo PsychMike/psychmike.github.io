@@ -65,6 +65,7 @@ body {
 .map-icon img {
     width: 100px; /* Adjust as necessary */
     height: auto;
+    border-radius: 20%;
 }
 
 .map-icon span {
@@ -98,8 +99,8 @@ body {
     background: red;
     bottom: 0;
     left: 0;
-    z-index: 0; /* Ensure it covers text instead of being behind it */
-    transition: height 2s ease-in-out;
+    z-index: -5; /* Ensure it covers text instead of being behind it */
+    transition: height 1s ease-in-out;
     filter: blur(2px); /* Gives a smoother spread */
 }
 
