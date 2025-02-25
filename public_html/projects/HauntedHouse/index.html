@@ -9,13 +9,23 @@
 <link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico">
 </head>
 <body>
+
+  <div id="menu-container"></div>
+  <script>
+      fetch("menu.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("menu-container").innerHTML = data);
+  </script>
+  
+
   <div class="map-container">
 
     <!-- SVG overlay for dashed connecting lines -->
     <svg class="map-lines" xmlns="http://www.w3.org/2000/svg">
-        <line id="line1" class="dashed-line" />
-        <line id="line2" class="dashed-line" />
-        <line id="line3" class="dashed-line" />  <!-- Added this -->
+      <path id="path1" class="dashed-line" fill="none" />
+      <path id="path2" class="dashed-line" fill="none" />
+      <path id="path3" class="dashed-line" fill="none" />
+      
     </svg>
     
       
@@ -41,47 +51,53 @@
 
   </div>
   <script>
-    function updateLines() {
-        const gallery = document.getElementById("gallery").getBoundingClientRect();
-        const projects = document.getElementById("projects").getBoundingClientRect();
-        const contact = document.getElementById("contact").getBoundingClientRect();
-        const donate = document.getElementById("donate").getBoundingClientRect();
+   function setCurvedPath(path, startX, startY, endX, endY) {
 
-  
-        const svg = document.querySelector(".map-lines");
-        const line1 = document.getElementById("line1");
-        const line2 = document.getElementById("line2");
-        const line3 = document.getElementById("line3");
-  
-        function setLine(line, startX, startY, endX, endY) {
-            line.setAttribute("x1", startX);
-            line.setAttribute("y1", startY);
-            line.setAttribute("x2", endX);
-            line.setAttribute("y2", endY);
-        }
-  
-        // Get center points of each icon
-        function getCenter(element) {
-            return {
-                x: element.left + element.width / 2,
-                y: element.top + element.height / 2
-            };
-        }
-  
-        const centerGallery = getCenter(gallery);
-        const centerProjects = getCenter(projects);
-        const centerContact = getCenter(contact);
-        const centerDonate = getCenter(donate);
-  
-        // Set the lines to connect the icons dynamically
-        setLine(line1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
-        setLine(line2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
-        setLine(line3, centerContact.x, centerContact.y, centerDonate.x, centerDonate.y);
+    const offsetMult = 500; // Offset multiplier for curve
+    const offsetVal = 60; // Offset value for curve
+
+    const midX = (startX + endX) / 2 + (Math.random() * offsetMult - offsetVal); // Random X offset
+    const midY = (startY + endY) / 2 + (Math.random() * offsetMult - offsetVal); // Random Y offset
+
+    const d = `M ${startX} ${startY} Q ${midX} ${midY}, ${endX} ${endY}`;
+    path.setAttribute("d", d);
+}
+
+function updateLines() {
+    const gallery = document.getElementById("gallery").getBoundingClientRect();
+    const projects = document.getElementById("projects").getBoundingClientRect();
+    const contact = document.getElementById("contact").getBoundingClientRect();
+    const donate = document.getElementById("donate").getBoundingClientRect();
+
+    const path1 = document.getElementById("path1");
+    const path2 = document.getElementById("path2");
+    const path3 = document.getElementById("path3");
+
+    function getCenter(element) {
+        return {
+            x: element.left + element.width / 2,
+            y: element.top + element.height / 2
+        };
     }
-  
-    window.addEventListener("load", updateLines);
-    window.addEventListener("resize", updateLines);
+
+    const centerGallery = getCenter(gallery);
+    const centerProjects = getCenter(projects);
+    const centerContact = getCenter(contact);
+    const centerDonate = getCenter(donate);
+
+    setCurvedPath(path1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
+    setCurvedPath(path2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
+    setCurvedPath(path3, centerContact.x, centerContact.y, centerDonate.x, centerDonate.y);
+}
+
+window.addEventListener("load", () => {
+    setTimeout(updateLines, 100); // Delay to allow images to load
+});
+window.addEventListener("resize", updateLines);
+
   </script>
-  
+
+  <footer><p>&copy; Beau Horror</p></footer>
+
 </body>
 </html>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
@@ -7,6 +10,13 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+/* Apply haunted house background only to non-main pages */
+body.subpage {
+    background: url('../assets/hauntedhouse1.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
 
 .map-container {
     position: relative;
@@ -58,9 +68,9 @@ body {
 }
 
 /* Position each icon where you need it */
-#gallery   { top: 30%; left: 35%; }
+#gallery   { top: 20%; left: 35%; }
 #projects  { top: 50%; left: 65%; }
-#contact   { top: 70%; left: 50%; }
+#contact   { top: 60%; left: 40%; }
 #donate    { top: 20%; left: 60%; }
 
 .map-icon img {
@@ -118,4 +128,135 @@ body {
     src: url('another_danger/Another\ Danger\ Slanted\ -\ Demo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background: black; */
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+.map-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Contact Form Container */
+/* Contact Form Container */
+.form-container {
+    background: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+    padding: 25px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* Red glowing shadow */
+}
+
+/* Style for text inside the form */
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    color: white;
+    margin: 10px 0 5px;
+}
+
+/* Style for inputs and text area */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style for submit button */
+.contact-form button {
+    background: red;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: darkred;
+    box-shadow: 0 0 8px red;
+}
+
+.contact-info {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: black;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background: darkred;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
