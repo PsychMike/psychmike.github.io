@@ -8,60 +8,79 @@
 </head>
 <body class="subpage">
     <header>
-        <h1 style="font-family: 'Creepster',cursive; color: rgb(138, 35, 35); padding-left: 50px; font-size: 50px;"">Gallery</h1>
+        <h1 style="font-family: 'Creepster',cursive; color: rgb(138, 35, 35); padding-left: 50px; font-size: 50px;">Gallery</h1>
     </header>
 
     <main>
-        <div class="carousel">
+        <div class="carousel-container">
             <button id="prevBtn">❮</button>
-            <img id="carouselImage" src="" alt="Gallery Image">
+            <div class="carousel">
+                <img id="carouselImage" src="" alt="Gallery Image" onclick="openLightbox()">
+            </div>
             <button id="nextBtn">❯</button>
         </div>
+
+        <!-- Lightbox for Enlarged Image -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <button onclick="closeLightbox()" class="close-btn">✖</button>
+            <img id="lightboxImage" src="" alt="Enlarged Image">
+        </div>
+        
+
     </main>
 
     <script>
         let images = [];
         let currentIndex = 0;
-        const imageFolder = "/assets/gallery_imgs/"; // Correct Flask path
         const carouselImage = document.getElementById("carouselImage");
 
         async function fetchGalleryImages() {
-    try {
-        const response = await fetch("http://127.0.0.1:5000/gallery");
-        const data = await response.json();
-        console.log("Fetched images:", data); // ✅ Debugging
+            try {
+                const response = await fetch("http://127.0.0.1:5000/gallery");
+                const data = await response.json();
+                console.log("Fetched images:", data);
 
-        images = data.images.map(img => `http://127.0.0.1:5000/gallery_imgs/${img}`);
-        console.log("Image URLs:", images); // ✅ Ensure correct URLs
+                images = data.images.map(img => `http://127.0.0.1:5000/gallery_imgs/${img}`);
+                console.log("Image URLs:", images);
 
-        if (images.length > 0) {
-            currentIndex = 0;  // ✅ Reset index
-            updateCarousel();  // ✅ Call update
+                if (images.length > 0) {
+                    currentIndex = 0;
+                    updateCarousel();
+                }
+            } catch (error) {
+                console.error("Failed to load images:", error);
+            }
         }
-    } catch (error) {
-        console.error("Failed to load images:", error);
-    }
-}
 
-    
         function updateCarousel() {
             carouselImage.src = images[currentIndex];
         }
-    
+
         document.getElementById("prevBtn").addEventListener("click", () => {
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateCarousel();
         });
-    
+
         document.getElementById("nextBtn").addEventListener("click", () => {
             currentIndex = (currentIndex + 1) % images.length;
             updateCarousel();
         });
-    
-        fetchGalleryImages(); // Load images on page load
-        
-    </script>
-    
 
+        fetchGalleryImages();
+
+        function openLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    
+    lightboxImage.src = document.getElementById("carouselImage").src;
+    lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+
+    </script>
 </body>
 </html>
