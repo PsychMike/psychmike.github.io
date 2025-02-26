@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
-<body class="subpage">
+<body class="subpage gallery-page">
+
+    <div id="menu-container"></div>
+    <script>
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("menu-container").innerHTML = data);
+    </script>
+
     <header>
         <h1 style="font-family: 'Creepster',cursive; color: rgb(138, 35, 35); padding-left: 50px; font-size: 50px;">Gallery</h1>
     </header>
@@ -15,8 +24,12 @@
         <div class="carousel-container">
             <button id="prevBtn">❮</button>
             <div class="carousel">
-                <img id="carouselImage" src="" alt="Gallery Image" onclick="openLightbox()">
+                <div class="frame-container">
+                    <img id="carouselImage" src="" alt="Gallery Image" onclick="openLightbox()">
+                </div>
+                                <div class="smoke-overlay"></div>
             </div>
+            
             <button id="nextBtn">❯</button>
         </div>
 
@@ -81,6 +94,38 @@ function closeLightbox() {
 }
 
 
+function updateCarousel() {
+    carouselImage.classList.remove("active");
+    setTimeout(() => {
+        carouselImage.src = images[currentIndex];
+        carouselImage.classList.add("active");
+    }, 300);
+}
+
+
+
     </script>
+
+
+<svg width="0" height="0">
+    <defs>
+        <filter id="smoke-filter" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" result="noise"/>
+            <feGaussianBlur in="noise" stdDeviation="12" result="blurredNoise"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.6"/>
+            </feComponentTransfer>
+            <feComposite in="blurredNoise" in2="SourceAlpha" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+</svg>
+
+
+<footer style="padding-bottom: 20px;"><p>&copy; Beau Horror</p></footer>
+
 </body>
 </html>
