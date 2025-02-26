@@ -13,33 +13,9 @@ body.gallery-page {
     width: 80%;
     max-width: 900px;
     margin: auto;
+    padding-top: 100px;
 }
 
-/* 🖼️ FRAME STYLING */
-.frame-container {
-    position: relative;
-    display: inline-block;
-    padding: 20px;
-    background: url('../assets/frame_texture.webp'); /* Ornate texture */
-    background-size: cover;
-    border: 20px solid #8b6f4c; /* Antique gold frame */
-    border-radius: 15px;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.9), 
-                inset 0px 10px 20px rgba(255, 255, 255, 0.2);
-}
-
-/* 🖼️ INNER FRAME BORDER (Gives a realistic inset effect) */
-.frame-container::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 15px;
-    border: 5px solid rgba(0, 0, 0, 0.6); /* Dark shadow for depth */
-    pointer-events: none;
-}
 
 /* 🖼️ IMAGE INSIDE THE FRAME */
 .carousel img {
@@ -211,14 +187,14 @@ body::before {
 .frame-container {
     position: relative;
     display: inline-block;
-    padding: 10px;
-    background: linear-gradient(145deg, #7a5d3a 10%, #c8a165 50%, #7a5d3a 90%);
-    border: 12px solid #8b6f4c; /* Gold/brown antique frame */
+    padding: 8px;
+    background: linear-gradient(145deg, #2a1f14 10%, #0a0805 50%, #2a1f14 90%); /* Darkened tones */
+    border: 14px solid #382a1c; /* Darker antique brown frame */
     border-radius: 12px;
     box-shadow: 
-        0px 8px 25px rgba(0, 0, 0, 0.7),  /* Outer shadow */
-        inset 0px 4px 10px rgba(0, 0, 0, 0.5), /* Dark inner edge */
-        inset 0px -4px 6px rgba(255, 255, 255, 0.2); /* Highlight on top edge */
+        0px 10px 30px rgba(0, 0, 0, 0.85),  /* Stronger outer shadow */
+        inset 0px 6px 12px rgba(0, 0, 0, 0.7), /* Darker inner edge */
+        inset 0px -6px 8px rgba(255, 255, 255, 0.15); /* More subtle highlight */
 }
 
 /* 🖼️ INNER FRAME BORDER */
@@ -230,9 +206,10 @@ body::before {
     right: -6px;
     bottom: -6px;
     border-radius: 10px;
-    border: 5px solid rgba(0, 0, 0, 0.4); /* Darkened inner frame */
+    border: 5px solid rgba(0, 0, 0, 0.6); /* Darker inner frame */
     pointer-events: none;
 }
+
 
 /* 🔥 SMOKE EFFECT */
 .smoke-overlay {
@@ -278,3 +255,69 @@ body::before {
 .carousel-container {
     animation: floating 6s ease-in-out infinite; /* Smooth floating effect */
 }
+
+
+/* 🪵 WOODEN SIGN EFFECT */
+.page-sign {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    transform: translateX(-50%);
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../assets/woodtable.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px 50px;
+    font-family: 'Creepster', cursive;
+    font-size: 42px;
+    color: #8b0000; /* Dark blood-red */
+    text-shadow: 3px 3px 8px black;
+    border: 0px solid #1a1714; /* Dark brown border */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8), 
+                inset 0px 3px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* 🔗 CHAINS TO MAKE SIGN LOOK HANGING */
+.page-sign::before,
+.page-sign::after {
+    content: "";
+    position: absolute;
+    top: -135px; /* Adjust the height of the chains */
+    width: 10px;
+    height: 140px;
+    background: #110e09; /* Rope color */
+    border-radius: 5px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.page-sign::before {
+    left: 15%;
+}
+
+.page-sign::after {
+    right: 15%;
+}
+
+/* ⛓ OPTIONAL: ADDING A CHAIN INSTEAD OF ROPES */
+.page-sign::before {
+    background: url('../assets/chain_texture.webp') repeat-y;
+    background-size: contain;
+}
+
+.page-sign::after {
+    background: url('../assets/chain_texture.webp') repeat-y;
+    background-size: contain;
+}
+
+/* ⚖️ NATURAL SWING ANIMATION */
+@keyframes swing {
+    0% { transform: translateX(-50%) rotate(-3deg); }
+    50% { transform: translateX(-50%) rotate(3deg); }
+    100% { transform: translateX(-50%) rotate(-3deg); }
+}
+
+.page-sign {
+    animation: swing 4s infinite ease-in-out;
+}
+
