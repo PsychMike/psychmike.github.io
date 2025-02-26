@@ -263,3 +263,68 @@ footer {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+/* 🪵 WOODEN SIGN EFFECT */
+.page-sign {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    transform: translateX(-50%);
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../assets/woodtable.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px 50px;
+    font-family: 'Creepster', cursive;
+    font-size: 42px;
+    color: #8b0000; /* Dark blood-red */
+    text-shadow: 3px 3px 8px black;
+    border: 0px solid #1a1714; /* Dark brown border */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8), 
+                inset 0px 3px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* 🔗 CHAINS TO MAKE SIGN LOOK HANGING */
+.page-sign::before,
+.page-sign::after {
+    content: "";
+    position: absolute;
+    top: -135px; /* Adjust the height of the chains */
+    width: 10px;
+    height: 140px;
+    background: #110e09; /* Rope color */
+    border-radius: 5px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.page-sign::before {
+    left: 15%;
+}
+
+.page-sign::after {
+    right: 15%;
+}
+
+/* ⛓ OPTIONAL: ADDING A CHAIN INSTEAD OF ROPES */
+.page-sign::before {
+    background: url('../assets/chain_texture.webp') repeat-y;
+    background-size: contain;
+}
+
+.page-sign::after {
+    background: url('../assets/chain_texture.webp') repeat-y;
+    background-size: contain;
+}
+
+/* ⚖️ NATURAL SWING ANIMATION */
+@keyframes swing {
+    0% { transform: translateX(-20%) rotate(-1deg); }
+    50% { transform: translateX(-20%) rotate(1deg); }
+    100% { transform: translateX(-20%) rotate(-1deg); }
+}
+
+.page-sign {
+    animation: swing 4s infinite ease-in-out;
+}
