@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="subpage">
+    <header>
+        <h1 style="font-family: 'Creepster',cursive; color: rgb(138, 35, 35); padding-left: 50px; font-size: 50px;"">Gallery</h1>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <button id="prevBtn">❮</button>
+            <img id="carouselImage" src="" alt="Gallery Image">
+            <button id="nextBtn">❯</button>
+        </div>
+    </main>
+
+    <script>
+        let images = [];
+        let currentIndex = 0;
+        const imageFolder = "/assets/gallery_imgs/"; // Correct Flask path
+        const carouselImage = document.getElementById("carouselImage");
+
+        async function fetchGalleryImages() {
+    try {
+        const response = await fetch("http://127.0.0.1:5000/gallery");
+        const data = await response.json();
+        console.log("Fetched images:", data); // ✅ Debugging
+
+        images = data.images.map(img => `http://127.0.0.1:5000/gallery_imgs/${img}`);
+        console.log("Image URLs:", images); // ✅ Ensure correct URLs
+
+        if (images.length > 0) {
+            currentIndex = 0;  // ✅ Reset index
+            updateCarousel();  // ✅ Call update
+        }
+    } catch (error) {
+        console.error("Failed to load images:", error);
+    }
+}
+
+    
+        function updateCarousel() {
+            carouselImage.src = images[currentIndex];
+        }
+    
+        document.getElementById("prevBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+    
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel();
+        });
+    
+        fetchGalleryImages(); // Load images on page load
+        
+    </script>
+    
+
+</body>
+</html>
