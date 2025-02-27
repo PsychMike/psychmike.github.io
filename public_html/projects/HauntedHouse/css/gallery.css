@@ -14,7 +14,7 @@ body.gallery-page {
     max-width: 900px;
     margin: auto;
     padding-top: 100px;
-    z-index: 9999;
+    z-index: 1001;
 }
 
 
@@ -96,7 +96,7 @@ body.gallery-page {
     background: rgba(0, 0, 0, 0.85);
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 /* Enlarged Image */
