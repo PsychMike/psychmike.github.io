@@ -50,22 +50,23 @@
         const carouselImage = document.getElementById("carouselImage");
 
         async function fetchGalleryImages() {
-            try {
-                const response = await fetch("http://127.0.0.1:5000/gallery");
-                const data = await response.json();
-                console.log("Fetched images:", data);
+    try {
+        const repo = "PsychMike/psychmike.github.io";
+        const path = "HauntedHouse/assets/gallery_imgs";
+        const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
+        const data = await response.json();
 
-                images = data.images.map(img => `http://127.0.0.1:5000/gallery_imgs/${img}`);
-                console.log("Image URLs:", images);
+        const images = data.map(file => file.download_url);
+        console.log("Image URLs:", images);
 
-                if (images.length > 0) {
-                    currentIndex = 0;
-                    updateCarousel();
-                }
-            } catch (error) {
-                console.error("Failed to load images:", error);
-            }
+        if (images.length > 0) {
+            currentIndex = 0;
+            updateCarousel();
         }
+    } catch (error) {
+        console.error("Failed to load images:", error);
+    }
+}
 
         function updateCarousel() {
             carouselImage.src = images[currentIndex];
