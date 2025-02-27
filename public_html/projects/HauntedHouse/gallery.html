@@ -56,7 +56,11 @@
         const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
         const data = await response.json();
 
-        const images = data.map(file => file.download_url);
+        // Filter only images (jpg, png, webp)
+        images = data
+            .filter(file => file.name.match(/\.(jpg|jpeg|png|webp)$/i))
+            .map(file => file.download_url);
+
         console.log("Image URLs:", images);
 
         if (images.length > 0) {
@@ -67,6 +71,7 @@
         console.error("Failed to load images:", error);
     }
 }
+
 
         function updateCarousel() {
             carouselImage.src = images[currentIndex];
