@@ -51,15 +51,21 @@
 
         async function fetchGalleryImages() {
     try {
-        const repo = "PsychMike/psychmike.github.io";
-        const path = "HauntedHouse/assets/gallery_imgs";
-        const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
-        const data = await response.json();
+        // const repo = "PsychMike/psychmike.github.io";
+        // const path = "HauntedHouse/assets/gallery_imgs";
+        // const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
+        // const data = await response.json();
 
-        // Filter only images (jpg, png, webp)
-        images = data
-            .filter(file => file.name.match(/\.(jpg|jpeg|png|webp)$/i))
-            .map(file => file.download_url);
+        // // Filter only images (jpg, png, webp)
+        // images = data
+        //     .filter(file => file.name.match(/\.(jpg|jpeg|png|webp)$/i))
+        //     .map(file => file.download_url);
+
+            images = [
+    "assets/gallery_imgs/treasuremap_lowres.png",
+    "assets/gallery_imgs/treasuremap1.webp",
+    "assets/gallery_imgs/hauntedhouse1.webp",
+    "assets/gallery_imgs/woodtable.png",]
 
         console.log("Image URLs:", images);
 
@@ -71,6 +77,8 @@
         console.error("Failed to load images:", error);
     }
 }
+
+
 
 
         function updateCarousel() {
