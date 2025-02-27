@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('../assets/treasuremap2.webp') no-repeat center center fixed;
+    background: url('../assets/blank-treasuremap.webp') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     overflow: hidden;
@@ -51,7 +51,7 @@ body.subpage {
 .map-icon {
     position: absolute;
     text-decoration: none;
-    color: white;
+    color: rgb(6, 7, 1);
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -67,21 +67,18 @@ body.subpage {
     transform: scale(1.2);
 }
 
-/* Position each icon where you need it */
-#gallery   { top: 20%; left: 35%; }
-#projects  { top: 50%; left: 65%; }
-#contact   { top: 60%; left: 40%; }
-#donate    { top: 20%; left: 60%; }
-
 .map-icon img {
     width: 100px; /* Adjust as necessary */
     height: auto;
     border-radius: 20% !important; /* Round the corners */
+    mix-blend-mode: darken;
+    filter: sepia(60%) saturate(120%) brightness(90%);
+
 }
 
 .map-icon span {
     margin-top: 5px;
-    background: rgba(0, 0, 0, 0.7);
+    /* background: rgba(0, 0, 0, 0.7); */
     padding: 3px 6px;
     border-radius: 70px;
     font-family: 'Another Danger Slanted', sans-serif; /* Use the downloaded font */
@@ -328,3 +325,24 @@ footer {
 .page-sign {
     animation: swing 4s infinite ease-in-out;
 }
+
+
+.landmass {
+    position: absolute;
+    top: 20%;  /* Adjust as needed */
+    left: 30%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Centers it */
+    width: 80vw; /* Adjust width based on your design */
+    height: 60vh;
+    background: url('../assets/landmass3.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1; /* Above the background */
+    pointer-events: none; /* Prevent clicks from interfering */
+    mix-blend-mode: darken;
+}
+
+/* Position each icon where you need it */
+#gallery   { top: 15%; left: 28%; }
+#projects  { top: 40%; left: 65%; }
+#contact   { top: 60%; left: 40%; }
+#donate    { top: 20%; left: 60%; }
