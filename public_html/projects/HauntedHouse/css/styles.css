@@ -80,6 +80,12 @@ body.subpage {
 
 }
 
+.map-icon img{
+        /* Create a smooth fade-out effect at the edges */
+        -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+        mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
 .map-icon span {
     /* margin-top: 5px; */
     /* background: rgba(0, 0, 0, 0.7); */
@@ -338,7 +344,7 @@ footer {
 }
 
 
-.landmass {
+.landmass1 {
     position: absolute;
     top: 20%;  /* Adjust as needed */
     left: 30%; /* Adjust as needed */
@@ -351,6 +357,21 @@ footer {
     pointer-events: none; /* Prevent clicks from interfering */
     mix-blend-mode: darken;
 }
+
+.landmass2 {
+    position: absolute;
+    top: 70%;  
+    left: 55%; 
+    transform: translate(-50%, -50%) rotate(180deg); 
+    width: 180vw; 
+    height: 100vh;
+    background: url('../assets/landmass44.webp') no-repeat center center;
+    background-size: contain;
+    z-index: -1; 
+    pointer-events: none; 
+    mix-blend-mode: darken;
+}
+
 
 #donate-container {
     position: absolute;
@@ -503,10 +524,23 @@ footer {
 }
 
 
+.company-logo {
+    position: absolute; /* Allows positioning in the bottom left */
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    width: 150px; /* Set an appropriate width */
+    height: auto; /* Maintain aspect ratio */
+    background: url('assets/BeauHaunt-logo-2024.png') no-repeat center center;
+    background-size: contain;
+    z-index: 1000;
+    mix-blend-mode: darken;
+}
+
+
 /* Position each icon where you need it */
 #gallery   { top: 15%; left: 28%; }
 #projects  { top: 40%; left: 65%; }
 #contact   { top: 60%; left: 0%; }
 #donate    { top: 20%; left: 60%; }
 #about-us     { top: 80%; left: 80%; }
-#attractions { top: 60%; left: 50%; }
+#attractions { top: 59%; left: 50%; }
