@@ -442,9 +442,62 @@ footer {
 }
 
 
+.skull-container {
+    position: relative;
+    display: inline-block;
+}
+
+.skull-image {
+    display: block;
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Eye base styling */
+.skull-eye {
+    position: absolute;
+    width: 15px;  /* Adjust eye size */
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(255, 0, 0, 0.8); /* Glowing effect */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Left Eye Position */
+.left-eye {
+    top: 40%;  /* Adjust vertical positioning */
+    left: 42%; /* Adjust horizontal positioning */
+}
+
+/* Right Eye Position */
+.right-eye {
+    top: 40%;  /* Adjust vertical positioning */
+    left: 58%; /* Adjust horizontal positioning */
+}
+
+/* Show eyes when hovering over the skull */
+.skull-container:hover .eye {
+    opacity: 1;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.skull-container:hover .eye {
+    opacity: 1;
+    animation: flicker 0.2s infinite alternate;
+}
+
+
 /* Position each icon where you need it */
 #gallery   { top: 15%; left: 28%; }
 #projects  { top: 40%; left: 65%; }
 #contact   { top: 60%; left: 0%; }
 #donate    { top: 20%; left: 60%; }
 #about-us     { top: 80%; left: 80%; }
+#attractions { top: 60%; left: 50%; }

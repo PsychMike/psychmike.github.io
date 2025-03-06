@@ -29,6 +29,7 @@
       <path id="path2" class="dashed-line" fill="none" />
       <path id="path3" class="dashed-line" fill="none" />
       <path id="path4" class="dashed-line" fill="none" /> 
+      <path id="path5" class="dashed-line" fill="none" />
 
     </svg>
     
@@ -98,14 +99,23 @@
       </div>
     </a>
       
+    <a href="attractions.html" class="map-icon" id="attractions">
+      <div class="skull-container">
+          <img src="assets/skull-cave.webp" alt="Attractions" class="attractions" />
+          <div class="skull-eye left-eye"></div>
+          <div class="skull-eye right-eye"></div>
+              </div>
+      <span>Attractions</span>
+  </a>
+  
         
 
   </div>
   <script>
    function setCurvedPath(path, startX, startY, endX, endY) {
 
-    const offsetMult = 500; // Offset multiplier for curve
-    const offsetVal = 60; // Offset value for curve
+    const offsetMult = 0; // Offset multiplier for curve
+    const offsetVal = 0; // Offset value for curve
 
     const midX = (startX + endX) / 2 + (Math.random() * offsetMult - offsetVal); // Random X offset
     const midY = (startY + endY) / 2 + (Math.random() * offsetMult - offsetVal); // Random Y offset
@@ -120,11 +130,13 @@ function updateLines() {
     const contact = document.getElementById("contact").getBoundingClientRect();
     const donate = document.getElementById("donate").getBoundingClientRect();
     const aboutUs = document.getElementById("about-us").getBoundingClientRect();
+    const attractions = document.getElementById("attractions").getBoundingClientRect();
 
     const path1 = document.getElementById("path1");
     const path2 = document.getElementById("path2");
     const path3 = document.getElementById("path3");
     const path4 = document.getElementById("path4");
+    const path5 = document.getElementById("path5");
 
     function getCenter(element) {
         return {
@@ -138,11 +150,13 @@ function updateLines() {
     const centerContact = getCenter(contact);
     const centerDonate = getCenter(donate);
     const centerAboutUs = getCenter(aboutUs);
+    const centerAttractions = getCenter(attractions);
 
     setCurvedPath(path1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
     setCurvedPath(path2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
     setCurvedPath(path3, centerContact.x, centerContact.y, centerDonate.x, centerDonate.y);
     setCurvedPath(path4, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y);
+    setCurvedPath(path5, centerAboutUs.x, centerAboutUs.y, centerAttractions.x, centerAttractions.y);
 }
 
 window.addEventListener("load", () => {
@@ -179,6 +193,6 @@ document.getElementById("donate-animation").addEventListener("mouseleave", funct
 
 </script>
   <footer><p style="color:black;font-family: 'Another Danger Slanted', sans-serif;">&copy; Beau Horror</p></footer>
-
+<a>img src="assets/BeauHaunt-logo-2025.webp"</a>
 </body>
 </html>
