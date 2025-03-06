@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Help Fill the Treasure Chest</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico">
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script>
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("menu-container").innerHTML = data);
+    </script>
+    
+    <main class="donation-container">
+        <h1>💰 Help Fill the Treasure Chest!</h1>
+        <p>Every pirate needs a little booty! Your donation helps us keep our ship sailing, bringing even more thrilling experiences to our guests. Become a part of our legendary crew through your donation!</p>
+        
+        <section class="why-donate">
+            <h2>Why Donate?</h2>
+            <p>Your contributions allow us to create immersive experiences, build exciting new attractions, and keep the magic alive for all guests. Whether it’s helping us craft set pieces, design interactive elements, or refurbishing the treasures we’ve already unearthed, every donation makes a difference.</p>
+        </section>
+        
+        <section class="ways-to-give">
+            <h2>Ways to Give</h2>
+            <p>We accept donations through card and online payments. Click on the Venmo link below to donate!</p>
+            <a href="YOUR_VENMO_LINK_HERE" class="donate-button">Donate via Venmo</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; Beau Horror</p>
+    </footer>
+</body>
+</html>

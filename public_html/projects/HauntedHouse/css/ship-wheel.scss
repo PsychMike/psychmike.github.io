@@ -1,0 +1,33 @@
+// Define image URL for easy modification
+$imgUrl: "/assets/Steering_wheel_ship_1.png";
+
+@mixin rotation($angle) {
+  -ms-transform: rotate($angle);
+  -moz-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+.steering {
+  width: 100px !important;
+  height: 100px !important;
+  background: url("#{$imgUrl}") center no-repeat !important;  // Ensure image loads
+  background-size: contain !important;
+  animation: rotateWheel 5s infinite linear;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  z-index: 1000;
+  flex-shrink: 0;  // Prevent shrinking in flex containers
+  display: inline-block;
+  background-color: red !important;
+  position: relative;
+  will-change: transform; // Optimizes rendering for animations
+}
+
+@keyframes rotateWheel {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(90deg); }
+  50%  { transform: rotate(180deg); }
+  75%  { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); } 
+}

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Haunted Map</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/parrot.css" />
+  <!-- <link rel="stylesheet" href="css/skull.css" /> -->
+  <!-- <link rel="stylesheet" href="css/ship-wheel.scss" /> -->
   <!-- Favicon for all browsers -->
 <link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico">
 </head>
@@ -25,31 +28,77 @@
       <path id="path1" class="dashed-line" fill="none" />
       <path id="path2" class="dashed-line" fill="none" />
       <path id="path3" class="dashed-line" fill="none" />
-      
+      <path id="path4" class="dashed-line" fill="none" /> 
+
     </svg>
     
     <div class="landmass"></div>
 
-      
+    <div id="animation-container" style="width: 300px; height: 300px;"></div>
+
     <!-- Map icons with text underneath -->
     <a href="gallery.html" class="map-icon" id="gallery">
-      <img src="assets/gallery-icon1.png" alt="Gallery Icon" />
+      <!-- <img src="assets/x-mark.png" alt="Gallery Icon" /> -->
+      <div class="gallery"></div>
       <span>Gallery</span>
     </a>
 
     <a href="projects.html" class="map-icon" id="projects">
-      <img src="assets/projects.webp" alt="Projects Icon" />
-      <!-- <span>Projects</span> -->
+      <div class="steering"></div>
+      <span>Projects</span>
+    </a>
+    
+    <a href="about-us.html" class="map-icon" id="about-us">
+      <div class="hat"></div>
+      <span>About Us</span>
     </a>
 
-    <a href="contact.html" class="map-icon" id="contact">
-        <img src="assets/contact-us.webp" alt="Contact Icon" />
-        <!-- <span>Contact Us</span> -->
 
-      </a>    <a href="donate.html" class="map-icon" id="donate">
-        <img src="assets/donate.webp" alt="donate Icon" />
-        <!-- <span>Donate</span> -->
-      </a>
+    <!-- 🦉🦚🦜🦢🦩🐦🐧🦅🦆 -->
+     <a href="contact.html" class="map-icon" id="contact">
+<div class="container">
+	<div class="canvas">
+		<div class="parrot">
+			<div class="head"></div>
+			<div class="back"></div>
+			<div class="pbody">
+				<div class="shadesection"></div>
+				<div class="eye">
+					<div class="eyemiddle">
+					</div>
+					<div class="eyeshadow"></div>
+				</div>
+			</div>
+			<div class="foot"></div>
+			<div class="wing"></div>
+			<div class="beak">
+				<div class="mouth"></div>
+			</div>
+			<div class="lowerbeak"></div>
+			<div class="cursewords">
+				<div class="words words1">CONTACT</div>
+				<div class="words words2">US</div>
+				<div class="words words3">CONTACT</div>
+				<div class="words words4">US</div>
+			</div>
+		</div>
+		<div class="trim"></div>
+		<div class="circle"></div>
+
+	</div>
+</div>
+<span>Contact Us</span>
+</a>
+
+    <a href="donate.html" class="map-icon" id="donate">
+      <div id="donate-container">
+          <div id="donate-animation"></div>
+          <div class="color-overlay"></div>
+          <span style="padding-left:1.5rem;">Donate</span>
+      </div>
+    </a>
+      
+        
 
   </div>
   <script>
@@ -70,10 +119,12 @@ function updateLines() {
     const projects = document.getElementById("projects").getBoundingClientRect();
     const contact = document.getElementById("contact").getBoundingClientRect();
     const donate = document.getElementById("donate").getBoundingClientRect();
+    const aboutUs = document.getElementById("about-us").getBoundingClientRect();
 
     const path1 = document.getElementById("path1");
     const path2 = document.getElementById("path2");
     const path3 = document.getElementById("path3");
+    const path4 = document.getElementById("path4");
 
     function getCenter(element) {
         return {
@@ -86,10 +137,12 @@ function updateLines() {
     const centerProjects = getCenter(projects);
     const centerContact = getCenter(contact);
     const centerDonate = getCenter(donate);
+    const centerAboutUs = getCenter(aboutUs);
 
     setCurvedPath(path1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
     setCurvedPath(path2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
     setCurvedPath(path3, centerContact.x, centerContact.y, centerDonate.x, centerDonate.y);
+    setCurvedPath(path4, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y);
 }
 
 window.addEventListener("load", () => {
@@ -99,7 +152,33 @@ window.addEventListener("resize", updateLines);
 
   </script>
 
-  <footer><p>&copy; Beau Horror</p></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+
+<!-- <script src="scripts/skull.js"></script> -->
+
+<script>
+
+var animation = lottie.loadAnimation({
+    container: document.getElementById("donate-animation"),
+    renderer: "svg",
+    loop: false, // Don't loop automatically
+    autoplay: false, // Don't start automatically
+    path: "/assets/chest-animation.json"
+});
+
+// Play animation on hover
+document.getElementById("donate-animation").addEventListener("mouseenter", function() {
+    animation.goToAndPlay(0, true); // Start animation from beginning on hover
+});
+
+// Reset animation on mouse leave
+document.getElementById("donate-animation").addEventListener("mouseleave", function() {
+    animation.stop(); // Stop animation when hover ends
+});
+
+
+</script>
+  <footer><p style="color:black;font-family: 'Another Danger Slanted', sans-serif;">&copy; Beau Horror</p></footer>
 
 </body>
 </html>

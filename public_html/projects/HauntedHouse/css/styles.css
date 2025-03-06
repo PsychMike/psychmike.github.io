@@ -77,7 +77,7 @@ body.subpage {
 }
 
 .map-icon span {
-    margin-top: 5px;
+    /* margin-top: 5px; */
     /* background: rgba(0, 0, 0, 0.7); */
     padding: 3px 6px;
     border-radius: 70px;
@@ -90,7 +90,7 @@ body.subpage {
 }
 
 .map-icon:hover span {
-    color: white; /* Ensure contrast remains readable */
+    color: red; /* Ensure contrast remains readable */
 }
 
 .map-icon:hover span::before {
@@ -99,7 +99,7 @@ body.subpage {
 
 
 /* Blood-like effect on text */
-.map-icon span::before {
+/* .map-icon span::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -107,10 +107,12 @@ body.subpage {
     background: red;
     bottom: 0;
     left: 0;
-    z-index: -5; /* Ensure it covers text instead of being behind it */
-    transition: height 1s ease-in-out;
-    filter: blur(2px); /* Gives a smoother spread */
-}
+    z-index: -5;  */
+    /* Ensure it covers text instead of being behind it */
+    /* transition: height 1s ease-in-out;
+    filter: blur(2px);  */
+    /* Gives a smoother spread */
+/* } */
 
 
 @font-face {
@@ -341,8 +343,108 @@ footer {
     mix-blend-mode: darken;
 }
 
+#donate-container {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 20%; /* Adjust as needed */
+    left: 60%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#donate-animation {
+    width: 150px;
+    height: 150px;
+    pointer-events: auto; /* Ensures hover and click work */
+    /* filter: sepia(1) hue-rotate(30deg) saturate(5) brightness(1.2); */
+}
+
+
+
+/* Steering Wheel Icon */
+@mixin rotation($angle) {
+  -ms-transform: rotate($angle);
+  -moz-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+.steering {
+  width: 100px !important;
+  height: 100px !important;
+  background: url("/assets/Steering_wheel_ship_1.png") center no-repeat !important;
+  background-size: contain !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  z-index: 1000;
+  flex-shrink: 0;
+  display: inline-block;
+  /* background-color: red !important; */
+  position: relative;
+  will-change: transform;
+}
+
+.steering:hover {
+  animation: rotateWheel 7s linear infinite;
+}
+
+@keyframes rotateWheel {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(90deg); }
+  50%  { transform: rotate(80deg); }
+  75%  { transform: rotate(-20deg); }
+  100% { transform: rotate(-10deg); } 
+}
+
+.hat{
+    width: 100px !important;
+    height: 100px !important;
+    background: url("/assets/pirate-hat.png") center no-repeat !important;
+    background-size: contain !important;
+}
+
+.hat:hover {
+    animation: wiggleHat 1s linear infinite;
+}
+
+@keyframes wiggleHat {
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(8deg); }
+    20%  { transform: rotate(-8deg); }
+    30%  { transform: rotate(6deg); }
+    40%  { transform: rotate(-6deg); }
+    50%  { transform: rotate(4deg); }
+    60%  { transform: rotate(-4deg); }
+    70%  { transform: rotate(2deg); }
+    80%  { transform: rotate(-2deg); }
+    90%  { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); } 
+}
+
+
+.gallery {
+    width: 100px !important;
+    height: 100px !important;
+    background: url("/assets/x-mark.png") center no-repeat !important;
+    background-size: contain !important;
+    display: block; /* Ensures transform works */
+}
+
+.gallery:hover {
+    animation: expandXMark 4s linear infinite;
+}
+
+@keyframes expandXMark {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+
 /* Position each icon where you need it */
 #gallery   { top: 15%; left: 28%; }
 #projects  { top: 40%; left: 65%; }
-#contact   { top: 60%; left: 40%; }
+#contact   { top: 60%; left: 0%; }
 #donate    { top: 20%; left: 60%; }
+#about-us     { top: 80%; left: 80%; }
