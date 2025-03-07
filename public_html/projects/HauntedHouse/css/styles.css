@@ -539,8 +539,103 @@ footer {
 
 /* Position each icon where you need it */
 #gallery   { top: 15%; left: 28%; }
-#projects  { top: 40%; left: 65%; }
-#contact   { top: 60%; left: 0%; }
-#donate    { top: 20%; left: 60%; }
+#projects  { top: 20%; left: 60%; }
+#contact   { top: 45%; left: 0%; }
+#donate    { top: 40%; left: 80%; }
 #about-us     { top: 80%; left: 80%; }
 #attractions { top: 59%; left: 50%; }
+
+
+
+
+/* Mobile Styles (Default) */
+@media (max-width: 767px) {
+    body {
+        background-size: cover;
+    }
+
+    .map-icon img {
+        width: 60px; /* Reduce icon size */
+    }
+
+    .map-icon span {
+        font-size: 30px; /* Reduce text size */
+    }
+
+    .company-logo {
+        width: 100px; /* Adjust logo size */
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .landmass1, .landmass2 {
+        width: 120vw; /* Expand to cover more space */
+        height: auto;
+    }
+
+    .form-container, .contact-info {
+        width: 80%;
+    }
+
+    .dropdown {
+        top: 10px;
+        right: 10px;
+    }
+
+    .dropbtn {
+        font-size: 30px; /* Smaller menu button */
+    }
+
+    #gallery   { top: 12%; left: 20%; }
+    #projects  { top: 38%; left: 60%; }
+    #contact   { top: 70%; left: 5%; }
+    #donate    { top: 15%; left: 50%; }
+    #about-us  { top: 85%; left: 75%; }
+    #attractions { top: 55%; left: 40%; }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .map-icon img {
+        width: 80px;
+    }
+
+    .map-icon span {
+        font-size: 40px;
+    }
+
+    .company-logo {
+        width: 130px;
+    }
+
+    .landmass1, .landmass2 {
+        width: 100vw;
+    }
+
+    .form-container, .contact-info {
+        width: 70%;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .map-icon img {
+        width: 100px;
+    }
+
+    .map-icon span {
+        font-size: 54px;
+    }
+
+    .company-logo {
+        width: 150px;
+    }
+
+    .landmass1, .landmass2 {
+        width: 80vw;
+    }
+
+    .form-container, .contact-info {
+        width: 60%;
+    }
+}

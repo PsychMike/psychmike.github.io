@@ -115,8 +115,8 @@
   <script>
    function setCurvedPath(path, startX, startY, endX, endY) {
 
-    const offsetMult = 0; // Offset multiplier for curve
-    const offsetVal = 0; // Offset value for curve
+    const offsetMult = 20; // Offset multiplier for curve
+    const offsetVal = -150; // Offset value for curve
 
     const midX = (startX + endX) / 2 + (Math.random() * offsetMult - offsetVal); // Random X offset
     const midY = (startY + endY) / 2 + (Math.random() * offsetMult - offsetVal); // Random Y offset
@@ -197,3 +197,8 @@ document.getElementById("donate-animation").addEventListener("mouseleave", funct
     <img src="assets/BeauHaunt-logo-2024.png" alt="Company Logo" class="company-logo">
   </body>
 </html>
+
+
+
+
+
