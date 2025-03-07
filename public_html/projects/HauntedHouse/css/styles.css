@@ -551,6 +551,23 @@ footer {
     height: 200px;
 }
 
+/* Fog Animation */
+@keyframes fogMove {
+    0% { transform: translateX(-100vw); opacity: 0.05; }
+    100% { transform: translateX(100vw); opacity: 0.05; }
+}
+
+.fog {
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    background: url('../assets/fog-cloud.webp') no-repeat center center;
+    background-size: contain;
+    opacity: 0.5;
+    animation: fogMove 10s infinite ease-in-out;
+    top: -50%;
+    border-radius: 150%;
+}
 
 
 
