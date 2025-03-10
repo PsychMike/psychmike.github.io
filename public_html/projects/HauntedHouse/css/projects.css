@@ -32,9 +32,10 @@ body::before {
 /* Dropdown Container */
 .dropdown {
     position: absolute;
-    top: 10%;
-    right: 20px;
-    z-index: 1000;
+    top: 3%;
+    right: 10%;
+    z-index: 10000;
+    rotate: 2deg;
 }
 
 /* Dropdown Button */
@@ -140,3 +141,19 @@ body::before {
     rotate: -2deg;
     opacity: 0.6;
 }
+
+.scroll-top {
+    position: fixed;
+    top: -4vh;
+    left: 0; /* Align to the left edge */
+    width: 100vw; /* Makes it stretch across the entire screen */
+    height: 150px; /* Adjust height as needed */
+    background: url('../assets/scroll-top2.png') no-repeat center top;
+    background-size: cover; /* Ensures it fills the width */
+    z-index: 9999; /* Keep it above other elements */
+    rotate: 2deg;
+    mix-blend-mode: darken;
+    opacity: 0.8;
+}
+
+
