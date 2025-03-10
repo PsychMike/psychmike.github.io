@@ -157,3 +157,32 @@ body::before {
 }
 
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-container h1, .projects-container h2 {
+        font-size: 2.5rem;
+    }
+    .projects-container p {
+        font-size: 2rem;
+    }
+    .company-logo {
+        left: 80%;
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container h1, .projects-container h2 {
+        font-size: 2rem;
+    }
+    .projects-container p {
+        font-size: 1.5rem;
+    }
+    .dropbtn {
+        font-size: 30px;
+    }
+    .company-logo {
+        left: 70%;
+        width: 100px;
+    }
+}
