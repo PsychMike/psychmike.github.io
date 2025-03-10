@@ -161,9 +161,11 @@ body::before {
 @media (max-width: 1024px) {
     .projects-container h1, .projects-container h2 {
         font-size: 2.5rem;
+        padding-left: 50px !important;
     }
     .projects-container p {
         font-size: 2rem;
+        padding-left: 50px !important;
     }
     .company-logo {
         left: 80%;
