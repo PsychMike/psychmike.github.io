@@ -81,13 +81,14 @@ body::before {
     display: block;
 }
 
-/* Main Donation Container */
+/* Main Projects Container */
 .projects-container {
     padding-top: 50px !important;
     max-width: 1800px;
     margin: auto;
     /* padding: 30px; */
     border-radius: 15px;
+    margin-left: 5vw;
 }
 
 /* Section Headers */
@@ -161,11 +162,11 @@ body::before {
 @media (max-width: 1024px) {
     .projects-container h1, .projects-container h2 {
         font-size: 2.5rem;
-        padding-left: 50px !important;
+        /* padding-left: 50px !important; */
     }
     .projects-container p {
         font-size: 2rem;
-        padding-left: 50px !important;
+        /* padding-left: 50px !important; */
     }
     .company-logo {
         left: 80%;
