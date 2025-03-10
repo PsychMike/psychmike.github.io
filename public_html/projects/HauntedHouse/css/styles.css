@@ -63,6 +63,8 @@ body.subpage {
     flex-direction: column;
     align-items: center;
     font-family: 'Treasure Map Deadhand', cursive; /* Horror-themed font */
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
 }
 
 
@@ -77,7 +79,8 @@ body.subpage {
     border-radius: 20% !important; /* Round the corners */
     mix-blend-mode: darken;
     filter: sepia(60%) saturate(120%) brightness(90%);
-
+margin-top: 0px !important;
+    padding-top: 0px !important;
 }
 
 .map-icon img{
@@ -89,7 +92,9 @@ body.subpage {
 .map-icon span {
     /* margin-top: 5px; */
     /* background: rgba(0, 0, 0, 0.7); */
-    padding: 3px 6px;
+    /* padding: 3px 6px; */
+    padding-top: 0px !important;
+    margin-top: 0px !important;
     border-radius: 70px;
     font-family: 'Treasure Map Deadhand', sans-serif; /* Use the downloaded font */
     font-size: 54px;
@@ -351,7 +356,7 @@ footer {
     transform: translate(-50%, -50%); /* Centers it */
     width: 80vw; /* Adjust width based on your design */
     height: 60vh;
-    background: url('../assets/landmass3.png') no-repeat center center;
+    background: url('../assets/landmass33.png') no-repeat center center;
     background-size: contain;
     z-index: -1; /* Above the background */
     pointer-events: none; /* Prevent clicks from interfering */
@@ -368,6 +373,34 @@ footer {
     background: url('../assets/landmass44.webp') no-repeat center center;
     background-size: contain;
     z-index: -1; 
+    pointer-events: none; 
+    mix-blend-mode: darken;
+}
+
+.landmass3 {
+    position: absolute;
+    top: 75%;  
+    left: 15%; 
+    transform: translate(-50%, -50%) rotate(10deg); 
+    width: 180vw; 
+    height: 80vh;
+    background: url('../assets/landmass55.webp') no-repeat center center;
+    background-size: contain;
+    z-index: -1; 
+    pointer-events: none; 
+    mix-blend-mode: darken;
+}
+
+.rock{
+    position: absolute;
+    top: 40%;  
+    left: 85%; 
+    transform: translate(-50%, -50%) rotate(0deg); 
+    width: 8vw; 
+    height: 18vh;
+    background: url('../assets/rock.webp') no-repeat center center;
+    background-size: contain;
+    z-index: 1; 
     pointer-events: none; 
     mix-blend-mode: darken;
 }
@@ -528,8 +561,8 @@ footer {
 /* Company Logo */
 .company-logo {
     position: absolute; /* Allows positioning in the bottom left */
-    bottom: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
+    bottom: 0%; /* Adjust as needed */
+    left: 93%; /* Adjust as needed */
     width: 150px; /* Set an appropriate width */
     height: auto; /* Maintain aspect ratio */
     background: url('assets/BeauHaunt-logo-2024.png') no-repeat center center;
@@ -542,8 +575,8 @@ footer {
 .ship{
     position: absolute;
     mix-blend-mode: darken;
-    top: 20%;
-    left: 80%;
+    top: 10%;
+    left: 65%;
 }
 
 .ship img {
@@ -567,13 +600,24 @@ footer {
     animation: fogMove 10s infinite ease-in-out;
     top: -50%;
     border-radius: 150%;
+    pointer-events: none;
 }
 
-
+.skull{
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    width: 18vw;
+    height: 13vh;
+    background: url('../assets/skull.png') no-repeat center center;
+    background-size: contain;
+    z-index: 1000;
+    mix-blend-mode: darken;
+}
 
 /* Position each icon where you need it */
-#gallery   { top: 15%; left: 28%; }
-#projects  { top: 20%; left: 70%; }
+#gallery   { top: 10%; left: 27%; }
+#projects  { top: 20%; left: 60%; }
 #contact   { top: 45%; left: 0%; }
 #donate    { top: 40%; left: 80%; }
 #about-us     { top: 80%; left: 80%; }
@@ -602,7 +646,7 @@ footer {
         bottom: 10px;
     }
 
-    .landmass1, .landmass2 {
+    .landmass1, .landmass2, .landmass3 {
         width: 120vw; /* Expand to cover more space */
         height: auto;
     }
@@ -642,7 +686,7 @@ footer {
         width: 130px;
     }
 
-    .landmass1, .landmass2 {
+    .landmass1, .landmass2, .landmass3 {
         width: 100vw;
     }
 
@@ -665,7 +709,7 @@ footer {
         width: 150px;
     }
 
-    .landmass1, .landmass2 {
+    .landmass1, .landmass2, .landmass3 {
         width: 80vw;
     }
 
