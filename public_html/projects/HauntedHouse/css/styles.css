@@ -578,9 +578,9 @@ footer {
     left: 93%; /* Adjust as needed */
     width: 150px; /* Set an appropriate width */
     height: auto; /* Maintain aspect ratio */
-    background: url('../assets/BeauHaunt-logo-2024.PNG') no-repeat center center;
+    background: url('../assets/BeauHaunt-logo-2024.png') no-repeat center center;
     background-size: contain;
-    z-index: 1000;
+    z-index: 10000;
     mix-blend-mode: darken;
 }
 
