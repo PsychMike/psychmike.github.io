@@ -97,6 +97,7 @@ body::before {
 .projects-container h2 {
     font-size: 3.5rem;
     font-family: 'Treasure Map Deadhand';
+    margin-top: 12vh;
 }
 
 /* Paragraphs */
@@ -149,7 +150,7 @@ body::before {
     top: -4vh;
     left: 0; /* Align to the left edge */
     width: 100vw; /* Makes it stretch across the entire screen */
-    height: 150px; /* Adjust height as needed */
+    height: 250px; /* Adjust height as needed */
     background: url('../assets/scroll-top2.png') no-repeat center top;
     background-size: cover; /* Ensures it fills the width */
     z-index: 9999; /* Keep it above other elements */
