@@ -39,7 +39,11 @@
                 <div class="form-container">
                     <!-- <h2 class="send-us-a-message">Send Us a Message</h2> -->
 
-                    <form action="send_email.php" method="post" class="form-container">
+                    <form action="https://formsubmit.co/mrhess25@gmail.com" method="POST" class="form-container">
+                        <input type="text" name="_honey" style="display:none;">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:3000/index.html">
+                        
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required>
@@ -56,8 +60,8 @@
                         </div>
                     
                         <button type="submit">SEND MESSAGE</button>
-                        
                     </form>
+                    
                     
                     
                 </div>
