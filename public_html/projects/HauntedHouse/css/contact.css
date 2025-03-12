@@ -338,7 +338,7 @@ textarea, input {
 }
 
 /* Desktop Styles (1024px and Up) */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     .parchment-container {
         background-size: cover, cover;
         padding: 40px;
@@ -373,14 +373,6 @@ textarea, input {
         font-size: 2rem;
         padding: 15px 30px;
     }
-
-    /* .company-logo {
-        width: 150px;
-        height: auto;
-        bottom: 20px;
-        right: 20px;
-    } */
-
     .dropdown {
         top: 15px;
         right: 20px;
@@ -390,4 +382,4 @@ textarea, input {
         font-size: 40px;
         padding: 10px 15px;
     }
-}
+} */
