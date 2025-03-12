@@ -74,6 +74,7 @@ html, body {
     justify-content: center;
     align-items: center;
     gap: 20px; /* Space between fields */
+    padding-bottom: 1vh !important;
 }
 
 /* Wrap individual form groups in flex */
