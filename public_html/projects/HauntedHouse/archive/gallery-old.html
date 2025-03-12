@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+      <!-- Favicon for all browsers -->
+<link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico">
+</head>
+<body class="subpage gallery-page">
+
+    <div id="menu-container"></div>
+    <script>
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("menu-container").innerHTML = data);
+    </script>
+
+    <header>
+        <h1 class=page-sign >Gallery</h1>
+    </header>
+
+    <main>
+        <div class="carousel-container">
+            <button id="prevBtn">❮</button>
+            <div class="carousel">
+                <div class="frame-container">
+                    <img id="carouselImage" src="" alt="Gallery Image" onclick="openLightbox()">
+                </div>
+                                <div class="smoke-overlay"></div>
+            </div>
+            
+            <button id="nextBtn">❯</button>
+        </div>
+
+        <!-- Lightbox for Enlarged Image -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <button onclick="closeLightbox()" class="close-btn">✖</button>
+            <img id="lightboxImage" src="" alt="Enlarged Image">
+        </div>
+        
+
+    </main>
+
+    <script>
+        let images = [];
+        let currentIndex = 0;
+        const carouselImage = document.getElementById("carouselImage");
+
+        async function fetchGalleryImages() {
+    try {
+        // const repo = "PsychMike/psychmike.github.io";
+        // const path = "HauntedHouse/assets/gallery_imgs";
+        // const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
+        // const data = await response.json();
+
+        // // Filter only images (jpg, png, webp)
+        // images = data
+        //     .filter(file => file.name.match(/\.(jpg|jpeg|png|webp)$/i))
+        //     .map(file => file.download_url);
+
+            images = [
+                "assets/gallery_imgs/hauntedhouse1.webp",
+    "assets/gallery_imgs/treasuremap_lowres.png",
+    "assets/gallery_imgs/treasuremap1.webp",
+    "assets/gallery_imgs/woodtable.png",]
+
+        console.log("Image URLs:", images);
+
+        if (images.length > 0) {
+            currentIndex = 0;
+            updateCarousel();
+        }
+    } catch (error) {
+        console.error("Failed to load images:", error);
+    }
+}
+
+
+
+
+        function updateCarousel() {
+            carouselImage.src = images[currentIndex];
+        }
+
+        document.getElementById("prevBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel();
+        });
+
+        fetchGalleryImages();
+
+        function openLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    
+    lightboxImage.src = document.getElementById("carouselImage").src;
+    lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+
+function updateCarousel() {
+    carouselImage.classList.remove("active");
+    setTimeout(() => {
+        carouselImage.src = images[currentIndex];
+        carouselImage.classList.add("active");
+    }, 300);
+}
+
+
+
+    </script>
+
+
+<svg width="0" height="0">
+    <defs>
+        <filter id="smoke-filter" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" result="noise"/>
+            <feGaussianBlur in="noise" stdDeviation="12" result="blurredNoise"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.6"/>
+            </feComponentTransfer>
+            <feComposite in="blurredNoise" in2="SourceAlpha" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+</svg>
+
+
+<footer style="padding-bottom: 20px;"><p>&copy; Beau Horror</p></footer>
+
+</body>
+</html>

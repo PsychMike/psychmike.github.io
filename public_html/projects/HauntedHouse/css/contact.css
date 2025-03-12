@@ -1,0 +1,393 @@
+@font-face {
+    font-family: 'Treasure Map Deadhand';
+    src: url('./fonts/treasure-map-deadhand-font/TreasureMapDeadhand-yLA3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevents scrolling */
+    position: relative;
+}
+
+/* Parchment Background */
+.parchment-container {
+    background: url('../assets/parchment-paper.png') no-repeat center center fixed,
+                url('../assets/wood-bckgrnd.webp') no-repeat center center fixed;
+    background-size: cover, cover;
+    height: 100vh; /* Ensure it covers full screen */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content */
+    position: relative;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Wooden Sign Styling */
+.page-sign {
+    position: relative;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Treasure Map Deadhand';
+    background: url('../assets/woodtable.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px 40px;
+    color: #8b0000;
+    text-shadow: 3px 3px 8px black;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Parchment Content */
+.parchment-content {
+    /* max-width: 900px; */
+    padding: 30px 20px;
+    /* background: rgba(255, 255, 224, 0.9); */
+    /* box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4); */
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Treasure Map Deadhand';
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Contact Form */
+.form-container {
+    /* background: rgba(255, 255, 224, 0.9); */
+     /* Light parchment effect */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* max-width: 500px; */
+    margin: auto;
+    text-align: center;
+    /* box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6); */
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Treasure Map Deadhand';
+}
+
+/* Remove Scroll Effect */
+.scroll-top {
+    display: none;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: black;
+    color: white;
+    font-size: 40px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Treasure Map Deadhand', cursive;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Treasure Map Deadhand', cursive;
+    font-size: 30px;
+}
+
+.dropdown-content a:hover {
+    background: darkred;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+h1{
+    font-family: 'Treasure Map Deadhand';
+}
+
+.reach-us{
+    font-family: 'Treasure Map Deadhand';
+}
+
+.contact-form{
+    font-family: 'Treasure Map Deadhand';
+}
+
+/* Company Logo */
+.company-logo {
+    position: absolute; /* Allows positioning in the bottom left */
+    bottom: 5px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 150px; /* Set an appropriate width */
+    height: 100px; /* Maintain aspect ratio */
+    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
+    background-size: contain;
+    z-index: 10000;
+    mix-blend-mode: darken;
+}
+
+.quill-pencil {
+    background: url('../assets/quillpen.png') no-repeat center center;
+    background-size: contain;
+    z-index: 10000;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 20vw;
+    height: 50vh;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5)); /* Adds a soft shadow */
+}
+
+
+/* Custom Button Styling for Parchment Theme */
+.contact-form button {
+    font-family: 'Treasure Map Deadhand', cursive;
+    font-size: 2rem; /* Adjust size for readability */
+    color: #3b2f2f; /* Dark brown text */
+    background: linear-gradient(to bottom, #e0c089, #b8905b); /* Aged parchment look */
+    border: 3px solid #6b4f32; /* Darker brown border */
+    /* padding: 15px 30px; */
+    border-radius: 8px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Slight embossed effect */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Depth effect */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Hover Effect */
+.contact-form button:hover {
+    background: linear-gradient(to bottom, #b8905b, #8a683a); /* Darker parchment */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Active (Clicked) Effect */
+.contact-form button:active {
+    background: #8a683a;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(0.98);
+}
+
+textarea, input {
+    vertical-align: middle; /* Aligns the text area with adjacent text */
+    margin-top: -5px; /* Fine-tune the position by adjusting this value */
+    padding: 5px;
+    font-size: 1rem;
+    border: 2px solid #6b4f32; /* Matching border to fit the parchment theme */
+    background: rgba(255, 255, 224, 0.9); /* Aged parchment-like input background */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+/* Mobile Styles (Up to 767px) */
+@media (max-width: 767px) {
+    .parchment-container {
+        background-size: contain, cover; /* Adjust background scaling */
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .page-sign {
+        font-size: 2rem;
+        padding: 15px 30px;
+    }
+
+    .parchment-content {
+        font-size: 1.5rem;
+        padding: 20px 15px;
+    }
+
+    .contact-info {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        width: 95%;
+    }
+
+    .quill-pencil {
+        width: 30vw;
+        height: 30vh;
+        bottom: 5%;
+        right: 2%;
+    }
+
+    .contact-form button {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+
+    /* .company-logo {
+        width: 100px;
+        height: auto;
+        bottom: 10px;
+        right: 10px;
+    } */
+
+    .dropdown {
+        top: 10px;
+        right: 10px;
+    }
+
+    .dropbtn {
+        font-size: 30px;
+        padding: 8px 12px;
+    }
+}
+
+/* Tablet Styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .parchment-container {
+        background-size: cover, cover;
+        padding: 30px;
+    }
+
+    .page-sign {
+        font-size: 2.8rem;
+        padding: 18px 35px;
+    }
+
+    .parchment-content {
+        font-size: 1.8rem;
+        padding: 25px 20px;
+    }
+
+    .contact-info {
+        font-size: 2.2rem;
+    }
+
+    .form-container {
+        width: 85%;
+    }
+
+    .quill-pencil {
+        width: 25vw;
+        height: 40vh;
+        bottom: 8%;
+        right: 5%;
+    }
+
+    .contact-form button {
+        font-size: 1.8rem;
+        padding: 12px 25px;
+    }
+
+    /* .company-logo {
+        width: 120px;
+        height: auto;
+        bottom: 15px;
+        right: 15px;
+    } */
+
+    .dropdown {
+        top: 12px;
+        right: 15px;
+    }
+
+    .dropbtn {
+        font-size: 35px;
+        padding: 9px 14px;
+    }
+}
+
+/* Desktop Styles (1024px and Up) */
+@media (min-width: 1024px) {
+    .parchment-container {
+        background-size: cover, cover;
+        padding: 40px;
+    }
+
+    .page-sign {
+        font-size: 3.5rem;
+        padding: 20px 40px;
+    }
+
+    .parchment-content {
+        font-size: 2rem;
+        padding: 30px 25px;
+    }
+
+    .contact-info {
+        font-size: 2.5rem;
+    }
+
+    .form-container {
+        width: 70%;
+    }
+
+    .quill-pencil {
+        width: 20vw;
+        height: 50vh;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .contact-form button {
+        font-size: 2rem;
+        padding: 15px 30px;
+    }
+
+    /* .company-logo {
+        width: 150px;
+        height: auto;
+        bottom: 20px;
+        right: 20px;
+    } */
+
+    .dropdown {
+        top: 15px;
+        right: 20px;
+    }
+
+    .dropbtn {
+        font-size: 40px;
+        padding: 10px 15px;
+    }
+}

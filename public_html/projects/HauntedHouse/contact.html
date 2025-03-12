@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Haunted House</title>
-    <link rel="stylesheet" href="css/styles.css">
-      <!-- Favicon for all browsers -->
-<link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico">
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/BeauHaunt-logo.png">
 </head>
 <body class="subpage">
 
@@ -16,43 +16,51 @@
             .then(response => response.text())
             .then(data => document.getElementById("menu-container").innerHTML = data);
     </script>
-    
- 
-    <header>
-        <h1 class="page-sign">Contact Us</h1>
-    </header>
-    
-    <main>
-        <section class="contact-info">
-            <p>If you dare to reach out, use the form below or find us lurking in the shadows.</p>
-            <p>Email: contact@hauntedhouse.com</p>
-            <p>Phone: (666) 123-4567</p>
-            <p>Location: The Abandoned Manor, Darkwood Forest</p>
-        </section>
 
-        <section class="contact-form">
-            <div class="form-container">
-                <h2 style="color:white">Send Us a Message</h2>
-                <form action="#" method="post">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-        
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-        
+<div class="quill-pencil"></div>
 
-    </main>
-    
+    <div class="parchment-container">
+        <main class="parchment-content">
+            <h1>Send a Message by a Bottle</h1>
+
+            <section class="contact-info">
+                <p>Do you have a message to send across the seven seas? Whether it’s a message in a bottle or a modern-day scroll, we’d love to hear from you!</p>
+            </section>
+
+            <section class="reach-us">
+                <h2>How to Reach Us</h2>
+                <p>📧 <strong>Email</strong> – Send us an email and we’ll reply as soon as we can.</p>
+                <p>☠️ <strong>Social Media</strong> – Follow our pirate adventures and DM us there!</p>
+                <p>⚓ <strong>Visit Us</strong> – Want to meet the crew in person? Find our location and sail on over!</p>
+                <p>No matter how you choose to contact us, we’ll get back to you like a pirate chasing treasure!</p>
+            </section>
+
+            <section class="contact-form">
+                <div class="form-container">
+                    <h2>Send Us a Message</h2>
+                    <form action="#" method="post">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+            
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+            
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Decorative Wax Seal -->
+        <div class="wax-seal"></div>
+    </div>
+
     <footer>
-        <p>&copy; Beau Horror</p>
+        <div class="company-logo"></div>
     </footer>
+
 </body>
 </html>

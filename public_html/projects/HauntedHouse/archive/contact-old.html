@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Haunted House</title>
+    <link rel="stylesheet" href="css/styles.css">
+      <!-- Favicon for all browsers -->
+<link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico">
+</head>
+<body class="subpage">
+
+    <div id="menu-container"></div>
+    <script>
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("menu-container").innerHTML = data);
+    </script>
+    
+ 
+    <header>
+        <h1 class="page-sign">Contact Us</h1>
+    </header>
+    
+    <main>
+        <section class="contact-info">
+            <p>If you dare to reach out, use the form below or find us lurking in the shadows.</p>
+            <p>Email: contact@hauntedhouse.com</p>
+            <p>Phone: (666) 123-4567</p>
+            <p>Location: The Abandoned Manor, Darkwood Forest</p>
+        </section>
+
+        <section class="contact-form">
+            <div class="form-container">
+                <h2 style="color:white">Send Us a Message</h2>
+                <form action="#" method="post">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+        
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+
+    </main>
+    
+    <footer>
+        <p>&copy; Beau Horror</p>
+    </footer>
+</body>
+</html>
