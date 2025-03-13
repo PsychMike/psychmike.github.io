@@ -644,6 +644,7 @@ footer {
     body {
         background-size: cover;
         background: url('../assets/blank-treasuremap.webp') repeat center center fixed;
+        overflow: hidden !important;
     }
 
     .fog, .rock, .ship, .skull{
@@ -669,7 +670,6 @@ footer {
         background-color: red; /* Example color */
     }
 
-    
 
     .company-logo {
         width: 100px;
