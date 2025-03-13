@@ -1,0 +1,50 @@
+/* Dropdown Container */
+.dropdown {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10000;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: black;
+    color: white;
+    font-size: 40px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Treasure Map Deadhand', cursive;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Treasure Map Deadhand', cursive;
+    font-size: 30px;
+}
+
+.dropdown-content a:hover {
+    background: darkred;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

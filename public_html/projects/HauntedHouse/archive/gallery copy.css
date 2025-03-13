@@ -1,0 +1,261 @@
+/* 📸 Apply gallery background */
+body.gallery-page {
+    background: url('../assets/gallery_bckgrnd.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 🖼️ CAROUSEL CONTAINER */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    padding-top: 100px;
+    z-index: 1001;
+}
+
+
+/* 🖼️ IMAGE INSIDE THE FRAME */
+.carousel img {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-in effect */
+.carousel img.active {
+    opacity: 1;
+}
+
+/* 🔥 SMOKE EFFECT */
+.smoke-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 30%, transparent 80%);
+    opacity: 0.6;
+    animation: smoke-wisp 4s infinite ease-in-out;
+}
+
+/* 🎭 Smoke Animation */
+@keyframes smoke-wisp {
+    0% { opacity: 0.6; transform: scale(1) translateY(0px); }
+    50% { opacity: 0.8; transform: scale(1.05) translateY(-5px); }
+    100% { opacity: 0.6; transform: scale(1) translateY(0px); }
+}
+
+/* 🏚️ PREV & NEXT BUTTONS */
+.carousel-container button {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+#prevBtn {
+    position: absolute;
+    left: -80px;
+}
+
+#nextBtn {
+    position: absolute;
+    right: -80px;
+}
+
+/* 🔥 Button Glow Effect */
+.carousel-container button:hover {
+    background: darkred;
+    box-shadow: 0 0 15px red;
+}
+
+/* 🖼️ LIGHTBOX STYLING */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Enlarged Image */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ❌ Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🏚️ HOVER EFFECTS */
+.carousel img:hover {
+    filter: drop-shadow(0px 0px 20px rgba(255, 0, 0, 0.7));
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🎃 BACKGROUND DARKENING EFFECT */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.9) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 🕯️ FLICKERING CANDLE ANIMATION */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.candle {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 50px;
+    height: auto;
+    animation: flicker 1.5s infinite alternate ease-in-out;
+}
+
+/* 🩸 DRIPPING BLOOD EFFECT */
+@keyframes blood-drip {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(5px); opacity: 0.8; }
+    100% { transform: translateY(10px); opacity: 0; }
+}
+
+.gallery-title {
+    position: relative;
+    color: red;
+    font-family: 'Creepster', cursive;
+    font-size: 50px;
+    text-shadow: 0 0 12px red;
+}
+
+/* Animated Dripping Blood Effect */
+.gallery-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 5px;
+    height: 10px;
+    background: red;
+    opacity: 0;
+    animation: blood-drip 2s infinite;
+}
+
+/* 🖼️ FRAME STYLING */
+.frame-container {
+    position: relative;
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(145deg, #2a1f14 10%, #0a0805 50%, #2a1f14 90%); /* Darkened tones */
+    border: 14px solid #382a1c; /* Darker antique brown frame */
+    border-radius: 12px;
+    box-shadow: 
+        0px 10px 30px rgba(0, 0, 0, 0.85),  /* Stronger outer shadow */
+        inset 0px 6px 12px rgba(0, 0, 0, 0.7), /* Darker inner edge */
+        inset 0px -6px 8px rgba(255, 255, 255, 0.15); /* More subtle highlight */
+}
+
+/* 🖼️ INNER FRAME BORDER */
+.frame-container::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 10px;
+    border: 5px solid rgba(0, 0, 0, 0.6); /* Darker inner frame */
+    pointer-events: none;
+}
+
+
+/* 🔥 SMOKE EFFECT */
+.smoke-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0.4) 50%, transparent 80%);
+    opacity: 0.65;
+    animation: smoke-wisp 4s infinite ease-in-out;
+}
+
+/* 🎭 Smoke Animation */
+@keyframes smoke-wisp {
+    0% { opacity: 0.5; transform: scale(1) translateY(0px); }
+    50% { opacity: 0.8; transform: scale(1.05) translateY(-5px); }
+    100% { opacity: 0.5; transform: scale(1) translateY(0px); }
+}
+
+/* 🖼️ IMAGE INSIDE THE FRAME */
+.carousel img {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.9);
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 🎭 FLOATING ANIMATION */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Moves up */
+    100% { transform: translateY(0px); } /* Moves back down */
+}
+
+/* Apply the animation to the carousel */
+.carousel-container {
+    animation: floating 6s ease-in-out infinite; /* Smooth floating effect */
+}
+
+
+
