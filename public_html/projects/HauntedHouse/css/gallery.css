@@ -74,5 +74,8 @@ html {
 }
 
 .logo{
-    max-width: 150px;
+    max-width: 150px !important;
+    max-height: 150px !important;
+    right: 0 !important;
+    position: absolute !important;
 }
