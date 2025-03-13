@@ -10,7 +10,8 @@ html, body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    overflow: auto; /* Scrollable? */
+    overflow-y: auto; /* Scrollable? */
+    overflow-x: hidden; /* Prevents horizontal scroll */
     position: relative;
 }
 
@@ -280,6 +281,7 @@ textarea, input {
     .parchment-container {
         flex-direction: column;
         padding: 20px;
+        padding-top: 60px !important; /* Adjust to match screen-top height */
     }
 
     .page-sign {
