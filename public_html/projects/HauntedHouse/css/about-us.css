@@ -118,3 +118,50 @@ html {
     z-index: 10000;
     mix-blend-mode: darken;
 }
+
+@media (max-width: 768px) {
+    .company-logo {
+        top: 10px !important;
+        left: 10px !important;
+        width: 100px;
+        height: 70px;
+    }
+
+    .scroll-container {
+        font-size: 1rem;
+    }
+
+    .about-section h2, 
+    .about-section p {
+        font-size: 2rem;
+    }
+
+    .crew-gallery h2 {
+        font-size: 2rem;
+    }
+
+    /* 🏴‍☠️ Stack Crew Images Vertically on Mobile */
+    .crew-images {    
+        display: flex;
+        flex-direction: column; /* Change from row to column */
+        align-items: center; /* Center images */
+        gap: 20px; /* Space between images */
+    }
+
+    /* Center Crew Member Blocks */
+    .crew-member {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust Image Size for Mobile */
+    .crew-member img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Adjust Crew Name Font Size */
+    .crew-name {
+        font-size: 2.5rem;
+    }
+}
