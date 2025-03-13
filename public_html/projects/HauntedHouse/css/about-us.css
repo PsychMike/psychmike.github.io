@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Treasure Map Deadhand';
+    src: url('./fonts/treasure-map-deadhand-font/TreasureMapDeadhand-yLA3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 📜 Scrollable Parchment Paper Background */
+body {
+    background: url('../assets/parchmentpaper-long222.png') repeat-y center top;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🏴‍☠️ Parchment Scroll Container */
+.parchment-scroll {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 0;
+}
+
+/* 🎞️ Scrollable Content in the Center */
+.scroll-container {
+    width: 90%;
+    /* max-width: 800px; */
+    text-align: center;
+    padding: 20px;
+}
+
+/* 📜 About Sections */
+.about-section {
+    margin: 40px 0;
+    padding: 20px;
+    font-family: 'Treasure Map Deadhand', serif;
+    color: #3b2f2f;
+}
+
+/* 🏴‍☠️ Headers */
+.about-section h2 {
+    color: #8b0000; /* Dark pirate red */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 5rem;
+}
+
+/* 📜 Paragraph Styling */
+.about-section p {
+    font-size: 3.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ⚓ Crew Gallery */
+.crew-gallery {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.crew-gallery h2 {
+    font-size: 4rem;
+    color: #8b0000;
+    font-family: 'Treasure Map Deadhand', serif;
+}
+
+.crew-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-family: 'Treasure Map Deadhand', serif;
+    font-size: 4rem;
+}
+
+.crew-images img {
+    width: 180px;
+    height: 180px;
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 0 !important;
+}
+
+/* 🏴‍☠️ Hover Effect */
+.crew-images img:hover {
+    transform: scale(1.05);
+}
+
+
+.crew-member{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0 !important;
+}
+
+/* ✨ Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.about-section {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Company Logo */
+.company-logo {
+    position: absolute; /* Allows positioning in the bottom left */
+    top: 10px !important; /* Adjust as needed */
+    left: 100px !important; /* Adjust as needed */
+    width: 150px; /* Set an appropriate width */
+    height: 100px; /* Maintain aspect ratio */
+    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
+    background-size: contain;
+    z-index: 10000;
+    mix-blend-mode: darken;
+}

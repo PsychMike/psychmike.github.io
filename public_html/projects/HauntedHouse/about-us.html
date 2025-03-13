@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Haunted Adventure</title>
+    <link rel="stylesheet" href="css/about-us.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" type="image/png" href="assets/BeauHaunt-logo.png">
+</head>
+<body class="subpage about-page">
+
+    <!-- Menu Container -->
+    <div id="menu-container"></div>
+    <script>
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("menu-container").innerHTML = data);
+    </script>
+
+
+    <!-- Scrollable Parchment Section -->
+    <main class="parchment-scroll">
+        <div class="scroll-container">
+            
+            <!-- 🏴‍☠️ Meet the Crew -->
+            <section class="about-section">
+                <h2>🎩 Meet the Crew</h2>
+                <p>Every great ship needs a captain and a crew. Learn about everyone behind the adventure, our story, and the vision that keeps us sailing for new horizons!</p>
+            </section>
+
+            <!-- 📜 Our Story -->
+            <section class="about-section">
+                <h2>📜 Our Story</h2>
+                <p>
+                    Many Halloweens ago, my great-grandpa was a true pioneer of DIY creativity. Using nothing more than an old lighting fixture and foil, he made his own black light. 
+                    People would come from all over just to stand beneath it, excited at how their costumes lit up in the eerie glow. Looking back, it’s incredible to see how far we’ve come.
+                </p>
+                <p>
+                    In 2015, our passion for Halloween took a turn when we built our first haunted house in one of my previous homes. 
+                    Made from PVC pipes and black tarps, it was a smaller pirate-themed haunt—nowhere near the scale of what we have today, but it was the start of something special.
+                </p>
+                <p>
+                    Each year since, we’ve expanded, refined, and reimagined our haunted experience. 
+                    Each year we keep pushing the limits of immersion and storytelling. 
+                    What began as a small passion project has evolved into an attraction we take great pride in. 
+                    Every new addition brings us closer to creating a world where guests don’t just walk through a haunted house—they step into an adventure.
+                </p>
+                <p>
+                    So come aboard, choose your path, and see for yourself just how far this adventure has come!
+                </p>
+            </section>
+
+            <!-- 🏴‍☠️ Optional: Add Crew Images Here -->
+            <section class="crew-gallery">
+                <h2>⚓ The Crew Behind the Adventure</h2>
+                <div class="crew-images">
+                    <div class="crew-member">
+                        <img src="./assets/skull.png" alt="Crew Member 1">
+                        <p class="crew-name">Captain Blackbeard</p>
+                    </div>
+                    <div class="crew-member">
+                        <img src="./assets/skull.png" alt="Crew Member 2">
+                        <p class="crew-name">Quartermaster Anne</p>
+                    </div>
+                    <div class="crew-member">
+                        <img src="./assets/skull.png" alt="Crew Member 3">
+                        <p class="crew-name">First Mate Jack</p>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+        <div class="company-logo"></div>
+
+</body>
+</html>
