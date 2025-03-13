@@ -82,5 +82,13 @@
 
     <script src="send_email.php"></script>
 
+    <script>
+        if (isMobileDevice()) {
+          document.body.classList.add("mobile-mode"); // Apply mobile-specific styles
+      } else {
+          document.body.classList.add("desktop-mode");
+      }
+      </script>
+
 </body>
 </html>

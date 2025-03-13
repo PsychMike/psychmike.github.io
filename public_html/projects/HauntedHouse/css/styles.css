@@ -730,3 +730,10 @@ footer {
         width: 60%;
     }
 }
+
+.mobile-mode{
+    background: url('../assets/landmass444.webp') no-repeat center center fixed;
+    .dashed-line, .ship, .rock, .skull, .fog, .landmass1, .landmass2, .landmass3, .company-logo{
+        display: none !important;
+    }
+}

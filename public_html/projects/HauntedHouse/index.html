@@ -203,6 +203,14 @@ document.getElementById("donate-animation").addEventListener("mouseleave", funct
 
 </script>
 
+<script>
+  if (isMobileDevice()) {
+    document.body.classList.add("mobile-mode"); // Apply mobile-specific styles
+} else {
+    document.body.classList.add("desktop-mode");
+}
+</script>
+
 <footer>
   <img class="company-logo">
 </footer>
