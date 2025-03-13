@@ -731,9 +731,19 @@ footer {
     }
 }
 
-.mobile-mode{
+.mobile-mode {
     background: url('../assets/landmass444.webp') no-repeat center center fixed;
-    .dashed-line, .ship, .rock, .skull, .fog, .landmass1, .landmass2, .landmass3, .company-logo{
-        display: none !important;
-    }
+}
+
+/* Elements to hide when in mobile mode */
+.mobile-mode .dashed-line,
+.mobile-mode .ship,
+.mobile-mode .rock,
+.mobile-mode .skull,
+.mobile-mode .fog,
+.mobile-mode .landmass1,
+.mobile-mode .landmass2,
+.mobile-mode .landmass3,
+.mobile-mode .company-logo {
+    display: none !important;
 }

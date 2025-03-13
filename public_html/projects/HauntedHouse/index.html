@@ -204,11 +204,20 @@ document.getElementById("donate-animation").addEventListener("mouseleave", funct
 </script>
 
 <script>
-  if (isMobileDevice()) {
-    document.body.classList.add("mobile-mode"); // Apply mobile-specific styles
-} else {
-    document.body.classList.add("desktop-mode");
+function applyMobileMode() {
+    if (window.innerWidth <= 768) { // Adjust breakpoint as needed
+        document.body.classList.add("mobile-mode");
+    } else {
+        document.body.classList.remove("mobile-mode");
+    }
 }
+
+// Run on page load
+applyMobileMode();
+
+// Re-check on window resize
+window.addEventListener("resize", applyMobileMode);
+
 </script>
 
 <footer>
