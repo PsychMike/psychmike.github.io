@@ -301,12 +301,13 @@ textarea, input {
         padding: 10px 20px;
     }
 
-    /* .company-logo {
-        width: 100px;
+    .company-logo {
+        /* width: 100px;
         height: auto;
         bottom: 10px;
-        right: 10px;
-    } */
+        right: 10px; */
+        display: none !important; /* Hide the logo on mobile */
+    }
 
     .dropdown {
         top: 10px;
@@ -315,7 +316,7 @@ textarea, input {
 
     .dropbtn {
         font-size: 30px;
-        padding: 8px 12px;
+        /* padding: 8px 12px; */
     }
 
     .form-container {
