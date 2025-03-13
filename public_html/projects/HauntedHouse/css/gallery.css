@@ -46,15 +46,48 @@ body {
     padding-top: 0 !important;
 }
 
-/* 🖼️ Image Styling */
+/* 🎨 Realistic Picture Frame Styling */
 .gallery-image {
     width: 90%;
     max-width: 600px;
     height: auto;
-    border-radius: 10px;
-    border: 10px solid rgba(139, 69, 19, 0.8); /* Aged border effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    display: block;
+    border-radius: 5px; /* Slight rounding for a natural look */
+    padding: 12px; /* Creates an illusion of inner depth */
+    
+    /* 🏆 Realistic Gold Frame */
+    background: linear-gradient(145deg, #8d6f47 20%, #524029 50%,#8d6f47 80%);
+    border: 12px solid #5a4627; /* A golden antique frame look */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.5), /* Outer shadow for frame */
+        inset 0 2px 5px rgba(255, 255, 255, 0.3), /* Soft highlight */
+        inset 0 -3px 8px rgba(0, 0, 0, 0.3); /* Inner depth effect */
 }
+
+/* 🏛️ Inner Frame Border for More Depth */
+.gallery-image::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 5px solid rgba(80, 50, 20, 0.8); /* Darker inner frame */
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/* ✨ Slight Glow Effect on Hover */
+.gallery-image:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.7),
+        inset 0 3px 6px rgba(255, 255, 255, 0.4),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
 
 /* 🎭 Alternate Left and Right Positioning */
 .image-wrapper.left {
