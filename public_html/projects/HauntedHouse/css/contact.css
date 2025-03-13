@@ -10,14 +10,15 @@ html, body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    overflow: auto; /* Scrollable? */
+    overflow-y: auto; /* Scrollable? */
+    overflow-x: hidden;
     position: relative;
 }
 
 /* Parchment Background */
 .parchment-container {
-    background: url('../assets/parchment-paper.png') no-repeat center center fixed,
-                url('../assets/wood-bckgrnd.webp') no-repeat center center fixed;
+    background: url('../assets/parchment-paper.png') repeat center center fixed,
+                url('../assets/wood-bckgrnd.webp') repeat center center fixed;
     background-size: cover, cover;
     height: 100vh; /* Ensure it covers full screen */
     width: 100vw;
