@@ -644,7 +644,7 @@ footer {
     body {
         background-size: cover;
         background: url('../assets/blank-treasuremap.webp') repeat center center fixed;
-        overflow: hidden !important;
+        overflow: auto;
     }
 
     .fog, .rock, .ship, .skull{
@@ -695,12 +695,17 @@ footer {
         font-size: 30px; 
     }
 
-    #gallery   { top: 10%; left: 20%; }
-    #projects  { top: 25%; left: 70%; }
-    #contact   { top: 35%; left: -20%; }
-    #donate    { top: 55%; left: 70%; }
-    #about-us  { top: 65%; left: 20%; }
-    #attractions { top: 85%; left: 60%; }
+    .company-logo{
+        bottom: 0 !important;
+        left: 0 !important;
+    }
+
+    #gallery   { top: 4%; left: 20%; }
+    #projects  { top: 15%; left: 70%; }
+    #contact   { top: 30%; left: -20%; }
+    #donate    { top: 45%; left: 70%; }
+    #about-us  { top: 60%; left: 20%; }
+    #attractions { top: 75%; left: 60%; }
 }
 
 
