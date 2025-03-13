@@ -250,7 +250,7 @@ footer {
     position: absolute;
     top: 15px;
     right: 20px;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 /* Dropdown Button */
@@ -655,8 +655,21 @@ footer {
     }
 
     .map-icon span {
+        font-size: 20px;
+    }
+
+    .map-icon span {
         font-size: 30px;
     }
+
+    .parrot {
+        position: relative; /* Adjust positioning */
+        width: 100px; /* Adjust size */
+        height: 120px;
+        background-color: red; /* Example color */
+    }
+
+    
 
     .company-logo {
         width: 100px;
