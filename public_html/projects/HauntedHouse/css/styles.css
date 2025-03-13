@@ -643,24 +643,29 @@ footer {
 @media (max-width: 767px) {
     body {
         background-size: cover;
+        background: url('../assets/blank-treasuremap.webp') repeat center center fixed;
+    }
+
+    .fog, .rock, .ship, .skull{
+        display: none !important;
     }
 
     .map-icon img {
-        width: 60px; /* Reduce icon size */
+        width: 60px;
     }
 
     .map-icon span {
-        font-size: 30px; /* Reduce text size */
+        font-size: 30px;
     }
 
     .company-logo {
-        width: 100px; /* Adjust logo size */
+        width: 100px;
         left: 10px;
         bottom: 10px;
     }
 
     .landmass1, .landmass2, .landmass3 {
-        width: 120vw; /* Expand to cover more space */
+        width: 120vw; 
         height: auto;
     }
 
@@ -674,16 +679,18 @@ footer {
     }
 
     .dropbtn {
-        font-size: 30px; /* Smaller menu button */
+        font-size: 30px; 
     }
 
-    #gallery   { top: 12%; left: 20%; }
-    #projects  { top: 38%; left: 60%; }
-    #contact   { top: 70%; left: 5%; }
-    #donate    { top: 15%; left: 50%; }
-    #about-us  { top: 85%; left: 75%; }
-    #attractions { top: 55%; left: 40%; }
+    #gallery   { top: 10%; left: 20%; }
+    #projects  { top: 25%; left: 70%; }
+    #contact   { top: 35%; left: -20%; }
+    #donate    { top: 55%; left: 70%; }
+    #about-us  { top: 65%; left: 20%; }
+    #attractions { top: 85%; left: 70%; }
 }
+
+
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -731,19 +738,3 @@ footer {
     }
 }
 
-.mobile-mode {
-    background: url('../assets/landmass444.webp') no-repeat center center fixed;
-}
-
-/* Elements to hide when in mobile mode */
-.mobile-mode .dashed-line,
-.mobile-mode .ship,
-.mobile-mode .rock,
-.mobile-mode .skull,
-.mobile-mode .fog,
-.mobile-mode .landmass1,
-.mobile-mode .landmass2,
-.mobile-mode .landmass3,
-.mobile-mode .company-logo {
-    display: none !important;
-}
