@@ -13,7 +13,7 @@ body {
     background: url('../assets/blank-treasuremap.webp') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
 }
 

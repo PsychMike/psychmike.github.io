@@ -154,3 +154,26 @@ html {
     line-height: 1.6;
     margin-bottom: 15px;
 }
+
+
+@media screen and (max-width: 768px) {
+    /* .scroll-container {
+        width: 90%;
+    }
+    
+    .gallery-intro {
+        width: 90%;
+    } */
+    
+    .gallery-intro h2, .gallery-intro h3 {
+        font-size: 2rem;
+    }
+    
+    .gallery-intro h3 {
+        font-size: 1.5rem;
+    }
+    
+    .gallery-intro p {
+        font-size: 1rem;
+    }
+}
