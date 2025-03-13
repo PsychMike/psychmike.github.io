@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Treasure Map Deadhand';
+    src: url('./fonts/treasure-map-deadhand-font/TreasureMapDeadhand-yLA3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 📜 Scrollable Parchment Paper Background */
 body {
     background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
@@ -78,4 +85,34 @@ html {
     max-height: 150px !important;
     right: 0 !important;
     position: absolute !important;
+}
+
+/* 📜 Styled Text Section for Gallery */
+.gallery-intro {
+    text-align: center;
+    width: 80%;
+    /* max-width: 800px; */
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Treasure Map Deadhand', serif;
+    color: #3b2f2f;
+}
+
+/* 🏴‍☠️ Header Styling */
+.gallery-intro h2, .gallery-intro h3 {
+    color: #8b0000; /* Dark pirate red */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+}
+
+.gallery-intro h3 {
+    font-size: 3.5rem;
+    margin-top: 20px;
+}
+
+/* 📜 Paragraph Styling */
+.gallery-intro p {
+    font-size: 2.8rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
