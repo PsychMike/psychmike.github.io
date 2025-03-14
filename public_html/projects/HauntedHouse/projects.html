@@ -4,61 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Charting New Waters</title>
-    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/subpage.css">
     <link rel="icon" type="image/png" href="assets/treasuremap2.webp">
 </head>
 <body>
-    <div id="menu-container"></div>
+
+    <div class="scroll-top">
+        <h1 class="page-title">Projects</h1>
+        <div id="menu-container" class="menu-dropdown"></div>
+    </div>
+    
+
     <script>
         fetch("menu.html")
             .then(response => response.text())
             .then(data => document.getElementById("menu-container").innerHTML = data);
     </script>
-        <div class="scroll-top"></div>
 
-    <main class="projects-container">
+
+    <main class="content-container">
         <h1>Charting New Waters</h1>
         <p>We are always working on exciting new projects. Take a behind-the-scenes look at what we’ve been building, and see how we bring adventure to life, one plank at a time!</p>
         
-        <section class="working-on">
+        <section class="section-class">
             <h2>What We’re Working On</h2>
             <p>Every pirate needs more treasure! Check out our latest interactive builds, animatronic creations, and themed elements. We’re constantly expanding our world with new attractions and surprises for adventurers of all ages.</p>
         </section>
         
-        <section class="get-involved">
+        <section class="section-class">
             <h2>Get Involved</h2>
             <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
         </section>
-        
-        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>        <section class="get-involved">
-            <h2>Get Involved</h2>
-            <p>Want to be part of the action? We often need enthusiasts to help us bring these projects to life. Drop anchor and see how you can contribute by visiting our <a href="donate.html">donations page</a>.</p>
-        </section>
+
     </main>
     
     <footer>
-        <img class="company-logo">
-      </footer>
+        <div class="company-logo">
+    </footer>
+    
 </body>
 </html>

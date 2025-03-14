@@ -139,7 +139,6 @@ html {
 /* 🏴‍☠️ Header Styling */
 .gallery-intro h2, .gallery-intro h3 {
     color: #8b0000; /* Dark pirate red */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 4rem;
 }
 

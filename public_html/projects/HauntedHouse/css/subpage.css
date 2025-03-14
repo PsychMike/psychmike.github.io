@@ -28,14 +28,6 @@ body::before {
     z-index: -1;
 }
 
-/* Fix anchor position */
-/* .projects-container h2::before {
-    content: "⚓";
-    position: absolute;
-    left: -2vw; 
-    font-size: 2rem;
-    color: #0066cc;
-} */
 
 /* Dropdown Container */
 .dropdown {
@@ -88,28 +80,28 @@ body::before {
     display: block;
 }
 
-/* Main Projects Container */
-.projects-container {
+/* Main content Container */
+.content-container {
     padding-top: 0 !important;
     margin-top: 0 !important;
-    max-width: 1800px;
-    margin: auto;
+    /* max-width: 1800px; */
     /* padding: 30px; */
     border-radius: 15px;
     margin-left: 5vw;
     margin-right: 5vw;
+    padding-bottom: 0.5vh !important;
 }
 
 /* Section Headers */
-.projects-container h1, 
-.projects-container h2 {
+.content-container h1, 
+.content-container h2 {
     font-size: 3.5rem;
     font-family: 'Treasure Map Deadhand';
     margin-top: 1vh;
 }
 
 /* Paragraphs */
-.projects-container p {
+.content-container p {
     font-size: 2.8rem;
     line-height: 1.4;
     font-family: 'Treasure Map Deadhand';
@@ -140,16 +132,16 @@ body::before {
 
 /* Company Logo */
 .company-logo {
-    position: absolute; /* Allows positioning in the bottom left */
-    bottom: 0%; /* Adjust as needed */
-    left: 90%; /* Adjust as needed */
+    position: fixed; /* Allows positioning in the bottom left */
+    bottom: 0 !important; /* Adjust as needed */
+    left: 85%; /* Adjust as needed */
     width: 150px; /* Set an appropriate width */
-    height: auto; /* Maintain aspect ratio */
-    background: url('../assets/BeauHaunt-logo-2024.PNG') no-repeat center center;
+    height: 150px; /* Maintain aspect ratio */
+    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
     background-size: contain;
-    z-index: 1000;
+    z-index: 10000;
     mix-blend-mode: darken;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 /* Scroll-Top Bar */
@@ -160,13 +152,13 @@ body::before {
     left: 0; /* Ensures it touches the left side */
     width: 100vw; /* Makes sure it stretches across the full width */
     height: 10vh;
-    background: url('../assets/scroll-top2.png') repeat-x center center;
+    background: url('../assets/scroll-top22.png') repeat-x center center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Keeps title centered and menu aligned right */
     padding: 0; /* Remove any extra padding */
-    margin: 0; /* Ensures no extra spacing */
+    margin: 0 !important; /* Ensures no extra spacing */
     z-index: 1000;
 }
 
@@ -176,7 +168,8 @@ body::before {
     font-size: 4.5rem;
     color: darkred;
     margin: 0 auto; /* Ensures centering */
-    text-align: center;
+    text-align: center !important; /* Ensures centering */
+    justify-self: center !important; /* Ensures centering */;
     flex-grow: 1; /* Allows it to take up remaining space */
 }
 
@@ -186,16 +179,21 @@ body::before {
     justify-content: flex-end;
 }
 
+footer {
+    position: relative;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
 
 
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .projects-container h1, .projects-container h2 {
+    .content-container h1, .content-container h2 {
         font-size: 2.5rem;
         /* padding-left: 50px !important; */
     }
-    .projects-container p {
+    .content-container p {
         font-size: 2rem;
         /* padding-left: 50px !important; */
     }
@@ -206,10 +204,10 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .projects-container h1, .projects-container h2 {
+    .content-container h1, .content-container h2 {
         font-size: 2rem;
     }
-    .projects-container p {
+    .content-container p {
         font-size: 1.5rem;
     }
     .dropbtn {
@@ -222,4 +220,55 @@ body::before {
     .scroll-top{
         /* display: none !important; */
     }
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10000;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: black;
+    color: white;
+    font-size: 40px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Treasure Map Deadhand', cursive;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Treasure Map Deadhand', cursive;
+    font-size: 30px;
+}
+
+.dropdown-content a:hover {
+    background: darkred;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
