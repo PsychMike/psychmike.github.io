@@ -18,13 +18,18 @@
             .then(data => document.getElementById("menu-container").innerHTML = data);
     </script>
 
+<header class="page-title">
+    <h1>Attractions</h1>
+</header>
+
+
     <!-- Scrollable Parchment Section -->
     <main class="parchment-scroll">
         <div class="scroll-container">
 
             <!-- 💀 Venture into the Unknown -->
             <section class="attraction-section">
-                <h2>💀 Venture into the Unknown</h2>
+                <h2 class="section-header">💀 Venture into the Unknown</h2>
                 <p>
                     Dark caves, hidden treasures, and adventures await! Explore our attractions and uncover the secrets lurking within.
                     Ye be warned—some treasures are guarded by more than just shadows...
@@ -33,17 +38,26 @@
 
             <!-- 🏴‍☠️ What Awaits? -->
             <section class="attraction-section">
-                <h2>🏴‍☠️ What Awaits?</h2>
+                <h2 class="section-header">🏴‍☠️ What Awaits?</h2>
                 <ul class="attraction-list">
                     <li><strong>BeauHaunt Pirate Adventure</strong> – Our signature walk-through pirate adventure!</li>
+                    <div class="attraction-image-container">
+                    <img src="../assets/attractions/pirate-adventure2.webp" alt="BeauHaunt Pirate Adventure" class="attraction-image">
+                    </div>
                     <li><strong>Electronic Shooting Gallery Experiences</strong> – Engage with a pirate beach or graveyard and test ye shot at this shooting gallery!</li>
-                    <li><strong>Pirate Display and Show</strong> – Step right into a thrilling battle between a pirate ship and the fortress they are trying to infiltrate!</li>
-                </ul>
+                    <div class="attraction-image-container">
+                        <img src="../assets/attractions/shooting-gallery.webp" alt="BeauHaunt Pirate Adventure" class="attraction-image">
+                        </div>
+                        <li><strong>Pirate Display and Show</strong> – Step right into a thrilling battle between a pirate ship and the fortress they are trying to infiltrate!</li>
+                        <div class="attraction-image-container">
+                            <img src="../assets/attractions/display-show.webp" alt="BeauHaunt Pirate Adventure" class="attraction-image">
+                            </div>
+                    </ul>
             </section>
 
             <!-- 🗺️ Your Adventure Begins Here -->
             <section class="attraction-section">
-                <h2>🗺️ Your Adventure Begins Here</h2>
+                <h2 class="section-header">🗺️ Your Adventure Begins Here</h2>
                 <p>
                     Whether you’re a seasoned sailor or a landlubber seeking adventure, our attractions are designed to immerse you in the world of pirates like never before.
                     Are you brave enough to enter Skull Rock?

@@ -26,11 +26,14 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 40px 0;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    top: -10vh !important;
 }
 
 /* 🎞️ Scrollable Content in the Center */
 .scroll-container {
-    width: 90%;
+    width: 80%;
     /* max-width: 800px; */
     text-align: center;
     padding: 20px;
@@ -57,6 +60,35 @@ body {
     line-height: 1.6;
     margin-bottom: 15px;
 }
+
+/* Center the Image */
+.attraction-image-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers if needed */
+    width: 100%;
+    margin: 20px auto; /* Adds spacing and centers */
+}
+
+/* Ensure the image itself is responsive and well-positioned */
+.attraction-image-container img {
+    max-width: 40%; /* Prevents overflow */
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Optional for styling */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+.attraction-image{
+    /* max-width: 20vw; */
+    height: auto;
+    margin: 20px 0;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+}
+
 
 /* 🏴‍☠️ Attraction List */
 .attraction-list {
@@ -90,6 +122,10 @@ body {
 }
 
 
+.section-header{
+    font-size: 3rem !important;
+}
+
 /* ✨ Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -99,12 +135,140 @@ html {
 /* Company Logo */
 .company-logo {
     position: absolute; /* Allows positioning in the bottom left */
-    bottom: 0 !important; /* Adjust as needed */
-    right: 0 !important; /* Adjust as needed */
+    top: 0 !important; /* Adjust as needed */
+    left: 0 !important; /* Adjust as needed */
     width: 150px; /* Set an appropriate width */
     height: 100px; /* Maintain aspect ratio */
     background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
     background-size: contain;
     z-index: 10000;
     mix-blend-mode: darken;
+}
+
+
+/* 📜 Styled Header */
+.page-title {
+    text-align: center;
+    font-family: 'Treasure Map Deadhand', serif; /* Pirate-style font */
+    font-size: 4rem;
+    color: #8b0000; /* Dark blood-red */
+    padding: 20px 50px;
+    margin: 30px auto;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* 📜 Fix Parchment Background Scrolling */
+body {
+    background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
+                url('../assets/wood-bckgrnd.webp') repeat-y center bottom;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures proper sizing */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* 🏴‍☠️ Parchment Scroll Container */
+.parchment-scroll {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px; /* More responsive padding */
+    margin: 0;
+}
+
+/* 📜 Ensure Text & Sections Are Centered */
+.attraction-section {
+    width: 90%;
+    /* max-width: 800px; */
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 🎭 Page Title Fix */
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 4rem;
+    font-family: 'Treasure Map Deadhand', serif;
+}
+
+/* 🏴‍☠️ Fix Image Centering */
+.attraction-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.attraction-image-container img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* 📜 Attraction List */
+.attraction-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+/* ⚓ Custom Bullet Point Fix */
+.attraction-list li {
+    margin: 10px 0;
+    padding-left: 3vw; /* More spacing */
+    display: flex;
+    align-items: center;
+}
+
+/* Fix anchor position */
+.attraction-list li::before {
+    content: "⚓";
+    position: absolute;
+    left: -2vw; /* Moves it left */
+    font-size: 2rem;
+    color: #0066cc;
+}
+
+/* 📱 Mobile Fix */
+@media (max-width: 768px) {
+    .parchment-scroll {
+        padding: 10px;
+    }
+
+    .attraction-section {
+        width: 95%;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .attraction-image-container img {
+        max-width: 80%;
+    }
+
+    .attraction-list {
+        font-size: 1.8rem;
+    }
+
+    .attraction-list li::before {
+        font-size: 1.5rem;
+        left: -3vw;
+    }
 }
