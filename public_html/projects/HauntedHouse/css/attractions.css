@@ -50,7 +50,6 @@ body {
 /* 🏴‍☠️ Headers */
 .attraction-section h2 {
     color: #8b0000; /* Dark pirate red */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 2rem;
 }
 
