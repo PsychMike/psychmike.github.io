@@ -670,7 +670,6 @@ footer {
         background-color: red; /* Example color */
     }
 
-
     .company-logo {
         width: 100px;
         left: 10px;
@@ -696,7 +695,7 @@ footer {
     }
 
     .company-logo{
-        bottom: 0 !important;
+        bottom: 10vh !important;
         left: 0 !important;
         border: none !important;
     }
