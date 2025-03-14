@@ -1,0 +1,37 @@
+/* Scroll-Top Bar */
+/* Ensure scroll-top spans the full width */
+.scroll-top {
+    position: relative;
+    top: 0;
+    left: 0; /* Ensures it touches the left side */
+    width: 100vw; /* Makes sure it stretches across the full width */
+    height: 10vh;
+    background: url('../assets/scroll-top22.png') repeat-x center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps title centered and menu aligned right */
+    padding: 0; /* Remove any extra padding */
+    margin: 0 !important; /* Ensures no extra spacing */
+    z-index: 1000;
+    filter: brightness(110%);
+}
+
+/* Page Title - Centered in the Scroll Bar */
+.page-title {
+    position: absolute;
+    top: 0%; /* Adjust vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it properly */
+    font-size: 4rem; /* Adjust as needed */
+    color: #8b0000; /* Keep the dark red */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3), /* Soft shadow to blend into parchment */
+        -2px -2px 2px rgba(255, 255, 255, 0.1); /* Highlight for engraved effect */
+    font-family: 'Treasure Map Deadhand', cursive;
+    mix-blend-mode: multiply; /* Helps it blend with the background */
+    opacity: 0.9; /* Slight transparency for a faded look */
+    background: url('../assets/scroll-top22.png'); /* Same background as the scroll */
+    -webkit-background-clip: text;
+    color: transparent; /* Makes text take on the texture */
+}

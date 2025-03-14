@@ -90,6 +90,20 @@ body::before {
     margin-left: 5vw;
     margin-right: 5vw;
     padding-bottom: 0.5vh !important;
+    text-align: center;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Treasure Map Deadhand', serif;
+    color: #3b2f2f; /* Keep a dark readable color */
+    
+    background: url('../assets/parchment-paper.png'); /* Text texture */
+    background: linear-gradient(
+        rgb(65, 48, 36), /* Darker brown */
+        rgba(139, 69, 19, 1)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 /* Section Headers */
@@ -144,34 +158,6 @@ body::before {
     opacity: 0.8;
 }
 
-/* Scroll-Top Bar */
-/* Ensure scroll-top spans the full width */
-.scroll-top {
-    position: relative;
-    top: 0;
-    left: 0; /* Ensures it touches the left side */
-    width: 100vw; /* Makes sure it stretches across the full width */
-    height: 10vh;
-    background: url('../assets/scroll-top22.png') repeat-x center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Keeps title centered and menu aligned right */
-    padding: 0; /* Remove any extra padding */
-    margin: 0 !important; /* Ensures no extra spacing */
-    z-index: 1000;
-}
-
-/* Page Title - Centered in the Scroll Bar */
-.page-title {
-    font-family: 'Treasure Map Deadhand', cursive;
-    font-size: 4.5rem;
-    color: darkred;
-    margin: 0 auto; /* Ensures centering */
-    text-align: center !important; /* Ensures centering */
-    justify-self: center !important; /* Ensures centering */;
-    flex-grow: 1; /* Allows it to take up remaining space */
-}
 
 /* Ensure Menu is Aligned on the Right */
 #menu-container {
