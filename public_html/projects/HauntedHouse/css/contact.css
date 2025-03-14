@@ -324,7 +324,7 @@ textarea, input {
     }
 
     .dropdown {
-        top: 10px;
+        top: 0 !important;
         right: 10px;
         transform: scale(0.7);
         /* opacity: 0.3; */
