@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions | BeauHaunt Pirate Adventure</title>
+    <link rel="stylesheet" href="css/attractions.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" type="image/png" href="assets/BeauHaunt-logo.png">
+</head>
+<body>
+
+    <!-- Menu Container -->
+    <div id="menu-container"></div>
+    <script>
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("menu-container").innerHTML = data);
+    </script>
+
+    <!-- Scrollable Parchment Section -->
+    <main class="parchment-scroll">
+        <div class="scroll-container">
+
+            <!-- 💀 Venture into the Unknown -->
+            <section class="attraction-section">
+                <h2>💀 Venture into the Unknown</h2>
+                <p>
+                    Dark caves, hidden treasures, and adventures await! Explore our attractions and uncover the secrets lurking within.
+                    Ye be warned—some treasures are guarded by more than just shadows...
+                </p>
+            </section>
+
+            <!-- 🏴‍☠️ What Awaits? -->
+            <section class="attraction-section">
+                <h2>🏴‍☠️ What Awaits?</h2>
+                <ul class="attraction-list">
+                    <li><strong>BeauHaunt Pirate Adventure</strong> – Our signature walk-through pirate adventure!</li>
+                    <li><strong>Electronic Shooting Gallery Experiences</strong> – Engage with a pirate beach or graveyard and test ye shot at this shooting gallery!</li>
+                    <li><strong>Pirate Display and Show</strong> – Step right into a thrilling battle between a pirate ship and the fortress they are trying to infiltrate!</li>
+                </ul>
+            </section>
+
+            <!-- 🗺️ Your Adventure Begins Here -->
+            <section class="attraction-section">
+                <h2>🗺️ Your Adventure Begins Here</h2>
+                <p>
+                    Whether you’re a seasoned sailor or a landlubber seeking adventure, our attractions are designed to immerse you in the world of pirates like never before.
+                    Are you brave enough to enter Skull Rock?
+                </p>
+            </section>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="company-logo"></div>
+    </footer>
+
+</body>
+</html>

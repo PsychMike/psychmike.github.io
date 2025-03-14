@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Treasure Map Deadhand';
+    src: url('./fonts/treasure-map-deadhand-font/TreasureMapDeadhand-yLA3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 📜 Scrollable Parchment Paper Background */
+body {
+    background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
+    url('../assets/wood-bckgrnd.webp') repeat-y center bottom;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🏴‍☠️ Parchment Scroll Container */
+.parchment-scroll {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 0;
+}
+
+/* 🎞️ Scrollable Content in the Center */
+.scroll-container {
+    width: 90%;
+    /* max-width: 800px; */
+    text-align: center;
+    padding: 20px;
+}
+
+/* 📜 Attractions Sections */
+.attraction-section {
+    margin: 40px 0;
+    padding: 20px;
+    font-family: 'Treasure Map Deadhand', serif;
+    color: #3b2f2f;
+}
+
+/* 🏴‍☠️ Headers */
+.attraction-section h2 {
+    color: #8b0000; /* Dark pirate red */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
+
+/* 📜 Paragraph Styling */
+.attraction-section p {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 🏴‍☠️ Attraction List */
+.attraction-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    font-size: 2.3rem;
+    margin-top: 15px;
+}
+
+/* Custom Pirate Bullet Points */
+.attraction-list li {
+    margin: 10px 0;
+    padding-left: 2vw; /* Increases spacing between bullet and text */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Moves the anchor symbol to the left */
+.attraction-list li::before {
+    content: "⚓";
+    position: absolute;
+    left: 0;
+    font-size: 1.8rem; /* Adjust size */
+    color: #0066cc; /* Blue anchor color */
+    width: 20px; /* Ensures proper spacing */
+    height: auto;
+    line-height: 1; /* Ensures proper vertical positioning */
+    text-align: center;
+}
+
+
+/* ✨ Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Company Logo */
+.company-logo {
+    position: absolute; /* Allows positioning in the bottom left */
+    bottom: 0 !important; /* Adjust as needed */
+    right: 0 !important; /* Adjust as needed */
+    width: 150px; /* Set an appropriate width */
+    height: 100px; /* Maintain aspect ratio */
+    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
+    background-size: contain;
+    z-index: 10000;
+    mix-blend-mode: darken;
+}

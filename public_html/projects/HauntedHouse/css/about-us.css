@@ -7,8 +7,9 @@
 
 /* 📜 Scrollable Parchment Paper Background */
 body {
-    background: url('../assets/parchmentpaper-long222.png') repeat-y center top;
-    background-size: cover;
+    background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
+    url('../assets/wood-bckgrnd.webp') repeat-y center bottom;
+    background-size: cover, cover;
     margin: 0;
     padding: 0;
 }
