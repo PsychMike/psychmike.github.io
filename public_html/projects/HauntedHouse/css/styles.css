@@ -664,10 +664,8 @@ footer {
     }
 
     .parrot {
-        position: relative; /* Adjust positioning */
-        width: 100px; /* Adjust size */
-        height: 120px;
-        background-color: red; /* Example color */
+        transform: scale(2); /* Adjust scale factor as needed */
+        transform-origin: center; /* Ensures it scales from the center */
     }
 
     .company-logo {
