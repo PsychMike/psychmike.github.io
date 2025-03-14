@@ -48,7 +48,7 @@ html, body {
 /* Parchment Content */
 .parchment-content {
     /* max-width: 900px; */
-    padding: 30px 20px;
+    /* padding: 30px 20px; */
     /* background: rgba(255, 255, 224, 0.9); */
     /* box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4); */
     border-radius: 15px;
@@ -276,11 +276,13 @@ textarea, input {
 }
 
 
-    .parchment-container {
-        flex-direction: column;
-        padding: 20px;
-        width: 85%;
-    }
+.parchment-container {
+    width: 100%;
+    padding: 0 10px; /* Reduce padding to prevent shrinking */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
     .page-sign {
         font-size: 2rem;
