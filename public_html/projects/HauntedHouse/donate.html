@@ -6,10 +6,16 @@
     <title>Donate - Help Fill the Treasure Chest</title>
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="css/donate.css">
+    <link rel="stylesheet" href="css/scroll-top.css">
     <link rel="icon" type="image/png" href="assets/BeauHaunt-logo.png">
 </head>
 <body>
-    <div id="menu-container"></div>
+
+    <div class="scroll-top">
+        <h1 class="page-title">Donate</h1>
+        <div id="menu-container" class="menu-dropdown"></div>
+    </div>
+
     <script>
         fetch("menu.html")
             .then(response => response.text())
@@ -28,10 +34,18 @@
         <section class="ways-to-give">
             <h2>Ways to Give</h2>
             <p>We accept donations through card and online payments. Click on the Venmo link below to donate!</p>
-            <a href="YOUR_VENMO_LINK_HERE" class="donate-button">Donate via Venmo</a>
+            
+            <!-- Wrap the button in a centered div -->
+            <div class="donate-button-container">
+                <a href="YOUR_VENMO_LINK_HERE" class="donate-button">Donate via Venmo</a>
+            </div>
         </section>
+        
     </main>
     
-    <img src="assets/BeauHaunt-logo.png" alt="Company Logo" class="company-logo">
+    <footer>
+        <img src="assets/BeauHaunt-logo.png" alt="Company Logo" class="company-logo">
+    </footer>
+    
 </body>
 </html>
