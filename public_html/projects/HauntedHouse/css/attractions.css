@@ -31,6 +31,17 @@ body {
     top: -10vh !important;
 }
 
+
+.parchment-scroll p{
+    background: url('../assets/parchment-paper.png'); /* Text texture */
+    background: linear-gradient(
+        rgb(65, 48, 36), /* Darker brown */
+        rgba(139, 69, 19, 1)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 /* 🎞️ Scrollable Content in the Center */
 .scroll-container {
     width: 80%;
@@ -38,6 +49,8 @@ body {
     text-align: center;
     padding: 20px;
 }
+
+
 
 /* 📜 Attractions Sections */
 .attraction-section {
@@ -105,24 +118,54 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    background: url('../assets/parchment-paper.png'); /* Text texture */
+    background: linear-gradient(
+        rgb(65, 48, 36), /* Darker brown */
+        rgba(139, 69, 19, 1)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-/* Moves the anchor symbol to the left */
+
+
+/* Moves the anchor symbol to the left and blends it with the background */
 .attraction-list li::before {
     content: "⚓";
     position: absolute;
-    left: 0;
-    font-size: 1.8rem; /* Adjust size */
-    color: #0066cc; /* Blue anchor color */
-    width: 20px; /* Ensures proper spacing */
+    left: -2rem; /* Adjust as needed */
+    font-size: 2rem; /* Ensure it's visible */
+    width: auto; /* Allow full size */
     height: auto;
-    line-height: 1; /* Ensures proper vertical positioning */
+    line-height: 1;
     text-align: center;
+    overflow: visible;
+    white-space: nowrap; /* Prevents breaking */
+
+    /* Background Blending */
+    background: url('../assets/parchment-paper.png') !important; /* Match background */
+    background-size: cover !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important; /* Makes text take on the background texture */
+
+    /* Optional: Adjust brightness for better blending */
+    filter: brightness(0.5) contrast(1.1); 
 }
 
 
+
+
 .section-header{
+    padding-top: 3vh !important;
     font-size: 3rem !important;
+    background: url('../assets/parchment-paper.png') !important; /* Text texture */
+    background: linear-gradient(
+        rgb(65, 48, 36), /* Darker brown */
+        rgba(139, 69, 19, 1)
+    ) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
 }
 
 /* ✨ Smooth Scrolling */
@@ -180,6 +223,7 @@ body {
     text-align: center;
     padding: 40px 20px; /* More responsive padding */
     margin: 0;
+    
 }
 
 /* 📜 Ensure Text & Sections Are Centered */
@@ -242,6 +286,7 @@ body {
     left: -2vw; /* Moves it left */
     font-size: 2rem;
     color: #0066cc;
+
 }
 
 /* 📱 Mobile Fix */
@@ -269,5 +314,8 @@ body {
     .attraction-list li::before {
         font-size: 1.5rem;
         left: -3vw;
+    }
+    .company-logo{
+        display: none !important;
     }
 }

@@ -6,21 +6,21 @@
     <title>Attractions | BeauHaunt Pirate Adventure</title>
     <link rel="stylesheet" href="css/attractions.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/scroll-top.css">
     <link rel="icon" type="image/png" href="assets/BeauHaunt-logo.png">
 </head>
 <body>
 
-    <!-- Menu Container -->
-    <div id="menu-container"></div>
+    <div class="scroll-top">
+        <h1 class="page-title">Attractions</h1>
+        <div id="menu-container" class="menu-dropdown"></div>
+    </div>
+
     <script>
         fetch("menu.html")
             .then(response => response.text())
             .then(data => document.getElementById("menu-container").innerHTML = data);
     </script>
-
-<header class="page-title">
-    <h1>Attractions</h1>
-</header>
 
 
     <!-- Scrollable Parchment Section -->
