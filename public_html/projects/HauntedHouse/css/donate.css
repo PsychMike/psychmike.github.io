@@ -13,7 +13,7 @@ body {
     url('../assets/woodtable.png') no-repeat center center fixed;
     background-size: cover, cover;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
     position: relative;
 }
 
