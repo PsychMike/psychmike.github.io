@@ -6,12 +6,17 @@
     <title>About Us | The Haunted Adventure</title>
     <link rel="stylesheet" href="css/about-us.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/scroll-top.css">
     <link rel="icon" type="image/png" href="assets/BeauHaunt-logo.png">
 </head>
 <body class="subpage about-page">
 
-    <!-- Menu Container -->
-    <div id="menu-container"></div>
+    <div class="scroll-top">
+        <h1 class="page-title">About Us</h1>
+        <div id="menu-container" class="menu-dropdown"></div>
+        <div class="company-logo"></div>
+    </div>
+
     <script>
         fetch("menu.html")
             .then(response => response.text())
@@ -25,13 +30,13 @@
             
             <!-- 🏴‍☠️ Meet the Crew -->
             <section class="about-section">
-                <h2>🎩 Meet the Crew</h2>
+                <h2><span class="icon">🎩</span> Meet the Crew</h2>
                 <p>Every great ship needs a captain and a crew. Learn about everyone behind the adventure, our story, and the vision that keeps us sailing for new horizons!</p>
             </section>
 
             <!-- 📜 Our Story -->
             <section class="about-section">
-                <h2>📜 Our Story</h2>
+                <h2><span class="icon">📜</span> Our Story</h2>
                 <p>
                     Many Halloweens ago, my great-grandpa was a true pioneer of DIY creativity. Using nothing more than an old lighting fixture and foil, he made his own black light. 
                     People would come from all over just to stand beneath it, excited at how their costumes lit up in the eerie glow. Looking back, it’s incredible to see how far we’ve come.
@@ -53,7 +58,7 @@
 
             <!-- 🏴‍☠️ Optional: Add Crew Images Here -->
             <section class="crew-gallery">
-                <h2>⚓ The Crew Behind the Adventure</h2>
+                <h2><span class="icon">⚓</span> The Crew Behind the Adventure</h2>
                 <div class="crew-images">
                     <div class="crew-member">
                         <img src="./assets/skull.png" alt="Crew Member 1">
