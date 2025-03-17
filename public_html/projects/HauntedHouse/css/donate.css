@@ -9,13 +9,15 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('../assets/parchment-paper2.png') no-repeat center center fixed,
-    url('../assets/woodtable.png') no-repeat center center fixed;
-    background-size: cover, cover;
-    height: 100vh;
+    background: url('../assets/parchment-paper2.png') repeat-y center top,
+                url('../assets/woodtable.png') repeat-y center bottom;
+    background-size: cover;
+    height: auto; /* Allows it to scroll */
+    min-height: 100vh;
     overflow-y: auto;
     position: relative;
 }
+
 
 
 body::before {
