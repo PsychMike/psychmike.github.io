@@ -171,6 +171,39 @@ html {
 }
 
 
+
+/* General Icon Styling */
+.icon {
+    display: inline-block;
+    font-size: 2.8rem;
+    color: #4A2C2A; /* Dark brown ink */
+    opacity: 0.85;
+    mix-blend-mode: multiply;
+    filter: sepia(80%) contrast(110%) brightness(90%);
+    -webkit-background-clip: text;
+    background-image: url('../assets/parchment-paper.png');
+}
+
+
+
+
+/* Pirate Flag Icon */
+.pirate-flag {
+    color: darkred; /* Example custom color */
+}
+
+/* Scroll Icon */
+.scroll {
+    color: saddlebrown; /* Adjust for a parchment look */
+}
+
+/* Camera Icon */
+.camera {
+    color: darkblue; /* Example accent color */
+    mix-blend-mode: darken;
+}
+
+
 @media screen and (max-width: 768px) {
     /* .scroll-container {
         width: 90%;
