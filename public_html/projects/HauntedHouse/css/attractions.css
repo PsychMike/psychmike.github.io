@@ -172,31 +172,7 @@ html {
 }
 
 
-/* Company Logo */
-.company-logo {
-    position: absolute; /* Allows positioning in the bottom left */
-    top: 0 !important; /* Adjust as needed */
-    left: 0 !important; /* Adjust as needed */
-    width: 150px; /* Set an appropriate width */
-    height: 100px; /* Maintain aspect ratio */
-    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
-    background-size: contain;
-    z-index: 10000;
-    mix-blend-mode: darken;
-}
 
-
-/* 📜 Styled Header */
-.page-title {
-    text-align: center;
-    font-family: 'Treasure Map Deadhand', serif; /* Pirate-style font */
-    font-size: 4rem;
-    color: #8b0000; /* Dark blood-red */
-    padding: 20px 50px;
-    margin: 30px auto;
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-}
 
 
 /* 📜 Fix Parchment Background Scrolling */

@@ -167,20 +167,7 @@ html {
     padding-bottom: 0 !important;
     padding-top: 0 !important;
 }
-
-/* Company Logo */
-.company-logo {
-    position: absolute; /* Allows positioning in the bottom left */
-    top: 10px !important; /* Adjust as needed */
-    left: 100px !important; /* Adjust as needed */
-    width: 150px; /* Set an appropriate width */
-    height: 100px; /* Maintain aspect ratio */
-    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
-    background-size: contain;
-    z-index: 10000;
-    mix-blend-mode: darken;
-}
-
+ 
 .icon {
     display: inline-block;
     font-size: 2.8rem;
@@ -193,12 +180,12 @@ html {
 }
 
 @media (max-width: 768px) {
-    .company-logo {
+    /* .company-logo {
         top: 10px !important;
         left: 10px !important;
         width: 100px;
         height: 70px;
-    }
+    } */
 
     .scroll-container {
         font-size: 1rem;

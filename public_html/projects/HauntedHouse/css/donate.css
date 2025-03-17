@@ -31,57 +31,6 @@ body::before {
     z-index: -1;
 }
 
-/* Dropdown Container */
-.dropdown {
-    position: absolute;
-    top: 10%;
-    right: 20px;
-    z-index: 1000;
-}
-
-/* Dropdown Button */
-.dropbtn {
-    background: black;
-    color: white;
-    font-size: 40px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Treasure Map Deadhand', cursive;
-}
-
-/* Dropdown Content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    min-width: 150px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
-}
-
-/* Dropdown Links */
-.dropdown-content a {
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    transition: 0.3s;
-    font-family: 'Treasure Map Deadhand', cursive;
-    font-size: 30px;
-}
-
-.dropdown-content a:hover {
-    background: darkred;
-}
-
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* Main Donation Container */
 .donation-container {
     padding-top: 0 !important;
@@ -146,19 +95,6 @@ padding-top: 0 !important;
 }
 
 
-/* Company Logo */
-.company-logo {
-    position: absolute; /* Allows positioning in the bottom left */
-    bottom: 0%; /* Adjust as needed */
-    left: 90%; /* Adjust as needed */
-    width: 150px; /* Set an appropriate width */
-    height: auto; /* Maintain aspect ratio */
-    background: url('../assets/BeauHaunt-logo-2024.PNG') no-repeat center center;
-    background-size: contain;
-    z-index: 1000;
-    mix-blend-mode: darken;
-    opacity: 0.6;
-}
 
 @media (max-width: 768px) {
 
@@ -177,12 +113,10 @@ padding-top: 0 !important;
     .donation-container p {
         font-size: 1.5rem;
     }
-    .dropbtn {
-        font-size: 30px;
-    }
+
     .company-logo {
-        left: 70%;
-        width: 100px;
+        /* left: 70%;
+        width: 100px; */
         display: none !important;
     }
 }

@@ -1,50 +1,104 @@
 /* Scroll-Top Bar */
-/* Ensure scroll-top spans the full width */
 .scroll-top {
     position: relative;
-    top: 0;
-    left: 0; /* Ensures it touches the left side */
-    width: 100vw; /* Makes sure it stretches across the full width */
+    width: 100vw;
     height: 10vh;
     background: url('../assets/scroll-top22.png') repeat-x center center;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Keeps title centered and menu aligned right */
-    padding: 0; /* Remove any extra padding */
-    margin: 0 !important; /* Ensures no extra spacing */
+    justify-content: space-between; /* Spaces elements evenly */
+    padding: 0 20px;
     z-index: 1000;
     filter: brightness(110%);
+    overflow: visible; /* Allows elements inside to extend beyond */
 }
 
 /* Page Title - Centered in the Scroll Bar */
 .page-title {
-    position: absolute;
-    top: 0%; /* Adjust vertically */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center it properly */
-    font-size: 4rem; /* Adjust as needed */
-    color: #8b0000; /* Keep the dark red */
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.3), /* Soft shadow to blend into parchment */
-        -2px -2px 2px rgba(255, 255, 255, 0.1); /* Highlight for engraved effect */
+    flex-grow: 1;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #8b0000;
     font-family: 'Treasure Map Deadhand', cursive;
-    mix-blend-mode: multiply; /* Helps it blend with the background */
-    opacity: 0.9; /* Slight transparency for a faded look */
-    background: url('../assets/scroll-top22.png'); /* Same background as the scroll */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3), 
+        -2px -2px 2px rgba(255, 255, 255, 0.1);
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+    background: url('../assets/scroll-top22.png');
     -webkit-background-clip: text;
-    color: transparent; /* Makes text take on the texture */
+    color: transparent;
 }
 
 /* Company Logo */
 .company-logo {
-    position: absolute; /* Allows positioning in the bottom left */
-    top: 0 !important; /* Adjust as needed */
-    left: 0 !important; /* Adjust as needed */
-    width: 150px; /* Set an appropriate width */
-    height: 100px; /* Maintain aspect ratio */
+    width: 70px;
+    height: 70px;
     background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
     background-size: contain;
-    z-index: 10000;
     mix-blend-mode: darken;
+    flex-shrink: 0; /* Prevents resizing */
+    position: relative;
+    top: 50%; /* Ensures it’s vertically aligned */
+    transform: translateY(-50%); /* Centers it properly */
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: absolute;
+    top: 50%;
+    right: 5vw; /* Moves away from the edge */
+    transform: translateY(-50%); /* Centers vertically */
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Treasure Map Deadhand', cursive;
+    z-index: 10001;
+    right: 5vw;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); /* Ensures dropdown appears BELOW button */
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 120px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    z-index: 100000;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Treasure Map Deadhand', cursive;
+    font-size: 20px;
+    z-index: 100000;
+}
+
+.dropdown-content a:hover {
+    background: darkred;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
