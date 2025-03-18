@@ -53,18 +53,25 @@ body.subpage {
     pointer-events: none; /* Allows clicks to pass through */
 }
 
-/* Dashed red lines */
+/* Red Dashed Curved Lines */
 .dashed-line {
     stroke: red;
-    stroke-width: 5px; /* Increase thickness */
-    stroke-dasharray: 20 15; /* Increase dash and gap size */
-    animation: dash 8s linear infinite; /* Slow down animation */
+    stroke-width: 4px; /* Adjust thickness */
+    stroke-dasharray: 10, 15; /* Dash pattern: Dash length, Gap length */
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-opacity: 0.8; /* Adjust opacity for better blending */
+    animation: dashMove 5s linear infinite;
 }
 
-/* Animation to make the dashes look like they're moving */
-@keyframes dash {
-    to { stroke-dashoffset: 200; } /* Decrease the number to make it move slower */
+/* Animation to move the dashes */
+@keyframes dashMove {
+    to {
+        stroke-dashoffset: -100;
+    }
 }
+
 
 /* Style for the map icons */
 .map-icon {
@@ -635,6 +642,43 @@ footer {
 #donate    { top: 40%; left: 80%; }
 #about-us     { top: 80%; left: 80%; }
 #attractions { top: 59%; left: 50%; }
+.contact-attraction-point {
+    position: absolute;
+    top: 59%; 
+    left: 37%;
+    width: 50px;  /* Adjust size */
+    height: 50px;
+    /* background-color: red;   */
+    /* Temporary background to check visibility */
+    border-radius: 50%;
+     /* Makes it a circle */
+}
+#contact-attraction-point, 
+.projects-donate-point {
+    position: absolute;
+    width: 15px; 
+    height: 15px;
+}
+#projects-donate-point1, 
+#projects-donate-point2, 
+#projects-donate-point3, 
+#projects-donate-point4, 
+#projects-donate-point5 {
+    position: absolute;
+    width: 15px; /* Small circle marker */
+    height: 15px;
+    /* background-color: blue;  */
+    /* Temporary color for visibility */
+    border-radius: 50%; /* Makes it a circle */
+    z-index: 500;
+}
+
+/* Adjust positioning */
+#projects-donate-point1 { top: 10%; left: 85%; }
+#projects-donate-point2 { top: 25%; left: 75%; }
+#projects-donate-point3 { top: 20%; left: 83%; }
+#projects-donate-point4 { top: 3%; left: 73%; }
+#projects-donate-point5 { top: 50%; left: 65%; }
 
 
 

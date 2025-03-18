@@ -29,10 +29,18 @@
       <path id="path1" class="dashed-line" fill="none" />
       <path id="path2" class="dashed-line" fill="none" />
       <path id="path3" class="dashed-line" fill="none" />
-      <path id="path4" class="dashed-line" fill="none" /> 
+      <path id="path4" class="dashed-line" fill="none" />
       <path id="path5" class="dashed-line" fill="none" />
-
-    </svg>
+      <path id="path6" class="dashed-line" fill="none" />
+      <path id="path7" class="dashed-line" fill="none" />
+      <path id="path8" class="dashed-line" fill="none" />
+      <path id="path9" class="dashed-line" fill="none" />
+      <path id="path10" class="dashed-line" fill="none" />
+      <path id="path11" class="dashed-line" fill="none" />
+      <path id="path12" class="dashed-line" fill="none" />
+  </svg>
+  
+    
     
     <div class="landmass1"></div>
     <div class="landmass2"></div>
@@ -62,6 +70,14 @@
       <div class="hat"></div>
       <span>About Us</span>
     </a>
+
+    <div id="contact-attraction-point" class="contact-attraction-point"></div>
+
+    <div id="projects-donate-point1"  class="projects-donate-point1"></div>
+    <div id="projects-donate-point2"  class="projects-donate-point2"></div>
+    <div id="projects-donate-point3"  class="projects-donate-point3"></div>
+    <div id="projects-donate-point4"  class="projects-donate-point4"></div>
+    <div id="projects-donate-point5"  class="projects-donate-point5"></div>
 
 
     <!-- 🦉🦚🦜🦢🦩🐦🐧🦅🦆 -->
@@ -123,10 +139,12 @@
 
   </div>
   <script>
-   function setCurvedPath(path, startX, startY, endX, endY) {
+   function setCurvedPath(path, startX, startY, endX, endY, offsetMult, offsetVal) {
 
-    const offsetMult = 20; // Offset multiplier for curve
-    const offsetVal = -150; // Offset value for curve
+    // const offsetMult = 20; 
+    // Offset multiplier for curve
+    // const offsetVal = -150; 
+    // Offset value for curve
 
     const midX = (startX + endX) / 2 + (Math.random() * offsetMult - offsetVal); // Random X offset
     const midY = (startY + endY) / 2 + (Math.random() * offsetMult - offsetVal); // Random Y offset
@@ -142,19 +160,29 @@ function updateLines() {
     const donate = document.getElementById("donate").getBoundingClientRect();
     const aboutUs = document.getElementById("about-us").getBoundingClientRect();
     const attractions = document.getElementById("attractions").getBoundingClientRect();
+    const contact_attraction_point = document.getElementById("contact-attraction-point").getBoundingClientRect();
 
     const path1 = document.getElementById("path1");
     const path2 = document.getElementById("path2");
     const path3 = document.getElementById("path3");
     const path4 = document.getElementById("path4");
     const path5 = document.getElementById("path5");
+    const path6 = document.getElementById("path6");
+    const path7 = document.getElementById("path7");
+    const path8 = document.getElementById("path8");
+    const path9 = document.getElementById("path9");
+    const path10 = document.getElementById("path10");
+    const path11 = document.getElementById("path11");
+    const path12 = document.getElementById("path12");
 
     function getCenter(element) {
-        return {
-            x: element.left + element.width / 2,
-            y: element.top + element.height / 2
-        };
-    }
+    if (!element) return { x: 0, y: 0 }; // Prevents errors
+    return {
+        x: element.left + element.width / 2,
+        y: element.top + element.height / 2
+    };
+}
+
 
     const centerGallery = getCenter(gallery);
     const centerProjects = getCenter(projects);
@@ -162,12 +190,28 @@ function updateLines() {
     const centerDonate = getCenter(donate);
     const centerAboutUs = getCenter(aboutUs);
     const centerAttractions = getCenter(attractions);
+    const centerContactAttractionPoint = getCenter(contact_attraction_point);
+    const centerProjectsDonatePoint1 = getCenter(document.getElementById("projects-donate-point1").getBoundingClientRect());
+    const centerProjectsDonatePoint2 = getCenter(document.getElementById("projects-donate-point2").getBoundingClientRect());
+    const centerProjectsDonatePoint3 = getCenter(document.getElementById("projects-donate-point3").getBoundingClientRect());
+    const centerProjectsDonatePoint4 = getCenter(document.getElementById("projects-donate-point4").getBoundingClientRect());
+    const centerProjectsDonatePoint5 = getCenter(document.getElementById("projects-donate-point5").getBoundingClientRect());
 
-    setCurvedPath(path1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
-    setCurvedPath(path2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
-    setCurvedPath(path3, centerContact.x, centerContact.y, centerDonate.x, centerDonate.y);
-    setCurvedPath(path4, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y);
-    setCurvedPath(path5, centerAboutUs.x, centerAboutUs.y, centerAttractions.x, centerAttractions.y);
+
+    // setCurvedPath(path, startX, startY, endX, endY, offsetMult, offsetVal)
+    setCurvedPath(path1, centerAttractions.x, centerAttractions.y, centerProjects.x, centerProjects.y, 20, -150);
+    // setCurvedPath(path2, centerProjects.x, centerProjects.y, centerDonate.x, centerDonate.y, 20, -150);
+    setCurvedPath(path3, centerContact.x, centerContact.y, centerGallery.x, centerGallery.y, 20, 350);
+    setCurvedPath(path4, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y, -20, 150);
+    setCurvedPath(path5, centerContactAttractionPoint.x, centerContactAttractionPoint.y, centerAttractions.x, centerAttractions.y, 200, -150);
+    setCurvedPath(path6, centerContact.x, centerContact.y, centerContactAttractionPoint.x, centerContactAttractionPoint.y, 20, -150);
+    setCurvedPath(path7, centerDonate.x, centerDonate.y, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y, 20, -150);
+    setCurvedPath(path8, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y, centerProjectsDonatePoint2.x, centerProjectsDonatePoint2.y, 20, 150);
+    setCurvedPath(path9, centerProjectsDonatePoint2.x, centerProjectsDonatePoint2.y, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, 20, -150);
+    setCurvedPath(path10, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, 20, 150);
+    // setCurvedPath(path11, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, 20, -150);
+    setCurvedPath(path12, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjects.x, centerProjects.y, 20, 150);
+    
 }
 
 window.addEventListener("load", () => {
