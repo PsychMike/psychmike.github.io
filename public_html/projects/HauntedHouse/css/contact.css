@@ -73,7 +73,7 @@ html, body {
 /* Contact Info */
 .contact-info {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-family: 'Treasure Map Deadhand';
     margin-bottom: 20px;
     color: black;
@@ -86,7 +86,7 @@ html, body {
     
     background: url('../assets/parchment-paper.png'); /* Text texture */
     background: linear-gradient(
-        rgb(65, 48, 36), /* Darker brown */
+        rgb(14, 7, 2), /* Darker brown */
         rgba(139, 69, 19, 1)
     );
     -webkit-background-clip: text;
@@ -116,7 +116,7 @@ html, body {
 .form-group textarea {
     width: 250px; /* Consistent width for all fields */
     padding: 8px;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     border: 2px solid #6b4f32;
     background: rgba(255, 255, 224, 0.9);
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -167,7 +167,7 @@ footer {
 .dropbtn {
     background: black;
     color: white;
-    font-size: 40px;
+    font-size: 4rem;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -194,7 +194,7 @@ footer {
     display: block;
     transition: 0.3s;
     font-family: 'Treasure Map Deadhand', cursive;
-    font-size: 30px;
+    font-size: 4rem;
 }
 
 .dropdown-content a:hover {
@@ -212,6 +212,7 @@ h1{
 
 .reach-us{
     font-family: 'Treasure Map Deadhand';
+    font-size: 3rem;
 }
 
 .contact-form{
@@ -236,7 +237,7 @@ h1{
 /* Custom Button Styling for Parchment Theme */
 .contact-form button {
     font-family: 'Treasure Map Deadhand', cursive;
-    font-size: 1.8rem; /* Slightly smaller to match the theme */
+    font-size: 2.8rem; /* Slightly smaller to match the theme */
     color: #3b2f2f; /* Dark brown text */
     
     /* Aged parchment look */
@@ -259,8 +260,8 @@ h1{
 
 /* Hover Effect */
 .contact-form button:hover {
-    background: linear-gradient(to bottom, #b8905b, #8a683a); /* Darker parchment */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    /* background: linear-gradient(to bottom, #b8905b, #8a683a);  */
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); */
     transform: scale(1.05); /* Slightly enlarges on hover */
 }
 
@@ -275,7 +276,7 @@ textarea, input {
     vertical-align: middle; /* Aligns the text area with adjacent text */
     margin-top: 5px; /* Fine-tune the position by adjusting this value */
     padding: 5px;
-    font-size: 1rem;
+    font-size: 2rem;
     border: 2px solid #6b4f32; /* Matching border to fit the parchment theme */
     background: rgba(255, 255, 224, 0.9); /* Aged parchment-like input background */
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -314,12 +315,12 @@ textarea, input {
     }
 
     .parchment-content {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         padding: 20px 15px;
     }
 
     .contact-info {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .form-container {
