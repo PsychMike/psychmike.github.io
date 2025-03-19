@@ -138,19 +138,6 @@ body::before {
 }
 
 
-/* Company Logo */
-.company-logo {
-    position: absolute; /* Allows positioning in the bottom left */
-    bottom: 0%; /* Adjust as needed */
-    left: 90%; /* Adjust as needed */
-    width: 150px; /* Set an appropriate width */
-    height: auto; /* Maintain aspect ratio */
-    background: url('../assets/BeauHaunt-logo-2024.PNG') no-repeat center center;
-    background-size: contain;
-    z-index: 1000;
-    mix-blend-mode: darken;
-    opacity: 0.6;
-}
 
 /* Scroll-Top Bar */
 /* Ensure scroll-top spans the full width */
@@ -186,8 +173,12 @@ body::before {
     justify-content: flex-end;
 }
 
-
-
+.content-container p{
+    background: linear-gradient(
+        rgb(14, 7, 2), /* Darker brown */
+        rgba(139, 69, 19, 1)
+    );
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {

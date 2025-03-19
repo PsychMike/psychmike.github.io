@@ -20,6 +20,7 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,7 +138,7 @@ html {
     
     background: url('../assets/parchment-paper.png'); /* Text texture */
     background: linear-gradient(
-        rgba(139, 69, 19,1), /* Darker brown */
+        rgb(14, 7, 2), /* Darker brown */
         rgba(139, 69, 19, 1)
     );
     -webkit-background-clip: text;
@@ -151,7 +152,7 @@ html {
     font-size: 4.4rem;
     background: url('../assets/parchment-paper.png'); /* Text texture */
     background: linear-gradient(
-        rgb(65, 48, 36), /* Darker brown */
+        rgb(14, 7, 2), /* Darker brown */
         rgba(139, 69, 19, 1)
     );
     -webkit-background-clip: text;
@@ -168,6 +169,13 @@ html {
     font-size: 2.8rem;
     line-height: 1.6;
     margin-bottom: 15px;
+    background: url('../assets/parchment-paper.png'); /* Text texture */
+    background: linear-gradient(
+        rgb(14, 7, 2), /* Darker brown */
+        rgba(139, 69, 19, 1)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 

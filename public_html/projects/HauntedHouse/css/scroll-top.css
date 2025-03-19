@@ -18,14 +18,14 @@
 .page-title {
     flex-grow: 1;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: #8b0000;
     font-family: 'Treasure Map Deadhand', cursive;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.3), 
-        -2px -2px 2px rgba(255, 255, 255, 0.1);
+    /* text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.6), 
+        -2px -2px 2px rgba(255, 255, 255, 0.1); */
     mix-blend-mode: multiply;
-    opacity: 0.9;
+    opacity: 1;
     background: url('../assets/scroll-top22.png');
     -webkit-background-clip: text;
     color: transparent;
@@ -33,12 +33,13 @@
 
 /* Company Logo */
 .company-logo {
-    width: 70px;
-    height: 70px;
+    height: 10vh;
+    aspect-ratio: 1/1;
     background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
     background-size: contain;
     mix-blend-mode: darken;
-    flex-shrink: 0; /* Prevents resizing */
+    /* flex-shrink: 0;  */
+    /* Prevents resizing */
     position: relative;
     top: 50%; /* Ensures it’s vertically aligned */
     transform: translateY(-50%); /* Centers it properly */
