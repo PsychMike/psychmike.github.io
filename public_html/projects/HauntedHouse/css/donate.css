@@ -15,6 +15,7 @@ body {
     height: auto; /* Allows it to scroll */
     min-height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden !important;
     position: relative;
 }
 
@@ -94,7 +95,9 @@ padding-top: 0 !important;
     box-shadow: 0px 0px 20px rgba(255, 223, 0, 1);
 }
 
-
+.donate-button-container{
+    padding-bottom: 50px !important;
+}
 
 @media (max-width: 768px) {
 

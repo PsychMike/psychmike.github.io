@@ -73,7 +73,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    top: calc(100% + 5px); /* Ensures dropdown appears BELOW button */
+    top: calc(100% + 0px); /* Ensures dropdown appears BELOW button */
     right: 0;
     background: rgba(0, 0, 0, 0.9);
     min-width: 120px;
