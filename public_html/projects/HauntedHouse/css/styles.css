@@ -603,7 +603,7 @@ footer {
 .ship {
     position: absolute;
     top: 0vh;
-    left: 60vw;
+    left: 50vw;
     width: 8vw;
     height: auto;
 }
@@ -669,7 +669,7 @@ footer {
 #projects  { top: 10vh; left: 70vw; }
 #contact   { top: 50vh !important; left: 0vw !important; }
 #donate    { top: 40vh; left: 92vw; }
-#about-us  { top: 80vh; left: 80vw; }
+#about-us  { top: 80vh; left: 90vw; }
 #attractions { top: 59vh; left: 50vw; }
 
 .contact-attraction-point {
