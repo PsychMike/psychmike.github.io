@@ -124,7 +124,7 @@ margin-top: 0px !important;
     margin-top: 0px !important;
     border-radius: 70px;
     font-family: 'Treasure Map Deadhand', sans-serif; /* Use the downloaded font */
-    font-size: 54px;
+    font-size: 44px;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -777,9 +777,6 @@ footer {
         font-size: 20px;
     }
 
-    .map-icon span {
-        font-size: 30px;
-    }
 
     .parrot {
         transform: scale(2); /* Adjust scale factor as needed */
@@ -845,7 +842,7 @@ footer {
     }
 
     .map-icon span {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .company-logo {
@@ -874,7 +871,7 @@ footer {
     }
 
     .map-icon span {
-        font-size: 54px;
+        font-size: 44px;
     }
 
     .company-logo {
