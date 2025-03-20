@@ -97,11 +97,10 @@ html, body {
 /* Default: Arrange inputs in a horizontal row */
 .form-container {
     display: flex;
-    flex-direction: row; /* Aligns name, email, and message in a row */
+    flex-direction: column;
+    align-items: center; /* Centers all elements */
     justify-content: center;
-    align-items: center;
-    gap: 20px; /* Space between fields */
-    padding-bottom: 1vh !important;
+    width: 100%; /* Ensures the form takes up full width */
 }
 
 /* Wrap individual form groups in flex */
@@ -130,6 +129,45 @@ html, body {
     resize: none; /* Prevents manual resizing */
 }
 
+.form-group-message textarea{
+    width: 250px; /* Consistent width for all fields */
+    padding: 8px;
+    font-size: 2.2rem;
+    border: 2px solid #6b4f32;
+    background: rgba(255, 255, 224, 0.9);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    font-family: 'Treasure Map Deadhand', cursive;
+    height: 80px; /* Adjust to match alignment */
+    resize: none; /* Prevents manual resizing */
+}
+
+/* Centering the form fields */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all elements */
+    justify-content: center;
+    gap: 15px; /* Adds spacing between inputs */
+}
+
+/* Input Fields - Ensures consistent alignment */
+.contact-form input,
+.contact-form textarea {
+    width: 80%; /* Adjust as needed */
+    max-width: 400px; /* Prevents inputs from getting too wide */
+    text-align: center; /* Centers placeholder text */
+}
+
+/* Send Message Button - Centers it properly */
+.send-message-btn {
+    display: block;
+    margin-top: 10px; /* Adjust spacing */
+    width: 80%; /* Adjust width to match input fields */
+    max-width: 400px; /* Matches the max width of inputs */
+    text-align: center;
+    position: relative; /* Allows better alignment */
+}
 
 /* Aligning Submit Button */
 .contact-form button {
@@ -344,12 +382,12 @@ textarea, input {
         display: none !important; 
     } */
 
-    .dropdown {
+    /* .dropdown { */
         /* top: 0 !important;
         right: 10px; */
         /* transform: scale(0.7); */
         /* opacity: 0.3; */
-    }
+    /* } */
 
     .dropbtn {
         font-size: 30px;
