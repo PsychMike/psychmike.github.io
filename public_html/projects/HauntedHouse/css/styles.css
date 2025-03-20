@@ -612,12 +612,12 @@ footer {
     width: 200px;
     height: 200px;
     mix-blend-mode: darken;
-    animation: shipBob;
+    animation: shipBob 3s ease-in-out infinite;
 }
 
 @keyframes shipBob {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-1vh); }
     100% { transform: translateY(0); }
 }
 
@@ -642,8 +642,8 @@ footer {
 
 .skull{
     position: absolute;
-    top: 65vh;
-    left: 80vw;
+    top: 60vh;
+    left: 85vw;
     width: 10vw;
     height: 10vh;
     background: url('../assets/skull.png') no-repeat center center;
@@ -652,6 +652,17 @@ footer {
     mix-blend-mode: darken;
 }
 
+.volcano{
+    position: absolute;
+    top: 20vh;
+    left: 0vw;
+    width: 15vw;
+    height: 20vh;
+    background: url('../assets/volcano.webp') no-repeat center center;
+    background-size: contain;
+    z-index: 1000;
+    mix-blend-mode: darken;
+}
 
 /* Position each icon relative to the screen size */
 #gallery   { top: 10vh; left: 27vw; }
@@ -718,7 +729,17 @@ footer {
     top: 12vh;
     left: 76vw;
     mix-blend-mode: darken;
+    animation: rollWaves 5s ease-in-out infinite;
 }
+
+@keyframes rollWaves {
+    0% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(0.05vw) rotate(0.2deg); }
+    50% { transform: translateX(-0.05vw) rotate(-0.2deg); }
+    75% { transform: translateX(0.05vw) rotate(0.2deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
+
 
 /* Mobile Styles (Default) */
 @media (max-width: 767px) {
