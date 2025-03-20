@@ -104,6 +104,7 @@
     z-index: 10000; /* Ensures it stays above other elements */
     mix-blend-mode: darken;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth effects */
+    /* display: block; */
 }
 
 /* Logo enlarges slightly on hover */
