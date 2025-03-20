@@ -38,19 +38,25 @@ body.subpage {
 
 
 .map-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute; /* Ensure it's positioned correctly */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    top: 0;
+    left: 0;
 }
+
+/* .parrot-container{
+    min-height: 5vh;
+    min-width: 5vw;
+} */
 
 /* SVG overlay for the dashed red lines */
 .map-lines {
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Allows clicks to pass through */
 }
 
 /* Red Dashed Curved Lines */
@@ -189,7 +195,6 @@ footer {
     pointer-events: none;
 }
 
-/* Contact Form Container */
 /* Contact Form Container */
 .form-container {
     background: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
@@ -593,11 +598,12 @@ footer {
 }
 
 /* Ship Icon */
-.ship{
+.ship {
     position: absolute;
-    mix-blend-mode: darken;
-    top: 10%;
-    left: 65%;
+    top: 8vh;
+    left: 60vw;
+    width: 8vw;
+    height: auto;
 }
 
 .ship img {
@@ -626,33 +632,32 @@ footer {
 
 .skull{
     position: absolute;
-    top: 65%;
-    left: 80%;
-    width: 18vw;
-    height: 13vh;
+    top: 65vh;
+    left: 80vw;
+    width: 10vw;
+    height: 10vh;
     background: url('../assets/skull.png') no-repeat center center;
     background-size: contain;
     z-index: 1000;
     mix-blend-mode: darken;
 }
 
-/* Position each icon where you need it */
-#gallery   { top: 10%; left: 27%; }
-#projects  { top: 20%; left: 60%; }
-#contact   { top: 45%; left: 0%; }
-#donate    { top: 40%; left: 92%; }
-#about-us     { top: 80%; left: 80%; }
-#attractions { top: 59%; left: 50%; }
+
+/* Position each icon relative to the screen size */
+#gallery   { top: 10vh; left: 27vw; }
+#projects  { top: 20vh; left: 60vw; }
+#contact   { top: 50vh !important; left: 0vw !important; }
+#donate    { top: 40vh; left: 92vw; }
+#about-us  { top: 80vh; left: 80vw; }
+#attractions { top: 59vh; left: 50vw; }
+
 .contact-attraction-point {
     position: absolute;
-    top: 59%; 
-    left: 37%;
-    width: 50px;  /* Adjust size */
-    height: 50px;
-    /* background-color: red;   */
-    /* Temporary background to check visibility */
+    top: 59vh; 
+    left: 37vw;
+    width: 2vw;  
+    height: 2vw;
     border-radius: 50%;
-     /* Makes it a circle */
 }
 #contact-attraction-point, 
 .projects-donate-point {
@@ -675,14 +680,18 @@ footer {
 }
 
 /* Adjust positioning */
-#projects-donate-point1 { top: 10%; left: 85%; }
-#projects-donate-point2 { top: 25%; left: 75%; }
-#projects-donate-point3 { top: 20%; left: 83%; }
-#projects-donate-point4 { top: 3%; left: 73%; }
-#projects-donate-point5 { top: 50%; left: 65%; }
+#projects-donate-point1 { top: 18vh; left: 68vw; }
+#projects-donate-point2 { top: 23vh; left: 74vw; }
+#projects-donate-point3 { top: 28vh; left: 79vw; }
+#projects-donate-point4 { top: 34vh; left: 84vw; }
+#projects-donate-point5 { top: 38vh; left: 87vw; }
 
 
-
+/* Ensure landmarks are proportionate */
+.landmass1, .landmass2, .landmass3 {
+    width: 80vw;
+    height: 70vh; /* Maintains aspect ratio */
+}
 
 /* Mobile Styles (Default) */
 @media (max-width: 767px) {
@@ -743,12 +752,24 @@ footer {
         border: none !important;
     }
 
-    #gallery   { top: 4%; left: 20%; }
-    #projects  { top: 15%; left: 70%; }
-    #contact   { top: 30%; left: -20%; }
-    #donate    { top: 45%; left: 70%; }
-    #about-us  { top: 60%; left: 20%; }
-    #attractions { top: 75%; left: 60%; }
+    .ship {
+        top: 6vh;
+        left: 50vw;
+        width: 10vw;
+    }
+
+    .skull {
+        top: 70vh;
+        left: 75vw;
+        width: 12vw;
+    }
+/* 
+    #gallery   { top: 5vh; left: 20vw; }
+    #projects  { top: 15vh; left: 70vw; }
+    #contact   { top: 30vh; left: 10vw; }
+    #donate    { top: 45vh; left: 70vw; }
+    #about-us  { top: 60vh; left: 20vw; }
+    #attractions { top: 75vh; left: 60vw; } */
 }
 
 
@@ -774,6 +795,12 @@ footer {
     .form-container, .contact-info {
         width: 70%;
     }
+    /* #gallery   { top: 8vh; left: 25vw; }
+    #projects  { top: 18vh; left: 65vw; }
+    #contact   { top: 35vh; left: 10vw; }
+    #donate    { top: 42vh; left: 75vw; }
+    #about-us  { top: 68vh; left: 30vw; }
+    #attractions { top: 72vh; left: 55vw; } */
 }
 
 /* Desktop Styles */
@@ -797,5 +824,11 @@ footer {
     .form-container, .contact-info {
         width: 60%;
     }
+    /* #gallery   { top: 10vh; left: 27vw; }
+    #projects  { top: 20vh; left: 60vw; }
+    #contact   { top: 50vh; left: 0vw; }
+    #donate    { top: 40vh; left: 92vw; }
+    #about-us  { top: 80vh; left: 80vw; }
+    #attractions { top: 59vh; left: 50vw; } */
 }
 

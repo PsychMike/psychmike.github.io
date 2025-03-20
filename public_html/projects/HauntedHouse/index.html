@@ -85,7 +85,7 @@
 
     <!-- 🦉🦚🦜🦢🦩🐦🐧🦅🦆 -->
 <a href="contact-us.html" class="map-icon" id="contact">
-<div class="container">
+<div class="parrot-container">
 	<div class="canvas">
 		<div class="parrot">
 			<div class="head"></div>
@@ -246,6 +246,33 @@ document.getElementById("donate-animation").addEventListener("mouseenter", funct
 document.getElementById("donate-animation").addEventListener("mouseleave", function() {
     animation.stop(); // Stop animation when hover ends
 });
+
+function updateLandmasses() {
+    const gallery = document.getElementById("gallery").getBoundingClientRect();
+    const projects = document.getElementById("projects").getBoundingClientRect();
+    const donate = document.getElementById("donate").getBoundingClientRect();
+    const attractions = document.getElementById("attractions").getBoundingClientRect();
+
+    // Get landmasses
+    const landmass1 = document.querySelector(".landmass1");
+    const landmass2 = document.querySelector(".landmass2");
+    const landmass3 = document.querySelector(".landmass3");
+
+    function positionElement(element, target, xOffset = 0, yOffset = 0) {
+        element.style.left = `${target.left + target.width / 2 + xOffset}px`;
+        element.style.top = `${target.top + target.height / 2 + yOffset}px`;
+    }
+
+    // Tie landmasses to icons
+    positionElement(landmass1, gallery, 0, 0); // Near Gallery
+    positionElement(landmass2, attractions, 0, 50);  // Near Attractions
+    positionElement(landmass3, contact, 0, 0);    // Near Contact Us
+}
+
+// Update on load and resize
+window.addEventListener("load", updateLandmasses);
+window.addEventListener("resize", updateLandmasses);
+
 
 
 </script>
