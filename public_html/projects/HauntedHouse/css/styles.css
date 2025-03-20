@@ -91,6 +91,7 @@ body.subpage {
     font-family: 'Treasure Map Deadhand', cursive; /* Horror-themed font */
     margin-bottom: 0px !important;
     padding-bottom: 0px !important;
+    mix-blend-mode: darken !important;
 }
 
 
@@ -132,7 +133,7 @@ margin-top: 0px !important;
 }
 
 .map-icon:hover span {
-    color: white; /* Ensure contrast remains readable */
+    color: #5e0606; /* Ensure contrast remains readable */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
                  0 0 20px rgba(255, 255, 255, 0.6), 
                  0 0 30px rgba(255, 255, 255, 0.4);
@@ -408,7 +409,7 @@ footer {
     top: 75%;  
     left: 15%; 
     transform: translate(-50%, -50%) rotate(10deg); 
-    width: 180vw; 
+    width: 280vw; 
     height: 80vh;
     background: url('../assets/landmass55.webp') no-repeat center center;
     background-size: contain;
@@ -534,6 +535,7 @@ footer {
 .skull-container {
     position: relative;
     display: inline-block;
+    mix-blend-mode: darken;
 }
 
 .skull-image {
@@ -609,6 +611,14 @@ footer {
 .ship img {
     width: 200px;
     height: 200px;
+    mix-blend-mode: darken;
+    animation: shipBob;
+}
+
+@keyframes shipBob {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
 /* Fog Animation */
@@ -645,7 +655,7 @@ footer {
 
 /* Position each icon relative to the screen size */
 #gallery   { top: 10vh; left: 27vw; }
-#projects  { top: 20vh; left: 60vw; }
+#projects  { top: 10vh; left: 70vw; }
 #contact   { top: 50vh !important; left: 0vw !important; }
 #donate    { top: 40vh; left: 92vw; }
 #about-us  { top: 80vh; left: 80vw; }
@@ -680,17 +690,34 @@ footer {
 }
 
 /* Adjust positioning */
-#projects-donate-point1 { top: 18vh; left: 68vw; }
-#projects-donate-point2 { top: 23vh; left: 74vw; }
+#projects-donate-point1 { top: 24vh; left: 78vw; }
+#projects-donate-point2 { top: 10vh; left: 88vw; }
 #projects-donate-point3 { top: 28vh; left: 79vw; }
-#projects-donate-point4 { top: 34vh; left: 84vw; }
-#projects-donate-point5 { top: 38vh; left: 87vw; }
+#projects-donate-point4 { top: 28vh; left: 79vw; }
+#projects-donate-point5 { top: 38vh; left: 97vw; }
 
 
 /* Ensure landmarks are proportionate */
 .landmass1, .landmass2, .landmass3 {
-    width: 80vw;
+    width: 180vw;
     height: 70vh; /* Maintains aspect ratio */
+    mix-blend-mode: darken;
+}
+
+.landmass2{
+    width: 180vw;
+    height: 130vh;
+}
+
+.wave {
+    position: absolute;
+    width: 15vw; /* Increase width */
+    height: 13vh; /* Increase height */
+    background: url('../assets/wave22.webp') no-repeat center center;
+    background-size: contain;
+    top: 12vh;
+    left: 76vw;
+    mix-blend-mode: darken;
 }
 
 /* Mobile Styles (Default) */
@@ -701,7 +728,7 @@ footer {
         overflow: auto;
     }
 
-    .fog, .rock, .ship, .skull{
+    .fog, .rock, .ship, .skull, .wave{
         display: none !important;
     }
 
