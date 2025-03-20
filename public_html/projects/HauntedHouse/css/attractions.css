@@ -35,10 +35,10 @@ body {
 .parchment-scroll p{
     background: url('../assets/parchment-paper.png'); /* Text texture */
     background: linear-gradient(
-        rgb(65, 48, 36), /* Darker brown */
+        rgb(14, 7, 2), /* Darker brown */
         rgba(139, 69, 19, 1)
-    );
-    -webkit-background-clip: text;
+    ) !important;
+    -webkit-background-clip: text !important;
     color: transparent;
 }
 
@@ -63,12 +63,12 @@ body {
 /* 🏴‍☠️ Headers */
 .attraction-section h2 {
     color: #8b0000; /* Dark pirate red */
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /* 📜 Paragraph Styling */
 .attraction-section p {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -107,7 +107,7 @@ body {
     list-style-type: none;
     padding: 0;
     text-align: left;
-    font-size: 2.3rem;
+    font-size: 3.3rem;
     margin-top: 15px;
 }
 
@@ -120,10 +120,10 @@ body {
     align-items: center;
     background: url('../assets/parchment-paper.png'); /* Text texture */
     background: linear-gradient(
-        rgb(65, 48, 36), /* Darker brown */
+        rgb(14, 7, 2), /* Darker brown */
         rgba(139, 69, 19, 1)
-    );
-    -webkit-background-clip: text;
+    ) !important;
+    -webkit-background-clip: text !important;
     color: transparent;
 }
 
@@ -134,7 +134,7 @@ body {
     content: "⚓";
     position: absolute;
     left: -2rem; /* Adjust as needed */
-    font-size: 2rem; /* Ensure it's visible */
+    font-size: 3rem; /* Ensure it's visible */
     width: auto; /* Allow full size */
     height: auto;
     line-height: 1;
@@ -159,7 +159,7 @@ body {
     font-size: 3rem !important;
     background: url('../assets/parchment-paper.png') !important; /* Text texture */
     background: linear-gradient(
-        rgb(65, 48, 36), /* Darker brown */
+        rgb(14, 7, 2), /* Darker brown */
         rgba(139, 69, 19, 1)
     ) !important;
     -webkit-background-clip: text !important;
@@ -241,7 +241,7 @@ body {
     list-style-type: none;
     padding: 0;
     text-align: left;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 15px;
 }
 
@@ -258,7 +258,7 @@ body {
     content: "⚓";
     position: absolute;
     left: -2vw; /* Moves it left */
-    font-size: 2rem;
+    font-size: 3rem;
     color: #0066cc;
 
 }
@@ -301,7 +301,7 @@ body {
         font-size: 1.5rem;
         left: -3vw;
     }
-    .company-logo{
+    /* .company-logo{
         display: none !important;
-    }
+    } */
 }

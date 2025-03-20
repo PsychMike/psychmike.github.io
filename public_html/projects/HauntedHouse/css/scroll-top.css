@@ -1,7 +1,7 @@
 /* Scroll-Top Bar */
 .scroll-top {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background: url('../assets/scroll-top22.png') repeat-x center center;
     background-size: cover;
@@ -31,19 +31,6 @@
     color: transparent;
 }
 
-/* Company Logo */
-.company-logo {
-    height: 10vh;
-    aspect-ratio: 1/1;
-    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
-    background-size: contain;
-    mix-blend-mode: darken;
-    /* flex-shrink: 0;  */
-    /* Prevents resizing */
-    position: relative;
-    top: 50%; /* Ensures it’s vertically aligned */
-    transform: translateY(-50%); /* Centers it properly */
-}
 
 /* Dropdown Container */
 .dropdown {
@@ -102,4 +89,25 @@
 /* Show Dropdown on Hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.company-logo {
+    position: absolute; /* Allows precise positioning */
+    bottom: 5px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    width: 7vw; /* Adjust the width */
+        height: 100%; /* Same as scroll-top */
+        max-height: 10vh; /* Matches scroll-top height */
+    
+    background: url('../assets/BeauHaunt-logo.png') no-repeat center center;
+    background-size: contain;
+    z-index: 10000; /* Ensures it stays above other elements */
+    mix-blend-mode: darken;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth effects */
+}
+
+/* Logo enlarges slightly on hover */
+.company-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }

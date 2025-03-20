@@ -340,9 +340,9 @@ textarea, input {
         padding: 10px 20px;
     }
 
-    .company-logo {
-        display: none !important; /* Hide the logo on mobile */
-    }
+    /* .company-logo {
+        display: none !important; 
+    } */
 
     .dropdown {
         /* top: 0 !important;

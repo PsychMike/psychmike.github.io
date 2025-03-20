@@ -190,10 +190,10 @@ body::before {
         font-size: 2rem;
         /* padding-left: 50px !important; */
     }
-    .company-logo {
+    /* .company-logo {
         left: 80%;
         width: 120px;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
@@ -206,10 +206,10 @@ body::before {
     .dropbtn {
         font-size: 30px;
     }
-    .company-logo {
+    /* .company-logo {
         left: 70%;
         width: 100px;
-    }
+    } */
     .scroll-top{
         /* display: none !important; */
     }
