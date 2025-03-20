@@ -48,6 +48,7 @@
     <div class="landmass1"></div>
     <div class="landmass2"></div>
 <div class="landmass3"></div>
+<div class="landmass6"></div>
 <div class="rock"></div>
 <div class="skull"></div>
 <div class="wave"></div>
@@ -259,6 +260,7 @@ function updateLandmasses() {
     const landmass1 = document.querySelector(".landmass1");
     const landmass2 = document.querySelector(".landmass2");
     const landmass3 = document.querySelector(".landmass3");
+    const landmass6 = document.querySelector(".landmass6");
 
     function positionElement(element, target, xOffset = 0, yOffset = 0) {
         element.style.left = `${target.left + target.width / 2 + xOffset}px`;
@@ -269,6 +271,7 @@ function updateLandmasses() {
     positionElement(landmass1, gallery, 0, 0); // Near Gallery
     positionElement(landmass2, attractions, 0, 50);  // Near Attractions
     positionElement(landmass3, contact, 0, 0);    // Near Contact Us
+    positionElement(landmass6, donate, -80, 60);    // Near Donate
 }
 
 // Update on load and resize

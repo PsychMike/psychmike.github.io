@@ -130,6 +130,7 @@ margin-top: 0px !important;
     overflow: hidden;
     transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
     top: -3vh;
+    color: black; /* Ensures the text is visible */
 }
 
 .map-icon:hover span {
@@ -429,7 +430,7 @@ footer {
     background-size: contain;
     z-index: 1; 
     pointer-events: none; 
-    mix-blend-mode: darken;
+    mix-blend-mode: multiply;
 }
 
 
@@ -642,7 +643,7 @@ footer {
 
 .skull{
     position: absolute;
-    top: 60vh;
+    top: 65vh;
     left: 85vw;
     width: 10vw;
     height: 10vh;
@@ -718,6 +719,21 @@ footer {
 .landmass2{
     width: 180vw;
     height: 130vh;
+}
+
+.landmass6 {
+    position: absolute;
+    /* top: 20%;
+    left: 30%;  */
+    transform: translate(-50%, -50%); /* Centers it */
+    /* transform: rotate(50deg); */
+    width: 180vw; /* Adjust width based on your design */
+    height: 48vh;
+    background: url('../assets/landmass6.webp') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none; /* Prevent clicks from interfering */
+    mix-blend-mode: darken;
 }
 
 .wave {
