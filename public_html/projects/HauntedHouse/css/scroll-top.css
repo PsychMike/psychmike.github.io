@@ -19,17 +19,23 @@
     flex-grow: 1;
     text-align: center;
     font-size: 4rem;
-    color: #0f0202;
     font-family: 'Treasure Map Deadhand', cursive;
-    /* text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.6), 
-        -2px -2px 2px rgba(255, 255, 255, 0.1); */
+    
+    text-shadow:
+        2px 2px 0px #7d0000, /* Dark red outline */
+        -2px -2px 0px #7d0000, /* Opposite outline */
+        1px 1px 5px rgba(255, 0, 0, 0.7), /* Slight glow */
+        0px 0px 8px rgba(255, 0, 0,); /* Red glow effect */
+    
     mix-blend-mode: multiply;
     opacity: 1;
-    background: url('../assets/scroll-top22.png');
+    background: linear-gradient(to bottom, #ff0000, #7d0000); /* Red contrast gradient */
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
+
+
 
 
 /* Dropdown Container */
