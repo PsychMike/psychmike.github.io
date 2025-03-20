@@ -602,7 +602,7 @@ footer {
 /* Ship Icon */
 .ship {
     position: absolute;
-    top: 8vh;
+    top: 0vh;
     left: 60vw;
     width: 8vw;
     height: auto;
