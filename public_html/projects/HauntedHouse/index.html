@@ -213,7 +213,22 @@ function updateLines() {
     const centerProjectsDonatePoint4 = getCenter(document.getElementById("projects-donate-point4").getBoundingClientRect());
     const centerProjectsDonatePoint5 = getCenter(document.getElementById("projects-donate-point5").getBoundingClientRect());
 
+    const isMobile = window.innerWidth <= 767;
 
+
+    function setStraightPath(path, startX, startY, endX, endY) {
+      const d = `M ${startX} ${startY} L ${endX} ${endY}`;
+      path.setAttribute("d", d);
+  }
+
+  if (isMobile) {
+    setStraightPath(path1, centerGallery.x, centerGallery.y, centerProjects.x, centerProjects.y);
+    setStraightPath(path2, centerProjects.x, centerProjects.y, centerContact.x, centerContact.y);
+    setStraightPath(path3, centerContact.x, centerContact.y, centerDonate.x, centerDonate.y);
+    setStraightPath(path4, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y);
+    setStraightPath(path5, centerAboutUs.x, centerAboutUs.y, centerAttractions.x, centerAttractions.y);
+}
+else {
     // setCurvedPath(path, startX, startY, endX, endY, offsetMult, offsetVal)
     setCurvedPath(path1, centerAttractions.x, centerAttractions.y, centerProjects.x, centerProjects.y, 20, -150);
     // setCurvedPath(path2, centerProjects.x, centerProjects.y, centerDonate.x, centerDonate.y, 20, -150);
@@ -228,7 +243,7 @@ function updateLines() {
     // setCurvedPath(path11, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, 20, -150);
     setCurvedPath(path12, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjects.x, centerProjects.y, 20, 150);
     // setCurvedPath(path13, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y, 20, -150);
-
+}
     
 }
 

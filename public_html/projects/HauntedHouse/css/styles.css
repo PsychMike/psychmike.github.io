@@ -797,7 +797,7 @@ footer {
         overflow: auto;
     }
 
-    .fog, .rock, .ship, .skull, .wave, .dashed-line, .landmass1, .landmass2, .landmass3, .landmass6, .volcano {
+    .fog, .rock, .ship, .skull, .wave, .landmass1, .landmass2, .landmass3, .landmass6, .volcano {
         display: none !important;
     }
 
@@ -857,8 +857,14 @@ footer {
         width: 12vw;
     }
 
-/* 
-    #gallery   { top: 5vh; left: 20vw; }
+    #gallery      { top: 20vh;  left: 10vw; }  /* Left */
+    #projects     { top: 30vh;  left: 70vw; }  /* Right */
+    #contact      { top: 40vh;  left: 0vw; }  /* Left */
+    #donate       { top: 60vh;  left: 70vw; }  /* Right */
+    #about-us     { top: 70vh;  left: 10vw; }  /* Left */
+    #attractions  { top: 80vh;  left: 70vw; }  /* Right */
+
+    /* #gallery   { top: 5vh; left: 20vw; }
     #projects  { top: 15vh; left: 70vw; }
     #contact   { top: 30vh; left: 10vw; }
     #donate    { top: 45vh; left: 70vw; }
@@ -866,6 +872,12 @@ footer {
     #attractions { top: 75vh; left: 60vw; } */
 }
 
+@media (max-width: 767px) {
+    .map-lines path:nth-child(n+6) {
+      display: none;
+    }
+  }
+  
 
 
 /* Tablet Styles */
