@@ -791,7 +791,7 @@ footer {
         overflow: auto;
     }
 
-    .fog, .rock, .ship, .skull, .wave{
+    .fog, .rock, .ship, .skull, .wave, .dashed-line, .landmass1, .landmass2, .landmass3, .landmass6, .volcano {
         display: none !important;
     }
 
@@ -850,6 +850,7 @@ footer {
         left: 75vw;
         width: 12vw;
     }
+
 /* 
     #gallery   { top: 5vh; left: 20vw; }
     #projects  { top: 15vh; left: 70vw; }
