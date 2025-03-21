@@ -643,8 +643,8 @@ footer {
 
 .skull{
     position: absolute;
-    top: 65vh;
-    left: 85vw;
+    top: 85vh;
+    left: 90vw;
     width: 10vw;
     height: 10vh;
     background: url('../assets/skull.png') no-repeat center center;
