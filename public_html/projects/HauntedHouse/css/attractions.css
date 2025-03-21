@@ -159,8 +159,8 @@ body {
     font-size: 3rem !important;
     background: url('../assets/parchment-paper.png') !important; /* Text texture */
     background: linear-gradient(
-        rgb(14, 7, 2), /* Darker brown */
-        rgba(139, 69, 19, 1)
+        rgb(65, 48, 36), 
+        rgb(65, 48, 36)
     ) !important;
     -webkit-background-clip: text !important;
     color: transparent !important;

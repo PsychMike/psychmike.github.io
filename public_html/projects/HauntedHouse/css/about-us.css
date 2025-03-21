@@ -30,8 +30,8 @@ body {
         background-size: cover !important;
         -webkit-background-clip: text !important;
         background: linear-gradient(
-            rgb(65, 48, 36), /* Darker brown */
-            rgba(139, 69, 19, 1)
+            rgb(65, 48, 36), 
+            rgb(65, 48, 36)
         ) !important;
         background-clip: text !important;
         color: transparent !important; /* Makes text take on the background texture */
@@ -48,8 +48,8 @@ body {
         background-size: cover !important;
         -webkit-background-clip: text !important;
         background: linear-gradient(
-            rgb(65, 48, 36), /* Darker brown */
-            rgba(139, 69, 19, 1)
+            rgb(65, 48, 36), 
+            rgb(65, 48, 36)
         ) !important;
         background-clip: text !important;
         color: transparent !important; /* Makes text take on the background texture */
@@ -66,8 +66,8 @@ body {
         background-size: cover !important;
         -webkit-background-clip: text !important;
         background: linear-gradient(
-            rgb(65, 48, 36), /* Darker brown */
-            rgba(139, 69, 19, 1)
+            rgb(65, 48, 36), 
+            rgb(65, 48, 36)
         ) !important;
         background-clip: text !important;
         color: transparent !important; /* Makes text take on the background texture */
@@ -82,8 +82,8 @@ body {
         background-size: cover !important;
         -webkit-background-clip: text !important;
         background: linear-gradient(
-            rgb(65, 48, 36), /* Darker brown */
-            rgba(139, 69, 19, 1)
+            rgb(65, 48, 36), 
+            rgb(65, 48, 36)
         ) !important;
         background-clip: text !important;
         color: transparent !important; /* Makes text take on the background texture */
@@ -99,8 +99,8 @@ body {
         background-size: cover !important;
         -webkit-background-clip: text !important;
         background: linear-gradient(
-            rgb(65, 48, 36), /* Darker brown */
-            rgba(139, 69, 19, 1)
+            rgb(65, 48, 36), 
+            rgb(65, 48, 36)
         ) !important;
         background-clip: text !important;
         color: transparent !important; /* Makes text take on the background texture */
@@ -123,8 +123,8 @@ body {
         background-size: cover !important;
         -webkit-background-clip: text !important;
         background: linear-gradient(
-            rgb(65, 48, 36), /* Darker brown */
-            rgba(139, 69, 19, 1)
+            rgb(65, 48, 36), 
+            rgb(65, 48, 36)
         ) !important;
         background-clip: text !important;
         color: transparent !important; /* Makes text take on the background texture */

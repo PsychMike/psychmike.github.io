@@ -47,8 +47,8 @@ body::before {
     
     background: url('../assets/parchment-paper.png'); /* Text texture */
     background: linear-gradient(
-        rgb(65, 48, 36), /* Darker brown */
-        rgba(139, 69, 19, 1)
+        rgb(65, 48, 36), 
+        rgb(65, 48, 36)
     );
     -webkit-background-clip: text;
     color: transparent;

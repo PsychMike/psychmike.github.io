@@ -17,7 +17,7 @@ html, body {
 
 /* Parchment Background */
 .parchment-container {
-    background: url('../assets/parchment-paper.png') repeat center center,
+    background: url('../assets/parchmentpaper-long222.png') repeat center center,
                 url('../assets/wood-bckgrnd.webp') repeat center center;
     background-size: cover, cover; /* Prevents stretching */
     min-height: 100vh; /* Makes sure content fits properly */
@@ -61,10 +61,10 @@ html, body {
     font-family: 'Treasure Map Deadhand', serif;
     color: #3b2f2f; /* Keep a dark readable color */
     
-    background: url('../assets/parchment-paper.png'); /* Text texture */
+    background: url('../assets/parchmentpaper-long222.png'); /* Text texture */
     background: linear-gradient(
-        rgb(65, 48, 36), /* Darker brown */
-        rgba(139, 69, 19, 1)
+        rgb(65, 48, 36), 
+        rgb(65, 48, 36)
     );
     -webkit-background-clip: text;
     color: transparent;
@@ -84,7 +84,7 @@ html, body {
     font-family: 'Treasure Map Deadhand', serif;
     color: #3b2f2f; /* Keep a dark readable color */
     
-    background: url('../assets/parchment-paper.png'); /* Text texture */
+    background: url('../assets/parchmentpaper-long222.png'); /* Text texture */
     background: linear-gradient(
         rgb(14, 7, 2), /* Darker brown */
         rgba(139, 69, 19, 1)
@@ -285,7 +285,7 @@ h1{
     border-radius: 6px; /* Less rounded for an old-paper look */
     
     /* Light texture effect */
-    background-image: url('../assets/parchment-paper.png');
+    background-image: url('../assets/parchmentpaper-long222.png');
     background-size: cover;
     
     transition: all 0.3s ease-in-out;
@@ -539,5 +539,5 @@ textarea, input {
     mix-blend-mode: multiply;
     filter: sepia(80%) contrast(110%) brightness(90%);
     -webkit-background-clip: text;
-    background-image: url('../assets/parchment-paper.png');
+    background-image: url('../assets/parchmentpaper-long222.png');
 }

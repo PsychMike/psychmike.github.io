@@ -12,10 +12,15 @@
     z-index: 1000000;
     background-color: #3d332b;
     overflow: visible !important;
-    
+    /* border-radius: 50%; */
+    box-shadow: 
+        5px 5px 10px rgba(0, 0, 0, 0.3),  /* Outer shadow */
+        -5px -5px 10px rgba(92, 56, 23, 0.8), /* Highlight */
+        inset 2px 2px 5px rgba(39, 32, 11, 0.6), /* Inner light */
+        inset -2px -2px 5px rgba(0, 0, 0, 0.2); /* Inner shadow */
     /* Darken and fade the bottom */
-    /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%); */
+    /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%); */
+    /* -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%); */
 }
 
 /* Create a separate darkened mask effect */

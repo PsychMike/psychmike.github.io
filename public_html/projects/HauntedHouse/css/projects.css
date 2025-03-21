@@ -173,12 +173,12 @@ body::before {
     justify-content: flex-end;
 }
 
-.content-container p{
+/* .content-container p{
     background: linear-gradient(
-        rgb(14, 7, 2), /* Darker brown */
+        rgb(14, 7, 2), 
         rgba(139, 69, 19, 1)
     );
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -210,7 +210,7 @@ body::before {
         left: 70%;
         width: 100px;
     } */
-    .scroll-top{
+    /* .scroll-top{ */
         /* display: none !important; */
-    }
+    /* } */
 }

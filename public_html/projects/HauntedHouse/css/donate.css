@@ -9,7 +9,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('../assets/parchment-paper2.png') repeat-y center top,
+    background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
                 url('../assets/woodtable.png') repeat-y center bottom;
     background-size: cover;
     height: auto; /* Allows it to scroll */
