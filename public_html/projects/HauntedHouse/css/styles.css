@@ -454,12 +454,13 @@ footer {
 
 
 /* Steering Wheel Icon */
-@mixin rotation($angle) {
-  -ms-transform: rotate($angle);
-  -moz-transform: rotate($angle);
-  -webkit-transform: rotate($angle);
-  transform: rotate($angle);
-}
+/* Rotation styles */
+/* .steering {
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+} */
 
 .steering {
   width: 100px !important;

@@ -32,15 +32,7 @@ body {
 }
 
 
-.parchment-scroll p{
-    background: url('../assets/parchment-paper.png'); /* Text texture */
-    background: linear-gradient(
-        rgb(14, 7, 2), /* Darker brown */
-        rgba(139, 69, 19, 1)
-    ) !important;
-    -webkit-background-clip: text !important;
-    color: transparent;
-}
+
 
 /* 🎞️ Scrollable Content in the Center */
 .scroll-container {
@@ -118,13 +110,8 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    background: url('../assets/parchment-paper.png'); /* Text texture */
-    background: linear-gradient(
-        rgb(14, 7, 2), /* Darker brown */
-        rgba(139, 69, 19, 1)
-    ) !important;
-    -webkit-background-clip: text !important;
-    color: transparent;
+    color: #3b2f2f !important;
+
 }
 
 
@@ -143,7 +130,6 @@ body {
     white-space: nowrap; /* Prevents breaking */
 
     /* Background Blending */
-    background: url('../assets/parchment-paper.png') !important; /* Match background */
     background-size: cover !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
@@ -157,13 +143,8 @@ body {
 .section-header{
     padding-top: 3vh !important;
     font-size: 3rem !important;
-    background: url('../assets/parchment-paper.png') !important; /* Text texture */
-    background: linear-gradient(
-        rgb(65, 48, 36), 
-        rgb(65, 48, 36)
-    ) !important;
-    -webkit-background-clip: text !important;
-    color: transparent !important;
+    color: #3b2f2f !important;
+
 }
 
 /* ✨ Smooth Scrolling */

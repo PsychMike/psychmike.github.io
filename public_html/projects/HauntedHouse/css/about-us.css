@@ -25,17 +25,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 40px 0;
-        /* Background Blending */
-        background: url('../assets/parchment-paper.png') !important; /* Match background */
-        background-size: cover !important;
-        -webkit-background-clip: text !important;
-        background: linear-gradient(
-            rgb(65, 48, 36), 
-            rgb(65, 48, 36)
-        ) !important;
-        background-clip: text !important;
-        color: transparent !important; /* Makes text take on the background texture */
-}
+        color: #3b2f2f !important;
+    }
 
 /* 🎞️ Scrollable Content in the Center */
 .scroll-container {
@@ -44,16 +35,9 @@ body {
     text-align: center;
     padding: 20px;
         /* Background Blending */
-        background: url('../assets/parchment-paper.png') !important; /* Match background */
         background-size: cover !important;
-        -webkit-background-clip: text !important;
-        background: linear-gradient(
-            rgb(65, 48, 36), 
-            rgb(65, 48, 36)
-        ) !important;
-        background-clip: text !important;
-        color: transparent !important; /* Makes text take on the background texture */
-}
+        color: #3b2f2f !important;
+    }
 
 /* 📜 About Sections */
 .about-section {
@@ -62,15 +46,8 @@ body {
     font-family: 'Treasure Map Deadhand', serif;
     color: #3b2f2f;
         /* Background Blending */
-        background: url('../assets/parchment-paper.png') !important; /* Match background */
         background-size: cover !important;
-        -webkit-background-clip: text !important;
-        background: linear-gradient(
-            rgb(65, 48, 36), 
-            rgb(65, 48, 36)
-        ) !important;
-        background-clip: text !important;
-        color: transparent !important; /* Makes text take on the background texture */
+        color: #3b2f2f !important;
 }
 
 /* 🏴‍☠️ Headers */
@@ -78,15 +55,8 @@ body {
     color: #8b0000; /* Dark pirate red */
     font-size: 5rem;
         /* Background Blending */
-        background: url('../assets/parchment-paper.png') !important; /* Match background */
         background-size: cover !important;
-        -webkit-background-clip: text !important;
-        background: linear-gradient(
-            rgb(65, 48, 36), 
-            rgb(65, 48, 36)
-        ) !important;
-        background-clip: text !important;
-        color: transparent !important; /* Makes text take on the background texture */
+        color: #3b2f2f !important;
 }
 
 /* 📜 Paragraph Styling */
@@ -95,15 +65,8 @@ body {
     line-height: 1.6;
     margin-bottom: 15px;
         /* Background Blending */
-        background: url('../assets/parchment-paper.png') !important; /* Match background */
         background-size: cover !important;
-        -webkit-background-clip: text !important;
-        background: linear-gradient(
-            rgb(65, 48, 36), 
-            rgb(65, 48, 36)
-        ) !important;
-        background-clip: text !important;
-        color: transparent !important; /* Makes text take on the background texture */
+        color: #3b2f2f !important;
 
 }
 
@@ -118,16 +81,8 @@ body {
     color: #8b0000;
     font-family: 'Treasure Map Deadhand', serif;
         /* Background Blending */
-        /* Background Blending */
-        background: url('../assets/parchment-paper.png') !important; /* Match background */
         background-size: cover !important;
-        -webkit-background-clip: text !important;
-        background: linear-gradient(
-            rgb(65, 48, 36), 
-            rgb(65, 48, 36)
-        ) !important;
-        background-clip: text !important;
-        color: transparent !important; /* Makes text take on the background texture */
+        color: #3b2f2f !important;
 }
 
 .crew-images {

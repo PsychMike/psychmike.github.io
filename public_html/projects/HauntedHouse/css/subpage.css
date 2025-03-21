@@ -45,13 +45,11 @@ body::before {
     font-family: 'Treasure Map Deadhand', serif;
     color: #3b2f2f; /* Keep a dark readable color */
     
-    background: url('../assets/parchment-paper.png'); /* Text texture */
-    background: linear-gradient(
-        rgb(65, 48, 36), 
-        rgb(65, 48, 36)
-    );
-    -webkit-background-clip: text;
-    color: transparent;
+    /* background: url('../assets/parchmentpaper-long222.png'); */
+     /* Text texture */
+    /* color: rgb(55, 27, 7);  */
+    /* Single color */
+
 }
 
 /* Section Headers */
@@ -137,7 +135,7 @@ footer {
         left: 70%;
         width: 100px;
     } */
-    .scroll-top{
+    /* .scroll-top{ */
         /* display: none !important; */
-    }
+    /* } */
 }

@@ -26,7 +26,7 @@ body::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
     /* background: rgba(255, 255, 255, 0.5);  */
     z-index: -1;
@@ -35,7 +35,7 @@ body::before {
 /* Main Donation Container */
 .donation-container {
     padding-top: 0 !important;
-    max-width: 1800px;
+    max-width: 90vw;
     margin: auto;
     /* padding: 30px; */
     border-radius: 15px;
@@ -49,12 +49,11 @@ body::before {
     font-size: 3.5rem;
     font-family: 'Treasure Map Deadhand';
     background: url('../assets/parchment-paper.png'); /* Text texture */
-    background: linear-gradient(
-        rgb(14, 7, 2), /* Darker brown */
-        rgba(139, 69, 19, 1)
-    );
+    color: rgb(55, 27, 7); /* Single color */
+
     -webkit-background-clip: text;
-    color: transparent;
+    background-clip: text;
+    /* color: transparent; */
 }
 
 /* Paragraphs */
@@ -63,12 +62,8 @@ body::before {
     line-height: 1.4;
     font-family: 'Treasure Map Deadhand';
     background: url('../assets/parchment-paper.png'); /* Text texture */
-    background: linear-gradient(
-        rgb(14, 7, 2), /* Darker brown */
-        rgba(139, 69, 19, 1)
-    );
     -webkit-background-clip: text;
-    color: transparent;
+    color: rgb(55, 27, 7); /* Single color */
     padding-bottom: 0 !important;
 }
 
