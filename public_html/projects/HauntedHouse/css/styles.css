@@ -797,7 +797,7 @@ footer {
         overflow: auto;
     }
 
-    .fog, .rock, .ship, .skull, .wave, .landmass1, .landmass3, .landmass6, .volcano {
+    .fog, .rock, .ship, .skull, .wave, .landmass1, .landmass3, .landmass6, .volcano, .landmass2 {
         display: none !important;
     }
 
