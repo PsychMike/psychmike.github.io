@@ -797,7 +797,7 @@ footer {
         overflow: auto;
     }
 
-    .fog, .rock, .ship, .skull, .wave, .landmass1, .landmass2, .landmass3, .landmass6, .volcano {
+    .fog, .rock, .ship, .skull, .wave, .landmass1, .landmass3, .landmass6, .volcano {
         display: none !important;
     }
 
@@ -821,10 +821,10 @@ footer {
         bottom: 10px;
     }
 
-    .landmass1, .landmass2, .landmass3 {
+    /* .landmass1, .landmass2, .landmass3 {
         width: 120vw; 
         height: auto;
-    }
+    } */
 
     .form-container, .contact-info {
         width: 80%;
@@ -855,6 +855,11 @@ footer {
         top: 70vh;
         left: 75vw;
         width: 12vw;
+    }
+
+    .landmass2{
+        width: 500vw;
+        height: 500vh;
     }
 
     #gallery      { top: 20vh;  left: 10vw; }  /* Left */
