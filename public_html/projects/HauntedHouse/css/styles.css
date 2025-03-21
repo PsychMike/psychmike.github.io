@@ -678,6 +678,11 @@ footer {
 #about-us  { top: 80vh; left: 80vw; }
 #attractions { top: 59vh; left: 50vw; }
 
+/* .parrot-container{
+    max-width: 15vw !important;
+    max-height: 15vh !important;
+} */
+
 .contact-attraction-point {
     position: absolute;
     top: 59vh; 
