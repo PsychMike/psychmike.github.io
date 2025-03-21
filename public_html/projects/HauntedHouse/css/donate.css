@@ -7,17 +7,13 @@
 
 
 body {
+    background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
+    url('../assets/wood-bckgrnd.webp') repeat-y center bottom;
+    background-size: cover, cover;
     margin: 0;
     padding: 0;
-    background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
-                url('../assets/woodtable.png') repeat-y center bottom;
-    background-size: cover;
-    height: auto; /* Allows it to scroll */
-    min-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden !important;
-    position: relative;
 }
+
 
 
 
