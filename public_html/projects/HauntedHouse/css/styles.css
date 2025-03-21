@@ -667,7 +667,7 @@ footer {
 
 /* Position each icon relative to the screen size */
 #gallery   { top: 10vh; left: 27vw; }
-#projects  { top: 10vh; left: 70vw; }
+#projects  { top: 10vh; left: 60vw; }
 #contact   { top: 50vh !important; left: 0vw !important; }
 #donate    { top: 50vh; left: 92vw; }
 #about-us  { top: 80vh; left: 80vw; }
