@@ -41,6 +41,7 @@
       <path id="path10" class="dashed-line" fill="none" />
       <path id="path11" class="dashed-line" fill="none" />
       <path id="path12" class="dashed-line" fill="none" />
+      <path id="path13" class="dashed-line" fill="none" />
   </svg>
   
     
@@ -180,6 +181,7 @@ function updateLines() {
     const path10 = document.getElementById("path10");
     const path11 = document.getElementById("path11");
     const path12 = document.getElementById("path12");
+    const path13 = document.getElementById("path13");
 
     function getCenter(element) {
     if (!element) return { x: 0, y: 0 }; // Prevents errors
@@ -193,7 +195,7 @@ function updateLines() {
     const centerGallery = getCenter(gallery);
     const centerProjects = getCenter(projects);
     const centerContact = getCenter(contact);
-    const centerDonate = getCenter(donate) - 50;
+    const centerDonate = getCenter(donate)
     const centerAboutUs = getCenter(aboutUs);
     const centerAttractions = getCenter(attractions);
     const centerContactAttractionPoint = getCenter(contact_attraction_point);
@@ -208,7 +210,7 @@ function updateLines() {
     setCurvedPath(path1, centerAttractions.x, centerAttractions.y, centerProjects.x, centerProjects.y, 20, -150);
     // setCurvedPath(path2, centerProjects.x, centerProjects.y, centerDonate.x, centerDonate.y, 20, -150);
     setCurvedPath(path3, centerContact.x, centerContact.y, centerGallery.x, centerGallery.y, 20, 350);
-    setCurvedPath(path4, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y, -20, 150);
+    setCurvedPath(path4, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y, -20, -150);
     setCurvedPath(path5, centerContactAttractionPoint.x, centerContactAttractionPoint.y, centerAttractions.x, centerAttractions.y, 200, -150);
     setCurvedPath(path6, centerContact.x, centerContact.y, centerContactAttractionPoint.x, centerContactAttractionPoint.y, 20, -150);
     setCurvedPath(path7, centerDonate.x, centerDonate.y, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y, 20, -150);
@@ -217,6 +219,8 @@ function updateLines() {
     setCurvedPath(path10, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, 20, 50);
     // setCurvedPath(path11, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, 20, -150);
     setCurvedPath(path12, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjects.x, centerProjects.y, 20, 150);
+    // setCurvedPath(path13, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y, 20, -150);
+
     
 }
 
