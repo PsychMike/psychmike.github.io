@@ -62,6 +62,10 @@
 <div class="skull"></div>
 <div class="wave"></div>
 <div class="volcano"></div>
+<div id="donate-curve1" class="donate-curve-point"></div>
+<div id="donate-curve2" class="donate-curve-point"></div>
+<div id="donate-curve3" class="donate-curve-point"></div>
+
 
     <div class="ship">
       <img src="assets/ship.png"  />
@@ -190,6 +194,8 @@ function updateLines() {
     const path11 = document.getElementById("path11");
     const path12 = document.getElementById("path12");
     const path13 = document.getElementById("path13");
+    const path14 = document.getElementById("path14");
+    const path15 = document.getElementById("path15");
 
     function getCenter(element) {
     if (!element) return { x: 0, y: 0 }; // Prevents errors
@@ -212,6 +218,9 @@ function updateLines() {
     const centerProjectsDonatePoint3 = getCenter(document.getElementById("projects-donate-point3").getBoundingClientRect());
     const centerProjectsDonatePoint4 = getCenter(document.getElementById("projects-donate-point4").getBoundingClientRect());
     const centerProjectsDonatePoint5 = getCenter(document.getElementById("projects-donate-point5").getBoundingClientRect());
+    // const centerProjectsDonatePoint6 = getCenter(document.getElementById("projects-donate-point6").getBoundingClientRect());
+    // const centerProjectsDonatePoint7 = getCenter(document.getElementById("projects-donate-point7").getBoundingClientRect());
+    // const centerProjectsDonatePoint8 = getCenter(document.getElementById("projects-donate-point8").getBoundingClientRect());
 
     const isMobile = window.innerWidth <= 767;
 
@@ -238,11 +247,11 @@ else {
     setCurvedPath(path6, centerContact.x, centerContact.y, centerContactAttractionPoint.x, centerContactAttractionPoint.y, 20, -150);
     setCurvedPath(path7, centerDonate.x, centerDonate.y, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y, 20, -150);
     setCurvedPath(path8, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y, centerProjectsDonatePoint2.x, centerProjectsDonatePoint2.y, 20, 150);
-    setCurvedPath(path9, centerProjectsDonatePoint2.x, centerProjectsDonatePoint2.y, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, 20, -150);
-    setCurvedPath(path10, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, 20, 50);
-    // setCurvedPath(path11, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, 20, -150);
-    setCurvedPath(path12, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjects.x, centerProjects.y, 20, 150);
-    // setCurvedPath(path13, centerDonate.x, centerDonate.y, centerAboutUs.x, centerAboutUs.y, 20, -150);
+    setCurvedPath(path9, centerProjectsDonatePoint2.x, centerProjectsDonatePoint2.y, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, 20, 70);
+    setCurvedPath(path10, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, 20, -150);
+    setCurvedPath(path11, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjects.x, centerProjects.y, 20, -50);
+    // setCurvedPath(path11, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, 20, 150);
+    // setCurvedPath(path12, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, centerProjects.x, centerProjects.y, 20, 150);
 }
     
 }
@@ -282,6 +291,7 @@ function updateLandmasses() {
     const projects = document.getElementById("projects").getBoundingClientRect();
     const donate = document.getElementById("donate").getBoundingClientRect();
     const attractions = document.getElementById("attractions").getBoundingClientRect();
+    const isMobile = window.innerWidth <= 767;
 
     // Get landmasses
     const landmass1 = document.querySelector(".landmass1");

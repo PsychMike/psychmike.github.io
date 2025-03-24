@@ -608,18 +608,21 @@ footer {
 /* Ship Icon */
 .ship {
     position: absolute;
-    top: 0vh;
-    left: 45vw;
+    top: 5vh;
+    left: 50vw;
     width: 6vw;
     height: auto;
 }
 
 .ship img {
-    width: 200px;
-    height: 200px;
+    width: 8vw;               /* Scales relative to screen width */
+    height: auto;             /* Maintains aspect ratio */
     mix-blend-mode: darken;
     animation: shipBob 3s ease-in-out infinite;
+    min-width: 40px;
+    max-width: 200px;
 }
+
 
 @keyframes shipBob {
     0% { transform: translateY(0); }
@@ -713,10 +716,10 @@ footer {
 
 /* Adjust positioning */
 #projects-donate-point1 { top: 24vh; left: 78vw; }
-#projects-donate-point2 { top: 10vh; left: 88vw; }
-#projects-donate-point3 { top: 28vh; left: 79vw; }
+#projects-donate-point2 { top: 5vh; left: 84vw; }
+#projects-donate-point3 { top: 12vh; left: 90vw; }
 #projects-donate-point4 { top: 28vh; left: 79vw; }
-#projects-donate-point5 { top: 38vh; left: 97vw; }
+#projects-donate-point5 { top: 28vh; left: 79vw; }
 
 
 /* Ensure landmarks are proportionate */
@@ -844,7 +847,18 @@ footer {
         left: 0 !important;
         border: none !important;
     }
-
+    .donate-curve-point {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        /* background-color: red; */ /* Uncomment to see the points */
+        border-radius: 50%;
+        z-index: 999;
+      }
+      #donate-curve1 { top: 12vh; left: 78vw; }
+      #donate-curve2 { top: 17vh; left: 82vw; }
+      #donate-curve3 { top: 25vh; left: 85vw; }
+            
     .ship {
         top: 6vh;
         left: 50vw;
