@@ -649,7 +649,7 @@ footer {
     pointer-events: none;
 }
 
-.skull{
+/* .skull{
     position: absolute;
     top: 85vh;
     left: 90vw;
@@ -659,7 +659,7 @@ footer {
     background-size: contain;
     z-index: 1000;
     mix-blend-mode: darken;
-}
+} */
 
 .volcano{
     position: absolute;
