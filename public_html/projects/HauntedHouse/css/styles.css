@@ -408,7 +408,7 @@ footer {
 
 .landmass3 {
     position: absolute;
-    top: 80%;  
+    top: 82%;  
     left: 15%; 
     transform: translate(-50%, -50%) rotate(10deg); 
     width: 280vw; 
@@ -856,17 +856,7 @@ footer {
         left: 0 !important;
         border: none !important;
     }
-    .donate-curve-point {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        /* background-color: red; */ /* Uncomment to see the points */
-        border-radius: 50%;
-        z-index: 999;
-      }
-      #donate-curve1 { top: 12vh; left: 78vw; }
-      #donate-curve2 { top: 17vh; left: 82vw; }
-      #donate-curve3 { top: 25vh; left: 85vw; }
+
             
     .ship {
         top: 6vh;
