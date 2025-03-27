@@ -385,7 +385,7 @@ footer {
     transform: translate(-50%, -50%); /* Centers it */
     width: 80vw; /* Adjust width based on your design */
     height: 60vh;
-    background: url('../assets/landmass33.png') no-repeat center center;
+    background: url('../assets/landmass77.png') no-repeat center center;
     background-size: contain;
     z-index: -1; /* Above the background */
     pointer-events: none; /* Prevent clicks from interfering */
@@ -665,7 +665,7 @@ footer {
 .volcano{
     position: absolute;
     top: 20vh;
-    left: 0vw;
+    left: 10vw;
     width: 15vw;
     height: 20vh;
     background: url('../assets/volcano.webp') no-repeat center center;
