@@ -408,7 +408,7 @@ footer {
 
 .landmass3 {
     position: absolute;
-    top: 75%;  
+    top: 80%;  
     left: 15%; 
     transform: translate(-50%, -50%) rotate(10deg); 
     width: 280vw; 
@@ -682,6 +682,11 @@ footer {
 #about-us  { top: 80vh; left: 80vw; }
 #attractions { top: 59vh; left: 50vw; }
 
+@media (max-width: 1050px){
+    #contact   {left: -5vw !important; }
+
+}
+
 /* .parrot-container{
     max-width: 15vw !important;
     max-height: 15vh !important;
@@ -729,7 +734,10 @@ footer {
     height: 70vh; /* Maintains aspect ratio */
     mix-blend-mode: darken;
 }
-
+.landmass3{
+    width: 380vw;
+    height: 90vh;
+}
 .landmass2{
     width: 180vw;
     height: 130vh;
