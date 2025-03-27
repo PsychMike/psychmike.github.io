@@ -423,7 +423,7 @@ footer {
 .rock{
     position: absolute;
     top: 40%;  
-    left: 85%; 
+    left: 97%; 
     transform: translate(-50%, -50%) rotate(0deg); 
     width: 8vw; 
     height: 18vh;
