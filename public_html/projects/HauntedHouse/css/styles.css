@@ -420,6 +420,22 @@ footer {
     mix-blend-mode: darken;
 }
 
+/* .landmass88{
+    position: absolute;
+    top: 60%;  
+    left: -10%; 
+    transform: translate(-50%, -50%) rotate(10deg); 
+    width: 280vw; 
+    height: 80vh;
+    background: url('../assets/landmass444.webp') no-repeat center center;
+    background-size: contain;
+    z-index: -1; 
+    pointer-events: none; 
+    mix-blend-mode: darken;
+    /* transform: rotate(0deg); */
+} */
+
+
 .landmass99{
     position: absolute;
     top: 60%;  
@@ -438,7 +454,7 @@ footer {
 .rock{
     position: absolute;
     top: 40%;  
-    left: 97%; 
+    left: 92%; 
     transform: translate(-50%, -50%) rotate(0deg); 
     width: 8vw; 
     height: 18vh;
@@ -764,9 +780,9 @@ footer {
     left: 30%;  */
     transform: translate(-50%, -50%); /* Centers it */
     /* transform: rotate(50deg); */
-    width: 180vw; /* Adjust width based on your design */
-    height: 48vh;
-    background: url('../assets/landmass6.webp') no-repeat center center;
+    width: 210vw; /* Adjust width based on your design */
+    height: 58vh;
+    background: url('../assets/landmass88.png') no-repeat center center;
     background-size: contain;
     z-index: -1;
     pointer-events: none; /* Prevent clicks from interfering */
