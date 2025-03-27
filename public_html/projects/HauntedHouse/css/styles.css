@@ -420,6 +420,21 @@ footer {
     mix-blend-mode: darken;
 }
 
+.landmass99{
+    position: absolute;
+    top: 60%;  
+    left: -10%; 
+    transform: translate(-50%, -50%) rotate(10deg); 
+    width: 280vw; 
+    height: 80vh;
+    background: url('../assets/landmass444.webp') no-repeat center center;
+    background-size: contain;
+    z-index: -1; 
+    pointer-events: none; 
+    mix-blend-mode: darken;
+    /* transform: rotate(0deg); */
+}
+
 .rock{
     position: absolute;
     top: 40%;  
