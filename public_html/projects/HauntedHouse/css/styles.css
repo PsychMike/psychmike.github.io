@@ -853,10 +853,13 @@ footer {
         overflow: auto;
     }
 
-    .fog, .rock, .ship, .skull, .wave, .landmass1, .landmass3, .landmass6, .landmass88, .landmass99, .landmass77, .volcano, .landmass2 {
+    .fog, .rock, .ship, .skull, .wave, .volcano {
         display: none !important;
     }
-
+    .landmass1, .landmass3, .landmass6, .landmass88, .landmass99, .landmass77, .landmass2{
+opacity: 0.3;
+    }
+    
     .map-icon img {
         width: 60px;
     }
