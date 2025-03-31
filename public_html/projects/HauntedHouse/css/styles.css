@@ -399,7 +399,7 @@ footer {
     transform: translate(-50%, -50%) rotate(180deg); 
     width: 180vw; 
     height: 100vh;
-    background: url('../assets/landmass44.webp') no-repeat center center;
+    background: url('../assets/landmass44.png`') no-repeat center center;
     background-size: contain;
     z-index: -1; 
     pointer-events: none; 
