@@ -10,7 +10,7 @@
   <!-- <link rel="stylesheet" href="css/ship-wheel.scss" /> -->
   <!-- Favicon for all browsers -->
   <!-- <link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico"> -->
-  <link rel="icon" type="image/png" href="./assets/BeauHaunt-logo-2024.PNG">
+  <link rel="icon" type="image/png" href="./assets/BeauHaunt-logo.png" sizes="16x16" />
 </head>
 <body>
 
@@ -262,8 +262,13 @@ setCurvedPath(path7, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y,
 }
 
 window.addEventListener("load", () => {
-    setTimeout(updateLines, 100); // Delay to allow images to load
+  setTimeout(() => {
+      updateLines();
+      // Retry after a slight delay again in case elements were still loading
+      setTimeout(updateLines, 300);
+  }, 100);
 });
+
 window.addEventListener("resize", updateLines);
 
   </script>
