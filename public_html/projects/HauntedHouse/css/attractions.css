@@ -253,6 +253,7 @@ body {
     mix-blend-mode: multiply;
     filter: sepia(80%) contrast(110%) brightness(90%);
     -webkit-background-clip: text;
+    background-clip: text;
     background-image: url('../assets/parchment-paper.png');
 }
 
