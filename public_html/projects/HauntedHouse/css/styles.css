@@ -877,7 +877,7 @@ opacity: 0.3;
 
 
     .parrot {
-        transform: scale(2); /* Adjust scale factor as needed */
+        transform: scale(1.2); /* Adjust scale factor as needed */
         transform-origin: center; /* Ensures it scales from the center */
     }
 
