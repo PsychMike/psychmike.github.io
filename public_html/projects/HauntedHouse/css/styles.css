@@ -932,7 +932,10 @@ opacity: 0.3;
 
     #gallery      { top: 20vh;  left: 10vw; }  /* Left */
     #projects     { top: 30vh;  left: 70vw; }  /* Right */
-    #contact      { top: 40vh;  left: 0vw; }  /* Left */
+    #contact      { top: 45vh !important;  left: 0vw !important; transform: scale(1.5)}  /* Left */
+    #contact span{
+        transform: scale(0.75);
+    }
     #donate       { top: 60vh;  left: 70vw; }  /* Right */
     #about-us     { top: 70vh;  left: 10vw; }  /* Left */
     #attractions  { top: 80vh;  left: 70vw; }  /* Right */
