@@ -933,6 +933,16 @@ opacity: 0.3;
     #gallery      { top: 20vh;  left: 10vw; }  /* Left */
     #projects     { top: 30vh;  left: 70vw; }  /* Right */
     #contact      { top: 45vh !important;  left: 0vw !important; transform: scale(1.5)}  /* Left */
+ 
+    #gallery span,
+    #projects span,
+    #contact span,
+    #donate span,
+    #about-us span,
+    #attractions span {
+        padding-top: 2vh !important;
+        transform: scale(1.2);
+    }
     #contact span{
         transform: scale(0.75);
     }
