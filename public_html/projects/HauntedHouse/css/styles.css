@@ -857,7 +857,7 @@ footer {
     body {
         background-size: cover;
         background: url('../assets/blank-treasuremap.webp') repeat center center fixed;
-        overflow: auto;
+        overflow: hidden;
     }
 
     .fog, .rock, .ship, .skull, .wave, .volcano {
