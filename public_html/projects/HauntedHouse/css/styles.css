@@ -45,10 +45,12 @@ body.subpage {
     left: 0;
 }
 
-/* .parrot-container{
-    min-height: 5vh;
-    min-width: 5vw;
-} */
+.parrot-container{
+    /* min-height: 5vh;
+    min-width: 5vw; */
+    /* pointer-events: none; */
+    width: 215px;
+} 
 
 /* SVG overlay for the dashed red lines */
 .map-lines {
@@ -261,6 +263,11 @@ footer {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
+#contact{
+    /* pointer-events: none;  */
+    width: 200px;
+}
+
 /* Dropdown Container */
 .dropdown {
     position: absolute;
@@ -399,7 +406,7 @@ footer {
     transform: translate(-50%, -50%) rotate(180deg); 
     width: 180vw; 
     height: 100vh;
-    background: url('../assets/landmass44.png`') no-repeat center center;
+    background: url('../assets/landmass44.png') no-repeat center center;
     background-size: contain;
     z-index: -1; 
     pointer-events: none; 
@@ -438,7 +445,7 @@ footer {
 .landmass77{
     position: absolute;
     top: 0%;  
-    left: 100%; 
+    left: 105%; 
     transform: translate(-50%, -50%) rotate(10deg); 
     width: 280vw; 
     height: 80vh;
@@ -721,7 +728,7 @@ footer {
 /* Position each icon relative to the screen size */
 #gallery   { top: 10vh; left: 27vw; }
 #projects  { top: 10vh; left: 60vw; }
-#contact   { top: 50vh !important; left: 0vw !important; }
+#contact   { top: 52vh !important; left: 15vw !important; }
 #donate    { top: 50vh; left: 92vw; }
 #about-us  { top: 80vh; left: 80vw; }
 #attractions { top: 59vh; left: 50vw; }
