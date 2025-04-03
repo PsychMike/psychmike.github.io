@@ -733,10 +733,10 @@ footer {
 #about-us  { top: 80vh; left: 80vw; }
 #attractions { top: 59vh; left: 50vw; }
 
-@media (max-width: 1050px){
+/* @media (max-width: 1050px){
     #contact   {left: -5vw !important; }
 
-}
+} */
 
 /* .parrot-container{
     max-width: 15vw !important;
@@ -891,6 +891,7 @@ opacity: 0.3;
         width: 120vw; 
         height: auto;
     } */
+     
 
     .form-container, .contact-info {
         width: 80%;
@@ -966,10 +967,14 @@ opacity: 0.3;
         width: 130px;
     }
 
-    .landmass1, .landmass2, .landmass3 {
-        width: 100vw;
-    }
+    #contact{top: 60% !important}
 
+    .landmass1, .landmass2, .landmass3, .landmass6{
+        width: 60vw;
+    }
+.landmass77, .landmass88, .landmass99, .skull{
+    display:none !important;
+}
     .form-container, .contact-info {
         width: 70%;
     }
@@ -996,7 +1001,7 @@ opacity: 0.3;
     }
 
     .landmass1, .landmass2, .landmass3 {
-        width: 80vw;
+        width: 60vw;
     }
 
     .form-container, .contact-info {
