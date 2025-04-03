@@ -316,6 +316,10 @@ textarea, input {
 /* Mobile Styles (Up to 767px) */
 @media (max-width: 767px) {
 
+.parchment-content, h1, h2, h3, h4, h5, h6, p {
+    font-size: 2rem !important;
+}
+
 /* Top fixed section */
 .screen-top {
     position: fixed;
@@ -524,8 +528,9 @@ textarea, input {
     font-size: 2.8rem;
     color: #4A2C2A; /* Dark brown ink */
     opacity: 0.85;
-    mix-blend-mode: multiply;
+    mix-blend-mode: multiply !important;
     filter: sepia(80%) contrast(110%) brightness(90%);
     -webkit-background-clip: text;
+    background-clip: text;
     background-image: url('../assets/parchmentpaper-long222.png');
 }
