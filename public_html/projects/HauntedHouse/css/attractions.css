@@ -274,6 +274,10 @@ body {
         max-width: 80%;
     }
 
+h1, h2, p, .section-header{
+    font-size: 1.8rem !important;
+}
+
     .attraction-list {
         font-size: 1.8rem;
     }
