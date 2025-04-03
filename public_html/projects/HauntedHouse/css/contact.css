@@ -330,7 +330,12 @@ textarea, input {
     z-index: 10000;
 }
 
-
+.contact-info{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
 .parchment-container {
     width: 100%;
     padding: 0 10px; /* Reduce padding to prevent shrinking */
