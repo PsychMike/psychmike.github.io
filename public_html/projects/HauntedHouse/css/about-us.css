@@ -131,6 +131,7 @@ html {
     mix-blend-mode: multiply;
     filter: sepia(80%) contrast(110%) brightness(90%);
     -webkit-background-clip: text;
+    background-clip: text;
     background-image: url('../assets/parchment-paper.png');
 }
 
@@ -171,8 +172,8 @@ html {
 
     /* Adjust Image Size for Mobile */
     .crew-member img {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
 
     /* Adjust Crew Name Font Size */
