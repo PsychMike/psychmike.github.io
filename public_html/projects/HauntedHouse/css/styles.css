@@ -864,7 +864,7 @@ footer {
         display: none !important;
     }
     .landmass1, .landmass3, .landmass6, .landmass88, .landmass99, .landmass77, .landmass2{
-opacity: 0.3;
+opacity: 0.15 !important;
     }
     
     .map-icon img {
@@ -934,6 +934,10 @@ opacity: 0.3;
     #projects     { top: 30vh;  left: 70vw; }  /* Right */
     #contact      { top: 45vh !important;  left: 0vw !important; transform: scale(1.5)}  /* Left */
  
+.map-icon {
+mix-blend-mode: none !important;
+    }
+
     #gallery span,
     #projects span,
     #contact span,
