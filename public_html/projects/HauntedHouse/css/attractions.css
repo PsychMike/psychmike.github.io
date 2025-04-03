@@ -197,7 +197,7 @@ body {
 
 /* 📜 Ensure Text & Sections Are Centered */
 .attraction-section {
-    width: 90%;
+    width: 100%;
     /* max-width: 800px; */
     text-align: center;
     margin: auto;
@@ -224,7 +224,7 @@ body {
 }
 
 .attraction-image-container img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     display: block;
     border-radius: 10px;
@@ -286,7 +286,7 @@ body {
     }
 
     .attraction-image-container img {
-        max-width: 80%;
+        max-width: 100%;
     }
 
 h1, h2, p, .section-header{
