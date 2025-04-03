@@ -7,13 +7,26 @@
 
 
 /* 📜 Scrollable Parchment Paper Background */
-body {
+/* body {
     background: url('../assets/parchmentpaper-long222.png') repeat-y center top,
     url('../assets/wood-bckgrnd.webp') repeat-y center bottom;
     background-size: cover;
     margin: 0;
     padding: 0;
+} */
+/* Parchment Background */
+.parchment-container {
+    background: url('../assets/parchmentpaper-long222.png') repeat center center,
+                url('../assets/wood-bckgrnd.webp') repeat center center;
+    background-size: cover, cover; /* Prevents stretching */
+    min-height: 100vh; /* Makes sure content fits properly */
+    width: 100%; /* Avoids overflow issues */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 
 /* 🏴‍☠️ Parchment Scroll Container */
 .parchment-scroll {
