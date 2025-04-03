@@ -945,11 +945,11 @@ opacity: 0.3;
     #attractions { top: 75vh; left: 60vw; } */
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .map-lines path:nth-child(n+6) {
       display: none;
     }
-  }
+  } */
   
 
 
