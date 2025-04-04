@@ -50,10 +50,10 @@
 
 /* 🎞️ Scrollable Content in the Center */
 .scroll-container {
-    width: 80%;
+    width: 100%;
     /* max-width: 800px; */
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 
@@ -61,7 +61,7 @@
 /* 📜 Attractions Sections */
 .attraction-section {
     margin: 40px 0;
-    padding: 20px;
+    /* padding: 20px; */
     font-family: 'Treasure Map Deadhand', serif;
     color: #3b2f2f;
 }
@@ -120,7 +120,7 @@
 /* Custom Pirate Bullet Points */
 .attraction-list li {
     margin: 10px 0;
-    padding-left: 2vw; /* Increases spacing between bullet and text */
+    /* padding-left: 2vw; */
     position: relative;
     display: flex;
     align-items: center;
@@ -191,7 +191,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 20px; /* More responsive padding */
+    /* padding: 40px 20px; */
     margin: 0;
     
 }
@@ -202,7 +202,7 @@ body {
     /* max-width: 800px; */
     text-align: center;
     margin: auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 /* 🎭 Page Title Fix */
@@ -244,7 +244,7 @@ body {
 /* ⚓ Custom Bullet Point Fix */
 .attraction-list li {
     margin: 10px 0;
-    padding-left: 3vw; /* More spacing */
+    /* padding-left: 3vw;  */
     display: flex;
     align-items: center;
 }
