@@ -340,7 +340,7 @@ textarea, input {
 }
 .parchment-container {
     width: 100%;
-    padding: 0 10px; /* Reduce padding to prevent shrinking */
+    /* padding: 0 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -416,7 +416,7 @@ textarea, input {
 @media (min-width: 768px) and (max-width: 1200px) {
     .parchment-container {
         background-size: cover, cover;
-        padding: 30px;
+        /* padding: 30px; */
     }
 
     .page-sign {
