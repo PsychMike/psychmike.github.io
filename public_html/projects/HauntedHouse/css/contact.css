@@ -55,9 +55,9 @@ html, body {
     text-align: center;
     font-size: 2rem;
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: 40px auto;
-    padding: 20px;
+    /* padding: 20px; */
     font-family: 'Treasure Map Deadhand', serif;
     color: #3b2f2f; /* Keep a dark readable color */
     
