@@ -6,10 +6,6 @@
   <title>BeauHaunt</title>
   <link rel="stylesheet" href="css/parrot.css" />
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- <link rel="stylesheet" href="css/skull.css" /> -->
-  <!-- <link rel="stylesheet" href="css/ship-wheel.scss" /> -->
-  <!-- Favicon for all browsers -->
-  <!-- <link rel="icon" type="image/png" href="assets/HH_favicon/favicon.ico"> -->
   <link rel="icon" type="image/png" href="./assets/BeauHaunt-logo.png" sizes="16x16" />
 </head>
 <body>
@@ -30,10 +26,6 @@
 
   <div class="map-container">
 
-    <!-- <a href="https://www.instagram.com/beauhaunt/" target="_blank" class="instagram-link">
-      <img src="assets/instagram-icon.png" alt="Instagram" />
-  </a> -->
-  
 
     <!-- SVG overlay for dashed connecting lines -->
     <svg class="map-lines" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +71,6 @@
 
     <!-- Map icons with text underneath -->
     <a href="gallery.html" class="map-icon" id="gallery">
-      <!-- <img src="assets/x-mark.png" alt="Gallery Icon" /> -->
       <div class="gallery"></div>
       <span>Gallery</span>
     </a>
@@ -164,13 +155,11 @@
   <script>
    function setCurvedPath(path, startX, startY, endX, endY, offsetMult, offsetVal) {
 
-    // const offsetMult = 20; 
-    // Offset multiplier for curve
-    // const offsetVal = -150; 
-    // Offset value for curve
 
-    const midX = (startX + endX) / 2 + (Math.random() * offsetMult - offsetVal); // Random X offset
-    const midY = (startY + endY) / 2 + (Math.random() * offsetMult - offsetVal); // Random Y offset
+const setMulti = 0; // Set multiplier for curve
+
+    const midX = (startX + endX) / 2 + (setMulti * offsetMult - offsetVal); // Random X offset
+    const midY = (startY + endY) / 2 + (setMulti * offsetMult - offsetVal); // Random Y offset
 
     const d = `M ${startX} ${startY} Q ${midX} ${midY}, ${endX} ${endY}`;
     path.setAttribute("d", d);
@@ -242,9 +231,7 @@ function updateLines() {
     setStraightPath(path5, centerAboutUs.x, centerAboutUs.y, centerAttractions.x, centerAttractions.y);
 }
 else {
-    // setCurvedPath(path, startX, startY, endX, endY, offsetMult, offsetVal)
     setCurvedPath(path1, centerAttractions.x + 50, centerAttractions.y, centerProjects.x, centerProjects.y, 20, -150);
-    // setCurvedPath(path2, centerProjects.x, centerProjects.y, centerDonate.x, centerDonate.y, 20, -150);
     setCurvedPath(path3, centerGallery.x - 50, centerGallery.y, centerContact.x - 30, centerContact.y - 70, 20, 350);
     setCurvedPath(path4, centerDonate.x, centerDonate.y + 80, centerAboutUs.x, centerAboutUs.y, -20, -150);
     setCurvedPath(path5, centerContactAttractionPoint.x, centerContactAttractionPoint.y, centerAttractions.x, centerAttractions.y + 40, 200, -150);
@@ -254,9 +241,6 @@ setCurvedPath(path10, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y
 setCurvedPath(path9, centerProjectsDonatePoint3.x, centerProjectsDonatePoint3.y, centerProjectsDonatePoint2.x, centerProjectsDonatePoint2.y, -0, 30);
 setCurvedPath(path8, centerProjectsDonatePoint2.x, centerProjectsDonatePoint2.y, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y, -20, 150);
 setCurvedPath(path7, centerProjectsDonatePoint1.x, centerProjectsDonatePoint1.y, centerDonate.x - 50, centerDonate.y - 5, 20, -10);
-
-    // setCurvedPath(path11, centerProjectsDonatePoint4.x, centerProjectsDonatePoint4.y, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, 20, 150);
-    // setCurvedPath(path12, centerProjectsDonatePoint5.x, centerProjectsDonatePoint5.y, centerProjects.x, centerProjects.y, 20, 150);
 }
     
 }
