@@ -239,6 +239,8 @@ h1{
 .reach-us{
     font-family: 'Treasure Map Deadhand';
     font-size: 3rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .contact-form{
@@ -252,7 +254,7 @@ h1{
     background-size: contain;
     z-index: 100;
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
     right: 5%;
     width: 20vw;
     height: 50vh;
@@ -365,7 +367,7 @@ textarea, input {
     .quill-pencil {
         width: 30vw;
         height: 30vh;
-        bottom: 5%;
+        bottom: 0%;
         right: 2%;
         display: none !important; /* Hide the quill pen on mobile */
     }
