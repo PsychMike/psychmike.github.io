@@ -97,15 +97,15 @@ padding-top: 0 !important;
     }
 
     .donation-container{
-        width: 60%;
+        width: 90%;
         margin: auto;
     }
 
     .donation-container h1, .donation-container h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .donation-container p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     /* .company-logo { */
