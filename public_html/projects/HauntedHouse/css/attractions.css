@@ -276,6 +276,7 @@ body {
 @media (max-width: 768px) {
     .parchment-scroll {
         padding: 10px;
+        width: 90% !important;
     }
 
     .attraction-section {
